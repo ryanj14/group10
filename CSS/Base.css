@@ -14,11 +14,23 @@ td {
     text-align: center;
 }
 
-/* For Waitinglist page. */
+/* Waitinglist page CSS. */
 
 .waitingheader, p h2{
     text-align: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* NewsPage CSS */
+
+.newsHeader {
+    background-color: aqua;
+}
+
+.newsHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
 }

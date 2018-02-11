@@ -20,12 +20,13 @@ td {
     text-align: center;
 }
 
+<<<<<<< HEAD
 #container { /*To wrap everything from header to footer*/
   position: relative;
   min-height: 100%;
 }
 
-/********************Footer************************/
+/********************Footer CSS************************/
 
 footer {
   position: absolute;
@@ -87,11 +88,26 @@ footer a {
 
 /************************************************/
 
+
 /* For Waitinglist page. */
+
+/* Waitinglist page CSS. */
 
 .waitingheader, p h2{
     text-align: center;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* NewsPage CSS */
+
+.newsHeader {
+    background-color: aqua;
+}
+
+.newsHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
 }

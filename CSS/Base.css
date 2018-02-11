@@ -1,10 +1,16 @@
 /* For all pages. */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 table, th, td {
     border: 1px solid black;
 }
 
-table{
+table {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
@@ -13,6 +19,73 @@ table{
 td {
     text-align: center;
 }
+
+#container { /*To wrap everything from header to footer*/
+  position: relative;
+  min-height: 100%;
+}
+
+/********************Footer************************/
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+footer a {
+  color: #5A2F01;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#footerLogo, #footerCon, #footerSns {
+  height: 200px;
+  background-color: #EACEA7;
+  padding-top: 20px;
+  color: #5A2F01;
+}
+
+#footerLogo {
+  width: 25%;
+  float: left;
+}
+
+#footerLogo img, p { /*logo image*/
+  width:90%;
+  padding: 10px;
+}
+
+#footerCon {
+  width: 50%;
+  float: left;
+}
+
+#footerCon p {
+  margin:0;
+}
+#footerCon table, td, th {
+  border-style:none;
+  border:none;
+}
+
+#footerCon table {
+  width:100%;
+}
+
+#footerSns {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+#footerSns img {
+  width: 20%;
+  margin-top: 20%;
+  padding-right: 20px;
+}
+
+/************************************************/
 
 /* For Waitinglist page. */
 

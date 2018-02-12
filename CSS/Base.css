@@ -20,6 +20,15 @@ td {
     text-align: center;
 }
 
+ul {
+    margin:0;
+    padding:0;
+}
+
+li {
+    list-style: none;
+}
+
 #container { /*To wrap everything from header to footer*/
   position: relative;
   min-height: 100%;
@@ -30,6 +39,7 @@ td {
 footer {
   position: absolute;
   bottom: 0;
+  background-color: #EACEA7;
 }
 
 footer a {
@@ -39,7 +49,9 @@ footer a {
   text-decoration: none;
 }
 
-#footerLogo, #footerCon, #footerSns {
+footer p { margin: 0;}
+
+#footerLogo, #footerMid, #footerRight {
   height: 200px;
   background-color: #EACEA7;
   padding-top: 20px;
@@ -47,44 +59,48 @@ footer a {
 }
 
 #footerLogo {
-  width: 25%;
+  width: 20%;
   float: left;
 }
 
 #footerLogo img, p { /*logo image*/
-  width:90%;
+  width:100%;
   padding: 10px;
 }
 
-#footerCon {
-  width: 50%;
+#footerMid {
+  width: 55%;
   float: left;
 }
 
-#footerCon p {
-  margin:0;
-}
-#footerCon table, td, th {
+#footerMid table, td, th {
   border-style:none;
   border:none;
 }
 
-#footerCon table {
+#footerMid table {
   width:100%;
 }
 
-#footerSns {
-  width: 25%;
+#footerRight {
+  width: 22%;
+  margin-left: 30px;
   float: left;
-  text-align: center;
+  font-size: 16px;
+  text-align: left;
 }
 
-#footerSns img {
-  width: 20%;
-  margin-top: 20%;
-  padding-right: 20px;
+#footerRight img { /*SNS Icons*/
+  width: 18%;
+  margin-left:10px;
 }
 
+#footerSns { margin-left: 15%; }
+
+.fInforHead {
+  font-weight: bold;
+  font-size: 18px;
+}
 /************************************************/
 
 /* Waitinglist page CSS. */

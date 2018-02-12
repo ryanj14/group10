@@ -123,3 +123,61 @@ footer p { margin: 0;}
     height: 100px;
     padding-top: 50px;
 }
+
+/* TechnologyPage CSS */
+
+.techHeader {
+    background-color: aqua;
+}
+
+.techHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.techWordHeader, p h2{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techImage {
+    margin-left: 100px;
+    border: 2px solid;
+    width: 600px;
+    height: 400px;
+}
+
+.techWord {
+    margin-left: 60px;
+    width: 40%;
+}
+
+.techWord span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.techDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border: 2px solid;
+}
+
+.techAdvantage, p h1{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}

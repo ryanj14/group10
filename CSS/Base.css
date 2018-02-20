@@ -186,3 +186,45 @@ footer p { margin: 0;}
     margin-left: auto;
     margin-right: auto;
 }
+
+.advantageDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border: 2px solid;
+    position: relative;
+}
+
+.benefitsDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 300px;
+    width: 80%;
+    border: 2px solid;
+    position: relative;
+}
+
+.linkBoxes {
+    display: flex;
+    height: 400px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.leftBox {
+    border: 2px solid;
+    margin-right: auto;
+    width: 300px;
+}
+
+.rightBox {
+    border: 2px solid;
+    margin-left: auto;
+    width: 300px;
+}

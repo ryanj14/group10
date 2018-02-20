@@ -1,4 +1,4 @@
-/* For all pages. */
+/***************** For All Pages *********************/
 
 html, body {
     margin: 0;
@@ -34,7 +34,7 @@ li {
   min-height: 100%;
 }
 
-/********************Footer CSS************************/
+/******************* Footer CSS ***********************/
 
 /* The footer works; It just needs content. -Ryan */
 
@@ -104,9 +104,8 @@ footer p { margin: 0;}
   font-weight: bold;
   font-size: 18px;
 }
-/************************************************/
 
-/* Waitinglist page CSS. */
+/*************** Waitinglist Page CSS *******************/
 
 .waitingheader, p h2{
     text-align: center;
@@ -115,7 +114,7 @@ footer p { margin: 0;}
     margin-right: auto;
 }
 
-/* NewsPage CSS */
+/******************* News Page CSS ***********************/
 
 .newsHeader {
     background-color: aqua;
@@ -127,7 +126,7 @@ footer p { margin: 0;}
     padding-top: 50px;
 }
 
-/* TechnologyPage CSS */
+/**************** Technology Page CSS ********************/
 
 .techHeader {
     background-color: aqua;
@@ -227,4 +226,71 @@ footer p { margin: 0;}
     border: 2px solid;
     margin-left: auto;
     width: 300px;
+}
+
+/**************** Contact Us Page CSS ********************/
+
+.contactHeader {
+    background-color: aqua;
+    position: relative;
+}
+
+.contactHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.contactWordHeader, p h2{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactWrapper {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 2px solid;
+}
+
+.leftForm {
+    border: 2px solid;
+    width: 500px;
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.rightContact {
+    height: 400px;
+    width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.rightContact h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.innerContact {
+    border: 1px solid;
+    width: auto;
+    height: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.innerContact p {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }

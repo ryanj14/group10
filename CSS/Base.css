@@ -36,26 +36,28 @@ li {
 
 /********************Footer CSS************************/
 
+/* The footer works; It just needs content. -Ryan */
+
 footer {
-  position: absolute;
-  bottom: 0;
-  background-color: #EACEA7;
+    display: flex;
+    bottom: 0;
+    background-color: #EACEA7;
 }
 
 footer a {
-  color: #5A2F01;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
+    color: #5A2F01;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 footer p { margin: 0;}
 
 #footerLogo, #footerMid, #footerRight {
-  height: 200px;
-  background-color: #EACEA7;
-  padding-top: 20px;
-  color: #5A2F01;
+    height: 200px;
+    background-color: #EACEA7;
+    padding-top: 20px;
+    color: #5A2F01;
 }
 
 #footerLogo {
@@ -98,6 +100,7 @@ footer p { margin: 0;}
 #footerSns { margin-left: 15%; }
 
 .fInforHead {
+    background-color: #EACEA7;
   font-weight: bold;
   font-size: 18px;
 }
@@ -128,6 +131,7 @@ footer p { margin: 0;}
 
 .techHeader {
     background-color: aqua;
+    position: relative;
 }
 
 .techHeader h1 {
@@ -173,9 +177,10 @@ footer p { margin: 0;}
     height: 500px;
     width: 80%;
     border: 2px solid;
+    position: relative;
 }
 
-.techAdvantage, p h1{
+.techAdvantage, p, h1{
     text-align: center;
     width: 70%;
     margin-left: auto;

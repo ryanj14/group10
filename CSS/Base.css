@@ -255,11 +255,9 @@ footer p { margin: 0;}
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
-    border: 2px solid;
 }
 
 .leftForm {
-    border: 2px solid;
     width: 500px;
     height: 300px;
     margin-top: auto;
@@ -268,7 +266,7 @@ footer p { margin: 0;}
 }
 
 .rightContact {
-    height: 400px;
+    height: 500px;
     width: 500px;
     margin-top: auto;
     margin-bottom: auto;
@@ -286,6 +284,7 @@ footer p { margin: 0;}
     height: 400px;
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .innerContact p {
@@ -293,4 +292,17 @@ footer p { margin: 0;}
     margin-left: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.radio-inline { display: inline; }
+
+.radioMargin{
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.contactSocial img {
+    margin-left: 20px;
+    height: 10%;
+    width: 10%;
 }

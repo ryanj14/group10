@@ -114,6 +114,22 @@ footer p { margin: 0;}
     margin-right: auto;
 }
 
+.tableDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.listHeader {
+    background-color: aqua;
+    position: relative;
+}
+
+.listHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
 /******************* News Page CSS ***********************/
 
 .newsHeader {

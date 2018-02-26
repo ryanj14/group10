@@ -4,7 +4,6 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #F6B606;
 }
 
 table, th, td {
@@ -41,7 +40,7 @@ li {
     width: 97%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #395570;
+    background-color: #269A46;
     position: relative;
 }
 
@@ -236,7 +235,7 @@ footer p { margin: 0;}
 }
 
 .listHeader {
-    background-color: #395570;
+    background-color: #6CBD44;
     position: relative;
 }
 
@@ -249,7 +248,7 @@ footer p { margin: 0;}
 /******************* News Page CSS ***********************/
 
 .newsHeader {
-    background-color: #395570;
+    background-color: #6CBD44;
 }
 
 .newsHeader h1 {
@@ -261,7 +260,7 @@ footer p { margin: 0;}
 /**************** Technology Page CSS ********************/
 
 .techHeader {
-    background-color: aqua;
+    background-color: #6CBD44;
     position: relative;
 }
 
@@ -363,7 +362,7 @@ footer p { margin: 0;}
 /**************** Contact Us Page CSS ********************/
 
 .contactHeader {
-    background-color: #395570;
+    background-color: #6CBD44;
     position: relative;
 }
 
@@ -442,7 +441,7 @@ footer p { margin: 0;}
 /**************** About Us Page CSS ********************/
 
 .aboutHeader {
-    background-color: #395570;
+    background-color: #6CBD44;
     position: relative;
 }
 

@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #F6B606;
 }
 
 table, th, td {
@@ -40,7 +41,7 @@ li {
     width: 97%;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
+    background-color: #395570;
     position: relative;
 }
 
@@ -235,7 +236,7 @@ footer p { margin: 0;}
 }
 
 .listHeader {
-    background-color: aqua;
+    background-color: #395570;
     position: relative;
 }
 
@@ -248,7 +249,7 @@ footer p { margin: 0;}
 /******************* News Page CSS ***********************/
 
 .newsHeader {
-    background-color: aqua;
+    background-color: #395570;
 }
 
 .newsHeader h1 {
@@ -362,7 +363,7 @@ footer p { margin: 0;}
 /**************** Contact Us Page CSS ********************/
 
 .contactHeader {
-    background-color: aqua;
+    background-color: #395570;
     position: relative;
 }
 
@@ -436,4 +437,94 @@ footer p { margin: 0;}
     margin-left: 20px;
     height: 10%;
     width: 10%;
+}
+
+/**************** About Us Page CSS ********************/
+
+.aboutHeader {
+    background-color: #395570;
+    position: relative;
+}
+
+.aboutHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.aboutMainHead {
+    margin-bottom: 20px;
+}
+
+.aboutFlex {
+    display: flex;
+    height: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.aboutLeft {
+    border: 2px solid;
+    width: 50%;
+    height: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.aboutRight {
+    width: 50%;
+    height: 260px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.aboutRight h2 {
+    text-align: center;
+}
+
+.aboutRight p {
+    text-align: left;
+}
+
+.aboutInner {
+    height: 70px;
+    width: 50%;
+    border: 2px solid;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.aboutInner h1 {
+    margin-top: 15px;
+}
+
+.aboutWordHeader {  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutWordHeader h1 {
+    text-align: center;
+}
+
+.aboutWordHeader p {
+    text-align: left;
+}
+
+.aboutStory {  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutStory h1 {
+    text-align: center;
+}
+
+.aboutStory p {
+    text-align: left;
+    margin: 0, auto, 0;
 }

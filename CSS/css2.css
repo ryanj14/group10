@@ -1,32 +1,54 @@
 /********************Header CSS************************/
-
-#header logo{
+#header{
+    top:0;
+    left:0;
+    width:100%;
+    background-color: antiquewhite;
+    position: fixed;
+}
+.logo{
     width: 10%;
+    float: left;
     
 }
 #logo img{
     width: 45px;
 }
 
-.navBar{
+#
+.blogs,.navBar{
+    width:45%;
+    float:right;
     list-style-type: none;
     padding: 0;
     overflow: hidden;
     background-color: white;
-    margin-left: 150px;
+    margin-right: 150px;
+    
 }
 
-.navBar li{
+.navBar li,.blogs li{
     float: left;
 }
 
-.navBar a{
+.navBar a,.blogs a{
     display: block;
     color:black;
     padding: 10px 16px;
     text-align:center;
     text-decoration: none;
 }
+
+.navBar img{
+    width: 30px;
+}
+
+.blogs img{
+    width:30px;
+    padding: 0 5px;
+}
+
+
 
 
 

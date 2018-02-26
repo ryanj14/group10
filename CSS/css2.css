@@ -1,0 +1,37 @@
+/********************Header CSS************************/
+
+#header logo{
+    width: 10%;
+    
+}
+#logo img{
+    width: 45px;
+}
+
+.navBar{
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    margin-left: 150px;
+}
+
+.navBar li{
+    float: left;
+}
+
+.navBar a{
+    display: block;
+    color:black;
+    padding: 10px 16px;
+    text-align:center;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+

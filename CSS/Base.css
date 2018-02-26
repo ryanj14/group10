@@ -40,7 +40,7 @@ li {
     width: 97%;
     margin-left: auto;
     margin-right: auto;
-    background-color: #269A46;
+    background-color:  #44AFDD;
     position: relative;
 }
 
@@ -156,7 +156,7 @@ li {
 footer {
     display: flex;
     bottom: 0;
-    background-color: #EACEA7;
+    background-color: #44AFDD;
 }
 
 footer a {
@@ -170,7 +170,7 @@ footer p { margin: 0;}
 
 #footerLogo, #footerMid, #footerRight {
     height: 200px;
-    background-color: #EACEA7;
+    background-color: #44AFDD;
     padding-top: 20px;
     color: #5A2F01;
 }
@@ -215,9 +215,9 @@ footer p { margin: 0;}
 #footerSns { margin-left: 15%; }
 
 .fInforHead {
-    background-color: #EACEA7;
-  font-weight: bold;
-  font-size: 18px;
+    background-color: #44AFDD;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /*************** Waitinglist Page CSS *******************/
@@ -235,7 +235,7 @@ footer p { margin: 0;}
 }
 
 .listHeader {
-    background-color: #6CBD44;
+    background-color: #44AFDD;
     position: relative;
 }
 
@@ -248,7 +248,7 @@ footer p { margin: 0;}
 /******************* News Page CSS ***********************/
 
 .newsHeader {
-    background-color: #6CBD44;
+    background-color: #44AFDD;
 }
 
 .newsHeader h1 {
@@ -260,7 +260,7 @@ footer p { margin: 0;}
 /**************** Technology Page CSS ********************/
 
 .techHeader {
-    background-color: #6CBD44;
+    background-color: #44AFDD;
     position: relative;
 }
 
@@ -362,7 +362,7 @@ footer p { margin: 0;}
 /**************** Contact Us Page CSS ********************/
 
 .contactHeader {
-    background-color: #6CBD44;
+    background-color: #44AFDD;
     position: relative;
 }
 
@@ -441,7 +441,7 @@ footer p { margin: 0;}
 /**************** About Us Page CSS ********************/
 
 .aboutHeader {
-    background-color: #6CBD44;
+    background-color: #44AFDD;
     position: relative;
 }
 

@@ -527,3 +527,8 @@ footer p { margin: 0;}
     text-align: left;
     margin: 0, auto, 0;
 }
+
+.calculator {
+    border: 2px solid;
+    margin-bottom: 20px;
+}

@@ -3,26 +3,30 @@
     top:0;
     left:0;
     width:100%;
-    background-color: antiquewhite;
+    background-color: #ABC8C3;
     position: fixed;
-}
-.logo{
-    width: 10%;
-    float: left;
+    list-style-type: none;
     
 }
-#logo img{
-    width: 45px;
+.logo{
+    width: 20%;
+    float: left;
+    padding: 20px;
+    
+}
+.logo img{
+    width: 40px;
 }
 
-#
+.logo a{
+    text-decoration: none;
+    color: black;
+}
 .blogs,.navBar{
-    width:45%;
     float:right;
     list-style-type: none;
     padding: 0;
     overflow: hidden;
-    background-color: white;
     margin-right: 150px;
     
 }

@@ -25,6 +25,7 @@
         <li><a href="Calculator.html">Calculator</a></li>
     </nav>
 
+    <!-- The results of the form input -->
     <?php    
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
@@ -55,6 +56,40 @@
             foreach($_POST['month_list'] as $selected2){
                 echo $selected2."<br>";
             }
+            echo "<br>";
+        }
+    ?>
+    
+    <!-- The calculator part -->
+    
+    <?php
+        $botPrice = 10000; // variable A
+        $budget = $_POST['annualBudget']; // variable U
+        $cash = $budget - $botPrice;
+        $arces = $_POST['acres']; // variavle R
+        $acreSaving = $cash * $arces;
+    
+        if(($cash <= 0) && ($acreSaving <= 0)) {
+            echo "It looks like you are doing a great job keeping you weeding budget to a minimum. Please consider Culture Bot to increase your crop yield<br>";
+        } else {
+            echo "Congratulations! With Culturebot, you can sav CAD $cash per year compated to your current weeding process!(Equivalent to CAD $acreSaving /year/acre)<br>";
+        }
+    
+        $phytosanitary = $_POST['expense3']; // variable m
+        $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $arces);
+        $F = (($budget - $phytosanitary) / ($budget * $botPrice));
+        if(!(($E <= 0) && ($F <= 0))) {
+            echo "You can also save CAD $E on phystosanitary products yearly!(Equivalent to CAD $F year/acre)<br>";
+        }
+        $workers = $_POST['expense']; // variable k
+        $workerBudget = $_POST['workers']; // variable S
+        $workerHours = $_POST['weeklyWorkers'];
+        $H = (($budget - $workers) / ($budget * $botPrice) * $arces);
+        $G = ($H / (($workers * $arces) / $workerBudget));
+        $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
+    
+        if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
+            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $H yearly and a total of $J hours weekly.<br>";
         }
     ?>
    

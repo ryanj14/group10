@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('mysqli_connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,8 +61,49 @@
             foreach($_POST['month_list'] as $selected2){
                 echo $selected2."<br>";
             }
-            echo "<br>";
+            echo "<br>"; 
         }
+    
+        // Connecting to the database
+        $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+        // If we don't connect to the database it will spit out an error for us to fix
+        if(!$list){
+            die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
+        }
+    
+        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
+        $growType = $_POST['growingType'];
+        $acres = $_POST['acres'];
+        $vegtables = $_POST['cultivate'];
+        $orchards = $_POST['cultivate2'];
+        $berries = $_POST['cultivate3'];
+        $vine = $_POST['cultivate4'];
+        $herb = $_POST['cultivate5'];
+        $other = $_POST['cultivate6'];
+        $hire = $_POST['weeding'];
+        $workHire = $_POST['workers'];
+        $workHours = $_POST['weeklyWorkers'];
+        $budget = $_POST['annualBudget'];
+        $workExpense = $_POST['expense'];
+        $machineExp = $_POST['expense2'];
+        $pytoExp = $_POST['expense3'];
+        $otherExp = $_POST['expense4'];
+    
+    
+        // Inserting in the Calculator table. It's long I know.
+        $sql = "INSERT INTO Calculator (growType, numAcres, vegtables,orchards,berries,vineyards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,amchineExpense,phytoExpense,otherExpense)
+        VALUES ($growType, $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, $hire, $workHire, $workHours, $budget, $workExpense, $workExp, $pytoExp, $otherExp)";
+
+        // Checking to see if we actually placed the data into the database
+        if (mysqli_query($list, $sql)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($list);
+        }
+
+        // Closing the connection to the database
+        mysqli_close($list);
     ?>
     
     <!-- The calculator part -->

@@ -3,16 +3,27 @@
 <head>
     <title>Calculator</title>
     <meta charset="utf-8">
-    
+
     <!-- Eleos Tab Icon -->
     <link rel="icon" href="Images/eleosIcon.png">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
 
+    <!-- For IE browser compatibility-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- For Respoinsive setting -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap-->
+    <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    
+
 <div id="container"> <!--Put every thing from nav to footer-->
 
     <nav>
@@ -25,7 +36,7 @@
         <li><a href="Calculator.html">Calculator</a></li>
     </nav>
 
-    <?php    
+    <?php
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
         echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
@@ -57,7 +68,7 @@
             }
         }
     ?>
-   
+
 <!---Footer Start--->
 <footer>
   <!--Logo-->
@@ -116,7 +127,7 @@
           <img src="Images/twitter.png" alt="Share on Twitter" /></a>
       </div>
   </div>
-</footer>    
+</footer>
 
 </div>
 </body>

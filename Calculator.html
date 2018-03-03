@@ -3,6 +3,9 @@
 <head>
     <title>Calculator</title>
     <meta charset="utf-8">
+    
+    <!-- Eleos Tab Icon -->
+    <link rel="icon" href="Images/eleosIcon.png">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
@@ -10,15 +13,154 @@
 </head>
 
 <body>
-  <div id="container"> <!--Put every thing from nav to footer-->
-    <nav>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.html">Waiting List</a></li>
-        <li><a href="TechnologyPage.html">Our Technology</a></li>
-        <li><a href="NewsPage.html">News</a></li>
-        <li><a href="Aboutus.html">About Us</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-    </nav>
+    <div id="container"> <!--Put every thing from nav to footer-->
+        
+        <nav>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Waitinglist.html">Waiting List</a></li>
+            <li><a href="TechnologyPage.html">Our Technology</a></li>
+            <li><a href="NewsPage.html">News</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </nav>
+        
+        
+    <div class="calculator">
+        <form action="UserResults.php" method="post">
+                
+            <label class="radio-inline">
+                Are you a
+                <input type="radio" name="growingType" value="Conventional">Conventional
+            </label>
+            <label class="radio-inline">
+                ,
+                <input type="radio" name="growingType" value="Organic">Organic
+            </label>
+            <label class="radio-inline">
+                ,or 
+                <input type="radio" name="growingType" value="Transitional">Transitional
+            </label> grower? <br>
+                
+            How many acres do you cultivate? <input type="text" name="acres" placeholder="100"><br>
+                
+            <p>What are the crops you cultivate?:</p>
+            Vegtables <input type="text" name="cultivate" placeholder="100"><br>
+            Orchards <input type="text" name="cultivate2" placeholder="100"><br>
+            Berries <input type="text" name="cultivate3" placeholder="100"><br>
+            Vineyards <input type="text" name="cultivate4" placeholder="100"><br>
+            Herbs <input type="text" name="cultivate5" placeholder="100"><br>
+            Other <input type="text" name="cultivate6" placeholder="100"><br>
+                
+            <label class="radio-inline">
+                Do you hire people for weeding?
+                <input type="radio" name="weeding" value="Yes">Yes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="weeding" value="No">No
+            </label>
+            <br>
+            How many workers per season? <input type="text" name="workers" placeholder="5"><br>
+            How many hours are spent weekly in average for weeding (all workers included)?  <input type="text" name="weeklyWorkers" placeholder="30">
+            <br>
+            What is your total annual budget for weeding (per acre)?  <input type="text" name="annualBudget" placeholder="$6000">
+            <br>
+            Workers <input type="text" name="expense" placeholder="100"><br>
+            Machinery <input type="text" name="expense2" placeholder="100"><br>
+            Phytosanitary products <input type="text" name="expense3" placeholder="100"><br>
+            Other <input type="text" name="expense4" placeholder="100"><br>
+            What are your peak harvesting months during the year? <br>
+            <input type="checkbox" name="month_list2[]" value="January">January<br>
+            <input type="checkbox" name="month_list2[]" value="February">February<br>
+            <input type="checkbox" name="month_list2[]" value="March">March<br>
+            <input type="checkbox" name="month_list2[]" value="April">April<br>
+            <input type="checkbox" name="month_list2[]" value="May">May<br>
+            <input type="checkbox" name="month_list2[]" value="June">June<br>
+            <input type="checkbox" name="month_list2[]" value="July">July<br>
+            <input type="checkbox" name="month_list2[]" value="August">August<br>
+            <input type="checkbox" name="month_list2[]" value="September">September<br>
+            <input type="checkbox" name="month_list2[]" value="October">October<br>
+            <input type="checkbox" name="month_list2[]" value="November">November<br>
+            <input type="checkbox" name="month_list2[]" value="December">December<br>
+            <br>
+            During what months of the year do you do weeding? <br>
+            <input type="checkbox" name="month_list[]" value="January">January<br>
+            <input type="checkbox" name="month_list[]" value="February">February<br>
+            <input type="checkbox" name="month_list[]" value="March">March<br>
+            <input type="checkbox" name="month_list[]" value="April">April<br>
+            <input type="checkbox" name="month_list[]" value="May">May<br>
+            <input type="checkbox" name="month_list[]" value="June">June<br>
+            <input type="checkbox" name="month_list[]" value="July">July<br>
+            <input type="checkbox" name="month_list[]" value="August">August<br>
+            <input type="checkbox" name="month_list[]" value="September">September<br>
+            <input type="checkbox" name="month_list[]" value="October">October<br>
+            <input type="checkbox" name="month_list[]" value="November">November<br>
+            <input type="checkbox" name="month_list[]" value="December">December<br>
+            
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+
+<!---Footer Start--->
+<footer>
+  <!--Logo-->
+  <div id="footerLogo">
+    <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
+    <p>© Eleos Robotics, Inc. All rights reserved.</p>
   </div>
+
+  <!--Links for each page, unknown content -->
+  <div id="footerMid">
+    <table>
+      <tr >
+        <th><a href="TechnologyPage.html">Technology</a></th>
+        <th><a href="Waitinglist.html">Waiting List</a></th>
+        <th><a href="#">About us</a></th>
+        <th><a href="ContactUs.html">Contact Us</a></th>
+      </tr>
+      <tr>
+        <td>
+          <p>Description about Technology page.</p>
+        </td>
+        <td>
+          <p>Description about Waiting list page.</p>
+        </td>
+        <td>
+          <p>Description about About us page.</p>
+        </td>
+        <td>
+        <p>Description about Contact us page.</p>
+        </td>
+      </tr>
+    </table>
+
+    <div id="footerSupporter">
+      <!--Contents is filled out later-->
+    </div>
+  </div>
+
+  <div id="footerRight">
+    <!--Company Information-->
+      <ul>
+        <li><span class="fInforHead">Address:</span></li>
+        <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
+        <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
+        <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
+        <li><span class="fInforHead">SNS:</span></li>
+      </ul>
+      <div id="footerSns">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
+          <img src="Images/facebook.png" alt="Share on Facebook" /></a>
+
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
+          <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
+
+        <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
+          <img src="Images/twitter.png" alt="Share on Twitter" /></a>
+      </div>
+  </div>
+</footer>
+
+
+    </div>
 </body>
 </html>

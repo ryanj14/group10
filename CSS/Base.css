@@ -1,4 +1,4 @@
-/* For all pages. */
+/***************** For All Pages *********************/
 
 html, body {
     margin: 0;
@@ -20,77 +20,207 @@ td {
     text-align: center;
 }
 
+ul {
+    margin:0;
+    padding:0;
+}
+
+li {
+    list-style: none;
+}
+
 #container { /*To wrap everything from header to footer*/
   position: relative;
   min-height: 100%;
 }
 
-/********************Footer CSS************************/
+/******************* Index CSS ************************/
+
+.indexHeader {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  #44AFDD;
+    position: relative;
+}
+
+.indexHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.indexHeader h1 {
+    text-align: center;
+    height: 200px;
+    padding-top: 50px;
+}
+
+.indexWordHeader {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.indexWordHeader p {
+    width: auto;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.indexContent {
+    display: flex;
+    height: 450px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.indexLeft {
+    width: 700px;
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.indexLeft p {
+    width: 660px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.indexRight {
+    height: 315px;
+    width: 560px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.recentNews {
+    display: flex;
+    height: 300px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: 2px solid;
+}
+
+.newsContent {
+    border: 2px solid;
+    width: 700px;
+}
+
+.newsColumn {
+    width: 600px;
+    border: 2px solid;
+}
+
+.columnOne {
+    height: 60px;
+    width: 90%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+}
+
+.columnTwo {
+    height: 60px;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+}
+
+.columnThree {
+    height: 60px;
+    width: 90%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid;
+}
+
+/******************* Footer CSS ***********************/
+
+/* The footer works; It just needs content. -Ryan */
 
 footer {
-  position: absolute;
-  bottom: 0;
+    display: flex;
+    bottom: 0;
+    background-color: #44AFDD;
 }
 
 footer a {
-  color: #5A2F01;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
+    color: #5A2F01;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-#footerLogo, #footerCon, #footerSns {
-  height: 200px;
-  background-color: #EACEA7;
-  padding-top: 20px;
-  color: #5A2F01;
+footer p { margin: 0;}
+
+#footerLogo, #footerMid, #footerRight {
+    height: 200px;
+    background-color: #44AFDD;
+    padding-top: 20px;
+    color: #5A2F01;
 }
 
 #footerLogo {
-  width: 25%;
+  width: 20%;
   float: left;
 }
 
 #footerLogo img, p { /*logo image*/
-  width:90%;
+  width:100%;
   padding: 10px;
 }
 
-#footerCon {
-  width: 50%;
+#footerMid {
+  width: 55%;
   float: left;
 }
 
-#footerCon p {
-  margin:0;
-}
-#footerCon table, td, th {
+#footerMid table, td, th {
   border-style:none;
   border:none;
 }
 
-#footerCon table {
+#footerMid table {
   width:100%;
 }
 
-#footerSns {
-  width: 25%;
+#footerRight {
+  width: 22%;
+  margin-left: 30px;
   float: left;
-  text-align: center;
+  font-size: 16px;
+  text-align: left;
 }
 
-#footerSns img {
-  width: 20%;
-  margin-top: 20%;
-  padding-right: 20px;
+#footerRight img { /*SNS Icons*/
+  width: 18%;
+  margin-left:10px;
 }
 
-/************************************************/
+#footerSns { margin-left: 15%; }
 
+.fInforHead {
+    background-color: #44AFDD;
+    font-weight: bold;
+    font-size: 18px;
+}
 
-/* For Waitinglist page. */
-
-/* Waitinglist page CSS. */
+/*************** Waitinglist Page CSS *******************/
 
 .waitingheader, p h2{
     text-align: center;
@@ -99,14 +229,306 @@ footer a {
     margin-right: auto;
 }
 
-/* NewsPage CSS */
+.tableDiv {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.listHeader {
+    background-color: #44AFDD;
+    position: relative;
+}
+
+.listHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+/******************* News Page CSS ***********************/
 
 .newsHeader {
-    background-color: aqua;
+    background-color: #44AFDD;
 }
 
 .newsHeader h1 {
     text-align: center;
     height: 100px;
     padding-top: 50px;
+}
+
+/**************** Technology Page CSS ********************/
+
+.techHeader {
+    background-color: #44AFDD;
+    position: relative;
+}
+
+.techHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.techWordHeader, p h2{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techImage {
+    margin-left: 100px;
+    border: 2px solid;
+    width: 600px;
+    height: 400px;
+}
+
+.techWord {
+    margin-left: 60px;
+    width: 40%;
+}
+
+.techWord span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.techDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border: 2px solid;
+    position: relative;
+}
+
+.techAdvantage, p, h1{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.advantageDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border: 2px solid;
+    position: relative;
+}
+
+.benefitsDetail {
+    margin-top: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 300px;
+    width: 80%;
+    border: 2px solid;
+    position: relative;
+}
+
+.linkBoxes {
+    display: flex;
+    height: 400px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.leftBox {
+    border: 2px solid;
+    margin-right: auto;
+    width: 300px;
+}
+
+.rightBox {
+    border: 2px solid;
+    margin-left: auto;
+    width: 300px;
+}
+
+/**************** Contact Us Page CSS ********************/
+
+.contactHeader {
+    background-color: #44AFDD;
+    position: relative;
+}
+
+.contactHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.contactWordHeader, p h2{
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactWrapper {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.leftForm {
+    width: 500px;
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+}
+
+.rightContact {
+    height: 500px;
+    width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.rightContact h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.innerContact {
+    border: 1px solid;
+    width: auto;
+    height: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.innerContact p {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.radio-inline { display: inline; }
+
+.radioMargin{
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.contactSocial img {
+    margin-left: 20px;
+    height: 10%;
+    width: 10%;
+}
+
+/**************** About Us Page CSS ********************/
+
+.aboutHeader {
+    background-color: #44AFDD;
+    position: relative;
+}
+
+.aboutHeader h1 {
+    text-align: center;
+    height: 100px;
+    padding-top: 50px;
+}
+
+.aboutMainHead {
+    margin-bottom: 20px;
+}
+
+.aboutFlex {
+    display: flex;
+    height: 400px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.aboutLeft {
+    border: 2px solid;
+    width: 50%;
+    height: 350px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.aboutRight {
+    width: 50%;
+    height: 260px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.aboutRight h2 {
+    text-align: center;
+}
+
+.aboutRight p {
+    text-align: left;
+}
+
+.aboutInner {
+    height: 70px;
+    width: 50%;
+    border: 2px solid;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+.aboutInner h1 {
+    margin-top: 15px;
+}
+
+.aboutWordHeader {  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutWordHeader h1 {
+    text-align: center;
+}
+
+.aboutWordHeader p {
+    text-align: left;
+}
+
+.aboutStory {  
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutStory h1 {
+    text-align: center;
+}
+
+.aboutStory p {
+    text-align: left;
+    margin: 0, auto, 0;
+}
+
+.calculator {
+    border: 2px solid;
+    margin-bottom: 20px;
 }

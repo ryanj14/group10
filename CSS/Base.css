@@ -409,41 +409,45 @@ footer p { margin: 0;}
 .techHeader h1 {
     text-align: center;
     height: 100px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
-.techWordHeader, p h2{
+.techWordHeader p {
+    text-align: center;
+    width: 80%;
+    padding: auto;
+}
+
+.techWordHeader h2{
     text-align: center;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.pair {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .techImage {
-    margin-left: 100px;
-    border: 2px solid;
-    width: 600px;
-    height: 400px;
+    width: 40%;
+    border: 2px solid black;
+    float: left;
+    margin-left: 5%;
+}
+.techImage img {
+    width: 60%;
+    height: 350px;
+    margin-left: 25%;
 }
 
 .techWord {
-    margin-left: 60px;
-    width: 40%;
+    width: 50%;
+    height: 350px;
+    float: right;
+    margin-right: 5%;
 }
 
-.techWord span {
-    display: inline-block;
-    vertical-align: middle;
-}
+.techWord2 { display: none;}
 
 .techDetail {
-    margin-top: 40px;
+    margin-top: 100px;
     margin-right: auto;
     margin-left: auto;
     height: 500px;
@@ -495,12 +499,15 @@ footer p { margin: 0;}
     width: 300px;
 }
 
+.leftBox h1 { font-size: 26px;}
+
 .rightBox {
     border: 2px solid;
     margin-left: auto;
     width: 300px;
 }
 
+.rightBox h1 { font-size: 26px;}
 /**************** Contact Us Page CSS ********************/
 
 .contactHeader {
@@ -511,7 +518,7 @@ footer p { margin: 0;}
 .contactHeader h1 {
     text-align: center;
     height: 100px;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .contactWordHeader, p h2{
@@ -758,19 +765,12 @@ footer p { margin: 0;}
 }
 
 
-/**********************Responsive setting*****************************/
+/*************Responsive setting******************/
 
 /*For Tablet Devices*/
 @media only screen and (max-width: 1080px) {
 
 /**********Footer(1080px) Responsive*************/
-
-footer a {
-    color: #5A2F01;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-}
 
 #footerLogo, #footerMid, #footerRight {
     height: 200px;
@@ -808,6 +808,37 @@ footer a {
 .fInforHead {
     font-size: 14px;
 }
+
+/******* Technology Page Responsive(1080px) ***********/
+#techMain p { margin: 0 auto ;}
+
+.techHeader h1 { font-size: 30px;}
+
+.techWordHeader h1 { font-size: 30px;}
+
+.techImage {
+    width: 90%;
+    clear: right;
+}
+.techImage img {
+    width: 50%;
+}
+
+.techWord {
+    display: none;
+}
+
+.techWord2 {
+    display: block;
+    padding-top: 50px;
+    width: 100%;
+    clear: both;
+}
+.benefits h1 { margin-top: 30px;}
+
+.leftBox h1 { font-size: 18px;}
+
+.rightBox h1 { font-size: 18px;}
 
 /*****Responsive(1080px) About Us*******/
   .aboutHeader h1 {
@@ -924,8 +955,6 @@ footer a {
 
 /*For Mobile Devices*/
 @media only screen and (max-width: 500px) {
-
-  /**************** Responsive(Mobile) About Us Page CSS ********************/
 
   /*********Footer(500px) Responsive*********/
     #footerLogo2 a { font-size: 18px; }

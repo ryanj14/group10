@@ -4,6 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: #FCF3EB;
 }
 
 table, th, td {
@@ -39,26 +40,134 @@ p {
     height: 100%;
 }
 
-/******************* Index CSS ************************/
+/********************Header CSS************************/
+#header{
+    top:0;
+    left:0;
+    width:100%;
+    height: 70px;
+    background-color: #DDDDDD;
+    position: fixed;
+    list-style-type: none;
+    -webkit-box-shadow: 0px 3px 40px 5px #E5E5E5;
+    -moz-box-shadow:    0px 3px 40px 5px #E5E5E5;
+    box-shadow:         0px 3px 40px 5px #E5E5E5;
+}
 
-.indexHeader {
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color:  #44AFDD;
+.logo{
+    float: left;
+    padding: 15px 50px;
+}
+.navBar{
+    width: 47%;
+}
+
+.blogs{
+    width: 10%;
+}
+.logo img{
+    width: 170px;
+}
+
+#header a{
+    text-decoration: none;
+    color: black;
+}
+
+.blogs,.navBar{
+    float:right;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin-right: 68px;  
+}
+
+.navBar li,.blogs li{
+    float: left;
+    padding: 25px 0;
+}
+
+.navBar a{
+    display: block;
+    padding: 10px 16px;
+    text-align:center;
+}
+.blogs a{
+    display: block;
+    text-align:center;
+}
+
+.navBar img{
+    width: 30px;
+}
+
+.blogs img{
+    width:30px;
+    padding: 0 5px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/******************* Index CSS ************************/
+.OpenPageContainer{
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 
-.indexHeader h1 {
+.OpenPageContainer .OpenPageTitle{
+    position: absolute;
+    z-index: 999;
     text-align: center;
-    height: 100px;
-    padding-top: 50px;
+    margin-top: 120px;
+    width: 100%;
+    padding: 200px 0;
 }
 
-.indexHeader h1 {
-    text-align: center;
-    height: 200px;
-    padding-top: 50px;
+.OpenPageContainer::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-image: url("../Images/riceFields.gif");
+    background-size: cover;
+    background-position: 0 -50px;
+    opacity: 0.5;
+}
+
+.OpenPageTitle h1{
+    font-size: 2em;
+    color:white;
+    font-family: "Courier New", Courier, monospace;
+}
+/*
+.OpenPageGifCover{
+    position: relative;
+}
+
+.OpenPageGifCover:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    box-shadow: 0 0 40px 10px #ffffff inset;;
+}
+
+.IndexOpenPageGif{
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity:0.5;
+    display: block;
+}*/
+
+.OpenPageTitle{
+    margin-bottom: 20px;
 }
 
 .indexWordHeader {
@@ -66,6 +175,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
+    
 }
 
 .indexWordHeader p {
@@ -165,7 +275,7 @@ footer {
     width: 100%;
     top: 5%;
     bottom: 0;
-    background-color: #44AFDD;
+    background-color: #CCD9CE;
 }
 
 footer a {
@@ -179,7 +289,7 @@ footer p { margin: 0;}
 
 #footerLogo, #footerMid, #footerRight {
     height: 200px;
-    background-color: #44AFDD;
+    background-color: #CCD9CE;
     padding-top: 20px;
     color: #5A2F01;
 }
@@ -223,13 +333,11 @@ footer p { margin: 0;}
 }
 
 #footerRight img { /*SNS Icons*/
-  width: 14%;
-  margin-top: 8px;
-  margin-left:17px;
+  width: 10%;
 }
 
 .fInforHead {
-    background-color: #44AFDD;
+    background-color: #CCD9CE;
     font-weight: bold;
     font-size: 18px;
 }

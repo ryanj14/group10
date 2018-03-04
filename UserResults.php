@@ -195,18 +195,16 @@
         <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
         <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
         <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
-        <li><span class="fInforHead">SNS:</span></li>
+        <li><span class="fInforHead">SNS:</span>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
+            <img src="Images/facebook.png" alt="Share on Facebook" /></a>
+
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
+            <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
+
+          <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
+            <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
       </ul>
-      <div id="footerSns">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
-          <img src="Images/facebook.png" alt="Share on Facebook" /></a>
-
-        <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
-          <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
-
-        <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
-          <img src="Images/twitter.png" alt="Share on Twitter" /></a>
-      </div>
   </div>
 </footer>
 

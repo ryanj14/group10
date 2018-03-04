@@ -553,10 +553,14 @@ footer p { margin: 0;}
 
 #calculator form {
     height: 100%;
-    width: 80%;
+    width: 90%;
     border: 2px solid;
-    margin:auto auto 30px 20%;
-    background-color: red;
+    margin:auto auto 30px auto;
+}
+
+#calcuCon {
+  width: 80%;
+  margin-left:20%;
 }
 
 #calculator div {
@@ -612,6 +616,7 @@ footer p { margin: 0;}
 /*Submit Button setting*/
 #calSubmit {
     margin-left: 25%;
+    margin-bottom: 20px;
     background-color: #1abc9c;
     border-radius: 4px;
     color: #fff;

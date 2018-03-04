@@ -112,6 +112,11 @@
     <p>© Eleos Robotics, Inc. All rights reserved.</p>
   </div>
 
+  <!--For Repsonsive(below768px, Invisible by default)-->
+  <div id="footerLogo2">
+      <a href="index.html">Eleos Robotics, Inc</a>
+  </div>
+
   <!--Links for each page, unknown content -->
   <div id="footerMid">
     <table>
@@ -143,6 +148,13 @@
   </div>
 
   <div id="footerRight">
+
+    <!--For Responsive(below 768px), Invisible by default-->
+    <div id="footerBottomLeft">
+      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
+      <p>© Eleos Robotics, Inc. All rights reserved.</p>
+    </div>
+
     <!--Company Information-->
       <ul>
         <li><span class="fInforHead">Address:</span></li>
@@ -161,7 +173,6 @@
       </ul>
   </div>
 </footer>
-
 </div>
 </body>
 </html>

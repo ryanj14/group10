@@ -1,3 +1,21 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Marketplace
+Explore
+ @HarunaKakinoki
+ Sign out
+1
+0 3 ryanj14/group10 Private
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+group10/CSS/Base.css
+1d82c5f  35 minutes ago
+@HarunaKakinoki HarunaKakinoki modified all page footer for responsive design
+@ryanj14 @HarunaKakinoki @maggiejieyao
+
+1014 lines (841 sloc)  15.3 KB
 /***************** For All Pages *********************/
 
 html, body {
@@ -112,7 +130,6 @@ p {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
-
 /******************* Index CSS ************************/
 .OpenPageContainer{
     width: 100%;

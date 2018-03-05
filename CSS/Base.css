@@ -377,14 +377,11 @@ footer p { margin: 0;}
 
 /******************* News Page CSS ***********************/
 
-.newsHeader {
-    background-color: #44AFDD;
-}
 
 .newsHeader h1 {
     text-align: center;
     height: 100px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 /**************** Technology Page CSS ********************/
@@ -565,21 +562,12 @@ footer p { margin: 0;}
 
 /**************** About Us Page CSS ********************/
 
-.aboutHeader {
-    background-color: #44AFDD;
-    position: relative;
-}
-
-.aboutHeader h1 {
-    text-align: center;
-    height: 100px;
-    padding-top: 50px;
-}
-
 .aboutMainHead {
     margin-bottom: 20px;
 }
-
+.aboutMainHead h1{
+    margin-top: 100px;
+}
 .aboutFlex {
     display: flex;
     height: 400px;

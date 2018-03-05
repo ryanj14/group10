@@ -275,7 +275,7 @@ p {
 footer {
     font-size: 16px;
     position: relative;
-    height: 220px;
+    height: auto;
     width: 100%;
     top: 5%;
     bottom: 0;
@@ -696,7 +696,7 @@ footer p { margin: 0;}
     margin: 0, auto, 0;
 }
 
-/*******************Calculato Page CSS********************/
+/*******************Calculator Page CSS********************/
 #calculator {
     margin-bottom: 20px;
     font-size: 18px;
@@ -746,7 +746,7 @@ footer p { margin: 0;}
 
 .itemsHeading {
     float: left;
-    margin-right: 2%;
+    margin-right: 3%;
 }
 
 .brakedowns  {
@@ -754,6 +754,9 @@ footer p { margin: 0;}
     display: inline-block;
 }
 
+.brakedowns input {
+    width: 60%;
+}
 .monthsItems {
     margin-left: 2%;
     width: 25%;
@@ -762,6 +765,30 @@ footer p { margin: 0;}
 
 .monthsItems input {
     margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 30px;
+    background-color: #1abc9c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    width: 20%;
+    line-height: 40px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 #0e8c73;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+#calSubmit:hover {
+    background-color: #31c8aa;
+    box-shadow: 0 3px 0 #23a188;
+}
+#calSubmit:active {
+    top: 3px;
+    box-shadow: none;
 }
 
 
@@ -834,11 +861,58 @@ footer p { margin: 0;}
     width: 100%;
     clear: both;
 }
-.benefits h1 { margin-top: 30px;}
+.benefits h1 { margin-top: 40px;}
 
+.leftBox { margin-right: 40px;}
 .leftBox h1 { font-size: 18px;}
 
 .rightBox h1 { font-size: 18px;}
+
+/*************Calculator Page Responsive(1080px)**************/
+#calcuCon {
+  width: 80%;
+  margin-left:16%;
+}
+
+#calculator form {
+    border: 2px solid #5A2F01;
+    font-size: 16px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    font-size: 18px;
+}
+
+.calcuChoices { /*All choices of questions*/
+    margin-right: 30px;
+}
+
+#growingType .radio-inline { display: inline-block;}
+
+#cropType  input { width: 60%;}
+
+.itemsHeading { margin-right: 5%;}
+
+.brakedowns input { width: 70%;}
+
+.brakedowns span { font-size: 14px;}
+
+.monthsItems {
+    margin-left: 5%;
+    width: 40%;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 30px;
+    font-size: 15px;
+    width: 30%;
+}
 
 /*****Responsive(1080px) About Us*******/
   .aboutHeader h1 {
@@ -914,7 +988,7 @@ footer p { margin: 0;}
     width: 100%;
     height: 100%;
     font-size: 16px;
-    float: right;
+    float: center;
   }
 
   #footerRight {
@@ -961,6 +1035,7 @@ footer p { margin: 0;}
 
     #footerMid { font-size: 12px; }
 
+    #footerMid a { font-size: 16px;}
     #footerRight {
       width: 100%;
       font-size: 18px;
@@ -1037,5 +1112,42 @@ footer p { margin: 0;}
 
   .aboutWordHeader h1, .aboutStory h1 {
       font-size: 22px;
+  }
+
+  /*************Calculator Page Responsive(500px)**************/
+  #calcuCon {
+    margin-left:12%;
+  }
+
+  #calculator form {
+      font-size: 14px;
+  }
+
+  .calcuParagraph { /*All Question paragraphs*/
+      font-size: 14px;
+  }
+
+  #cropType  input { width: 70%;}
+
+  .brakedowns input { width: 70%;}
+
+  .brakedowns span { font-size: 11px;}
+
+  .monthsItems {
+      margin-left: 5%;
+      width: 50%;
+      display: inline-block;
+  }
+
+  .monthsItems input {
+      margin: 10px;
+  }
+
+  /*Submit Button setting*/
+  #calSubmit {
+      margin-left: 25%;
+      margin-bottom: 30px;
+      font-size: 15px;
+      width: 30%;
   }
 }

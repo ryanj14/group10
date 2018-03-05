@@ -1035,7 +1035,8 @@ footer p { margin: 0;}
 
     #footerMid { font-size: 12px; }
 
-    #footerMid a { font-size: 16px;}
+    #footerMid a { font-size: 14px;}
+
     #footerRight {
       width: 100%;
       font-size: 18px;
@@ -1063,7 +1064,7 @@ footer p { margin: 0;}
       display: inline-block;
       float: right;
       width: 50%;
-      margin-right: 20px;
+      margin-right: 0px;
     }
     .fInforHead {
         font-size: 12px;

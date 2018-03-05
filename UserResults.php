@@ -43,6 +43,8 @@
 
     <!-- The results of the form input -->
     <?php
+        setlocale(LC_MONETARY,"en_CA");
+    
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
         echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
@@ -103,14 +105,16 @@
     
     
         // Inserting in the Calculator table. It's long I know.
-        $sql = "INSERT INTO Calculator (growType, numAcres, vegtables,orchards,berries,vineyards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,amchineExpense,phytoExpense,otherExpense)
-        VALUES ($growType, $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, $hire, $workHire, $workHours, $budget, $workExpense, $workExp, $pytoExp, $otherExp)";
+        $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
+        VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
+    
+        echo "<br>";
 
         // Checking to see if we actually placed the data into the database
         if (mysqli_query($list, $sql)) {
             echo "New record created successfully";
         } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($list);
+            echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
         }
 
         // Closing the connection to the database
@@ -146,7 +150,10 @@
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
 
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
-            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $H yearly and a total of $J hours weekly.<br>";
+            $HH = number_format($H,2);
+            $GG = round($G,0,PHP_ROUND_HALF_UP);
+            //$JJ = round($J);
+            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
         }
     ?>
 

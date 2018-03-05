@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('mysqli_connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +43,8 @@
 
     <!-- The results of the form input -->
     <?php
+        setlocale(LC_MONETARY,"en_CA");
+    
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
         echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
@@ -67,8 +74,51 @@
             foreach($_POST['month_list'] as $selected2){
                 echo $selected2."<br>";
             }
-            echo "<br>";
+            echo "<br>"; 
         }
+    
+        // Connecting to the database
+        $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+        // If we don't connect to the database it will spit out an error for us to fix
+        if(!$list){
+            die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
+        }
+    
+        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
+        $growType = $_POST['growingType'];
+        $acres = $_POST['acres'];
+        $vegtables = $_POST['cultivate'];
+        $orchards = $_POST['cultivate2'];
+        $berries = $_POST['cultivate3'];
+        $vine = $_POST['cultivate4'];
+        $herb = $_POST['cultivate5'];
+        $other = $_POST['cultivate6'];
+        $hire = $_POST['weeding'];
+        $workHire = $_POST['workers'];
+        $workHours = $_POST['weeklyWorkers'];
+        $budget = $_POST['annualBudget'];
+        $workExpense = $_POST['expense'];
+        $machineExp = $_POST['expense2'];
+        $pytoExp = $_POST['expense3'];
+        $otherExp = $_POST['expense4'];
+    
+    
+        // Inserting in the Calculator table. It's long I know.
+        $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
+        VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
+    
+        echo "<br>";
+
+        // Checking to see if we actually placed the data into the database
+        if (mysqli_query($list, $sql)) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+        }
+
+        // Closing the connection to the database
+        mysqli_close($list);
     ?>
 
     <!-- The calculator part -->
@@ -100,7 +150,10 @@
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
 
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
-            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $H yearly and a total of $J hours weekly.<br>";
+            $HH = number_format($H,2);
+            $GG = round($G,0,PHP_ROUND_HALF_UP);
+            //$JJ = round($J);
+            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
         }
     ?>
 
@@ -110,6 +163,11 @@
   <div id="footerLogo">
     <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
     <p>© Eleos Robotics, Inc. All rights reserved.</p>
+  </div>
+
+  <!--For Repsonsive(below768px, Invisible by default)-->
+  <div id="footerLogo2">
+      <a href="index.html">Eleos Robotics, Inc</a>
   </div>
 
   <!--Links for each page, unknown content -->
@@ -143,6 +201,13 @@
   </div>
 
   <div id="footerRight">
+
+    <!--For Responsive(below 768px), Invisible by default-->
+    <div id="footerBottomLeft">
+      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
+      <p>© Eleos Robotics, Inc. All rights reserved.</p>
+    </div>
+
     <!--Company Information-->
       <ul>
         <li><span class="fInforHead">Address:</span></li>
@@ -161,7 +226,6 @@
       </ul>
   </div>
 </footer>
-
 </div>
 </body>
 </html>

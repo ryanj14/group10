@@ -396,6 +396,9 @@ footer p { margin: 0;}
 }
 
 /**************** Technology Page CSS ********************/
+#techMain {
+    background-color: #FCF3EB;
+}
 .techHeader {
     background-color: #44AFDD;
     position: relative;
@@ -580,6 +583,7 @@ footer p { margin: 0;}
 }
 
 /**************** About Us Page CSS ********************/
+#aboutMain { background-color: #FCF3EB;}
 
 .aboutHeader {
     background-color: #44AFDD;
@@ -690,8 +694,10 @@ footer p { margin: 0;}
 
 /*******************Calculator Page CSS********************/
 #calculator {
-    margin-bottom: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     font-size: 18px;
+    background-color: #FCF3EB;
 }
 
 #calculator form {
@@ -699,6 +705,7 @@ footer p { margin: 0;}
     width: 90%;
     border: 2px solid;
     margin:auto auto 30px auto;
+    background-color: white;
 }
 
 #calcuCon {

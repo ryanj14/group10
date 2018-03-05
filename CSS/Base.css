@@ -30,9 +30,15 @@ li {
     list-style: none;
 }
 
+p {
+    margin: 0;
+}
 #container { /*To wrap everything from header to footer*/
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    height: auto; /*it's important to make footer fixed*/
+    height: 100%;
+    background-color: #FCF3EB;
 }
 
 /********************Header CSS************************/
@@ -44,9 +50,10 @@ li {
     background-color: #DDDDDD;
     position: fixed;
     list-style-type: none;
-    -webkit-box-shadow: 0px 3px 40px 5px #E5E5E5;
-    -moz-box-shadow:    0px 3px 40px 5px #E5E5E5;
-    box-shadow:         0px 3px 40px 5px #E5E5E5;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 40px 5px #CFCFCF;
+    -moz-box-shadow:    0px 2px 40px 5px #CFCFCF;
+    box-shadow:         0px 2px 40px 5px #CFCFCF;
 }
 
 .logo{
@@ -84,7 +91,7 @@ li {
 
 .navBar a{
     display: block;
-    padding: 10px 16px;
+    padding: 5px 16px;
     text-align:center;
 }
 .blogs a{
@@ -97,7 +104,7 @@ li {
 }
 
 .blogs img{
-    width:30px;
+    width:35px;
     padding: 0 5px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -118,7 +125,7 @@ li {
     padding: 200px 0;
 }
 
-.OpenPageContainer::after{
+.OpenPageContainer::before{
     content: "";
     position: absolute;
     top: 0;
@@ -136,6 +143,8 @@ li {
     font-size: 2em;
     color:white;
     font-family: "Courier New", Courier, monospace;
+    font-weight: 550;
+    text-shadow: 2px 2px 5px #CCCCCC;
 }
 /*
 .OpenPageGifCover{
@@ -169,7 +178,7 @@ li {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     
 }
 
@@ -177,7 +186,7 @@ li {
     width: auto;
     text-align: left;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 0;
 }
 
@@ -264,7 +273,11 @@ li {
 /* The footer works; It just needs content. -Ryan */
 
 footer {
-    display: flex;
+    font-size: 16px;
+    position: relative;
+    height: 220px;
+    width: 100%;
+    top: 5%;
     bottom: 0;
     background-color: #CCD9CE;
 }
@@ -286,7 +299,7 @@ footer p { margin: 0;}
 }
 
 #footerLogo {
-  width: 20%;
+  width: 22%;
   float: left;
 }
 
@@ -297,6 +310,7 @@ footer p { margin: 0;}
 
 #footerMid {
   width: 55%;
+  font-size: 14px;
   float: left;
 }
 
@@ -306,12 +320,17 @@ footer p { margin: 0;}
 }
 
 #footerMid table {
-  width:100%;
+  width: 90%;
+  text-align:  center;
+}
+
+#footerMid p {
+  width: 100%;
+  margin: 0;
 }
 
 #footerRight {
   width: 22%;
-  margin-left: 30px;
   float: left;
   font-size: 16px;
   text-align: left;
@@ -321,7 +340,6 @@ footer p { margin: 0;}
   width: 10%;
 }
 
-
 .fInforHead {
     background-color: #CCD9CE;
     font-weight: bold;
@@ -329,6 +347,10 @@ footer p { margin: 0;}
 }
 
 /*************** Waitinglist Page CSS *******************/
+#waitingMain {
+    height: 100%;
+    padding-bottom: 50px;
+}
 
 .waitingheader, p h2{
     text-align: center;
@@ -366,7 +388,6 @@ footer p { margin: 0;}
 }
 
 /**************** Technology Page CSS ********************/
-
 .techHeader {
     background-color: #44AFDD;
     position: relative;
@@ -468,20 +489,17 @@ footer p { margin: 0;}
 }
 
 /**************** Contact Us Page CSS ********************/
-
-.contactHeader {
-    background-color: #44AFDD;
+.contactWordHeader h1{
+    padding: 20px; 
+}
+.contactWordHeader{
+    margin-top: 78px;
 }
 
-.contactHeader h1 {
-    text-align: center;
-    height: 100px;
-    padding-top: 50px;
-}
 
 .contactWordHeader, p h2{
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -598,7 +616,7 @@ footer p { margin: 0;}
     height: 70px;
     width: 50%;
     border: 2px solid;
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -606,7 +624,7 @@ footer p { margin: 0;}
     margin-top: 15px;
 }
 
-.aboutWordHeader {  
+.aboutWordHeader {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -620,7 +638,7 @@ footer p { margin: 0;}
     text-align: left;
 }
 
-.aboutStory {  
+.aboutStory {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -635,7 +653,94 @@ footer p { margin: 0;}
     margin: 0, auto, 0;
 }
 
-.calculator {
-    border: 2px solid;
+/*******************Calculato Page CSS********************/
+#calculator {
     margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#calculator form {
+    height: 100%;
+    width: 90%;
+    border: 2px solid;
+    margin:auto auto 30px auto;
+}
+
+#calcuCon {
+  width: 80%;
+  margin-left:20%;
+}
+
+#calculator div {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    color: #5A2F01;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calcuChoices { /*All choices of questions*/
+    margin-right: 30px;
+}
+
+#calculator input {
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+#cropType  input {
+    margin-bottom: 10px;
+}
+
+.cropTypeItems {
+    width : 30%;
+    display: inline-block;
+    margin: auto;
+}
+
+.itemsHeading {
+    float: left;
+    margin-right: 2%;
+}
+
+.brakedowns  {
+    width: 25%;
+    display: inline-block;
+}
+
+.monthsItems {
+    margin-left: 2%;
+    width: 25%;
+    display: inline-block;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 20px;
+    background-color: #1abc9c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    width: 20%;
+    line-height: 40px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 #0e8c73;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+#calSubmit:hover {
+    background-color: #31c8aa;
+    box-shadow: 0 3px 0 #23a188;
+}
+#calSubmit:active {
+    top: 3px;
+    box-shadow: none;
 }

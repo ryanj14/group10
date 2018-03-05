@@ -387,14 +387,11 @@ footer p { margin: 0;}
 
 /******************* News Page CSS ***********************/
 
-.newsHeader {
-    background-color: #44AFDD;
-}
 
 .newsHeader h1 {
     text-align: center;
     height: 100px;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 /**************** Technology Page CSS ********************/
@@ -404,6 +401,7 @@ footer p { margin: 0;}
 .techHeader {
     background-color: #44AFDD;
     position: relative;
+    margin-top: 50px;
 }
 
 .techHeader h1 {
@@ -601,7 +599,9 @@ footer p { margin: 0;}
 .aboutMainHead {
     margin-bottom: 20px;
 }
-
+.aboutMainHead h1{
+    margin-top: 100px;
+}
 .aboutFlex {
     height: auto;
     width: 100%;
@@ -695,6 +695,7 @@ footer p { margin: 0;}
 
 /*******************Calculator Page CSS********************/
 #calculator {
+    margin-top: 120px;
     padding-top: 50px;
     padding-bottom: 30px;
     font-size: 18px;

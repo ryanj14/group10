@@ -39,6 +39,7 @@ p {
     min-height: 100%;
     height: auto; /*it's important to make footer fixed*/
     height: 100%;
+    background-color: #FCF3EB;
 }
 
 .floatClear { /*To remove float setting after the element which has this class*/
@@ -94,7 +95,7 @@ p {
 
 .navBar a{
     display: block;
-    padding: 10px 16px;
+    padding: 5px 16px;
     text-align:center;
 }
 .blogs a{
@@ -107,7 +108,7 @@ p {
 }
 
 .blogs img{
-    width:30px;
+    width:35px;
     padding: 0 5px;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -129,7 +130,7 @@ p {
     padding: 200px 0;
 }
 
-.OpenPageContainer::after{
+.OpenPageContainer::before{
     content: "";
     position: absolute;
     top: 0;
@@ -146,6 +147,8 @@ p {
     font-size: 2em;
     color:white;
     font-family: "Courier New", Courier, monospace;
+    font-weight: 550;
+    text-shadow: 2px 2px 5px #CCCCCC;
 }
 /*
 .OpenPageGifCover{
@@ -178,14 +181,13 @@ p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-
 }
 
 .indexWordHeader p {
     width: auto;
     text-align: left;
     margin-left: 0;
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 0;
 }
 
@@ -504,10 +506,8 @@ footer p { margin: 0;}
 
 .rightBox h1 { font-size: 26px;}
 /**************** Contact Us Page CSS ********************/
-
-.contactHeader {
-    background-color: #44AFDD;
-    position: relative;
+.contactWordHeader h1{
+    padding: 20px; 
 }
 
 .contactHeader h1 {
@@ -516,9 +516,10 @@ footer p { margin: 0;}
     padding-top: 30px;
 }
 
+
 .contactWordHeader, p h2{
     text-align: center;
-    width: 80%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }

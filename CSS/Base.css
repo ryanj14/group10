@@ -385,6 +385,10 @@ footer p { margin: 0;}
     padding-top: 50px;
 }
 
+.userWait {
+    border: 2px solid;
+}
+
 /******************* News Page CSS ***********************/
 
 

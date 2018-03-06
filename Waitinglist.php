@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('mysqli_connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,56 +49,76 @@
             <h1>Header</h1>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
+          
+        <div class="userWait">
+            <form action="" method="post">
+                Name:<br>
+                <input type="text" name="firstName" placeholder="James"><br>
+                Email:<br>
+                <input type="text" name="email" placeholder="example@mail.com">
+                <br>
+                <input id="calSubmit" type="submit" name="submit2" value="Submit">
+            </form>
+        </div>
+          
+        <?php
+            if(isset($_POST['submit2']))
+            {
+                $firstName = $_POST['firstName'];
+                $email = $_POST['email'];
+                
+                // Connecting to the database
+                $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+                // If we don't connect to the database it will spit out an error for us to fix
+                if(!$list)
+                {
+                    die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
+                }
+                
+                $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
+                
+                // Checking to see if we actually placed the data into the database
+                if (mysqli_query($list, $sql)) 
+                {
+                    echo "New record created successfully<br>";
+                } 
+                else 
+                {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+                }
+
+                // Closing the connection to the database
+                mysqli_close($list);
+                header("Refresh:0");
+            }
+        ?>
 
         <div class="tableDiv">
             <table>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-              <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <?php
+                    // Connecting to the database
+                    $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                
+                    $row = mysqli_query($list, "SELECT * FROM WaitingList");
+                    while($sqlRow = mysqli_fetch_assoc($row)){
+                    ?>   
+                <tr>
+                    <td><?php echo $sqlRow['firstName']; ?></td>
+                    <td><?php echo $sqlRow['email']; ?></td>
+                </tr>                 
+                <?php 
+                    }
+                    mysqli_close($list);
+                ?>
             </table>
         </div>
-      </div>
+          
+    </div>
 
         <!---Footer Start--->
         <footer>

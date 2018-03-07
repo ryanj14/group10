@@ -507,9 +507,12 @@ footer p { margin: 0;}
 }
 
 .rightBox h1 { font-size: 26px;}
+
 /**************** Contact Us Page CSS ********************/
+#contactMain { background-color:  #FCF3EB;}
+  
 .contactWordHeader h1{
-    padding: 20px; 
+    padding: 20px;
 }
 
 .contactHeader h1 {

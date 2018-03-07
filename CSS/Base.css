@@ -401,21 +401,9 @@ footer p { margin: 0;}
 }
 
 /**************** Technology Page CSS ********************/
-#techMain {
-    background-color: #FCF3EB;
+.techWordHeader{
+    padding-top: 100px;
 }
-.techHeader {
-    background-color: #44AFDD;
-    position: relative;
-    margin-top: 50px;
-}
-
-.techHeader h1 {
-    text-align: center;
-    height: 100px;
-    padding-top: 30px;
-}
-
 .techWordHeader p {
     text-align: center;
     width: 80%;
@@ -844,11 +832,11 @@ footer p { margin: 0;}
 }
 
 /******* Technology Page Responsive(1080px) ***********/
-#techMain p { margin: 0 auto ;}
 
-.techHeader h1 { font-size: 30px;}
-
-.techWordHeader h1 { font-size: 30px;}
+.techWordHeader h1 { 
+    font-size: 30px;
+    margin-top:100px;
+}
 
 .techImage {
     width: 90%;

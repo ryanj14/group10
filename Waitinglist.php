@@ -51,7 +51,7 @@
         </div>
           
         <div class="userWait">
-            <form action="" method="post">
+            <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
                 Name:<br>
                 <input type="text" name="firstName" placeholder="James"><br>
                 Email:<br>
@@ -105,6 +105,19 @@
                     $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                 
                     $row = mysqli_query($list, "SELECT * FROM WaitingList");
+                
+                    if ($result = $list->query("SELECT * FROM WaitingList")) {
+
+                        /* determine number of rows result set */
+                        $row_cnt = $result->num_rows;
+
+                        printf("Result set has %d rows.\n", $row_cnt);
+
+                        /* close result set */
+                        $result->close();
+                    }
+                
+                
                     while($sqlRow = mysqli_fetch_assoc($row)){
                     ?>   
                 <tr>
@@ -190,5 +203,41 @@
           </div>
         </footer>
     </div>
+    
+    <script>
+        function validateForm() {
+            var x = document.forms["waitForm"]["firstName"].value
+            var y = document.forms["waitForm"]["email"].value
+            if (x == "") {
+                alert("Name must be filled out")
+                document.getElementById("calSubmit").reset();
+                return false;
+            }
+            if(y == ""){
+                alert("email must be filled out")
+                document.getElementById("calSubmit").reset();
+                return false
+            }
+            ValidateEmail(document.waitForm.email)
+            if(ValidateEmail == false){
+                document.getElementById("calSubmit").reset();
+                return false;
+            }
+        }
+        
+        function ValidateEmail(mail) 
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(mail.value.match(mailformat))
+            {
+            return true;
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            return false;
+            }
+        }
+    </script>
 </body>
 </html>

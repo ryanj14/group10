@@ -38,7 +38,6 @@ p {
     position: relative;
     min-height: 100%;
     height: auto; /*it's important to make footer fixed*/
-    height: 100%;
     background-color: #FCF3EB;
 }
 
@@ -370,8 +369,10 @@ footer p { margin: 0;}
 }
 
 .tableDiv {
+    height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
 }
 
 .listHeader {
@@ -388,6 +389,7 @@ footer p { margin: 0;}
 .userWait {
     border: 2px solid;
 }
+
 
 /******************* News Page CSS ***********************/
 

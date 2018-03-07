@@ -23,6 +23,7 @@
 
 </head>
 <body>
+
     <div id = "ContactHeader">
         <div id = "header">
             <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
@@ -43,36 +44,38 @@
             </ul>
         </div>
     </div>
-    
-  
-      
-  <div id="container"> <!--Put every thing from nav to footer-->
 
+
+
+  <div id="container"> <!--Put every thing from nav to footer-->
     <div class="contactWordHeader">
-        <h1>Heading</h1>
+        <h1>Contact us Header</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
 
     <div class="contactWrapper">
         <div class="leftForm">
-            <form action="#">
-                Name:<br>
+            <form action="#" method="post">
+                <span class="contactText">Name:<br></span>
                 <input type="text" name="firstname">
                 <br>
-                Email:<br>
+                <span class="contactText">Email:</span>
                 <input type="text" name="lastname"><br>
+                <!--Inquiry type(Radio button)-->
                 <div class="radioMargin">
                     <label class="radio-inline">
-                      <input type="radio" name="optradio">General Inquiry
+                      <input type="radio" name="optradio">
+                      <span class="contactRadio">General Inquiry</span>
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="optradio">About Technology
+                      <input type="radio" name="optradio">
+                      <span class="contactRadio">About Technology</span>
                     </label>
                     <label class="radio-inline">
-                      <input type="radio" name="optradio">Other
+                      <span class="contactRadio"><input type="radio" name="optradio">Other</span>
                     </label>
                 </div>
-                <br>Message:<br>
+                <span class="contactText">Message:</span>
                 <textarea rows="4" cols="50" name="comment"></textarea>
                 <br><br>
                 <input type="submit" value="Send">
@@ -82,8 +85,8 @@
             <div class="innerHeader">
                 <h2>Reach Us</h2>
                 <div class="innerContact">
-                    <h2>Location</h2>
-                    <p>blah blah blah blah</p>
+                    <span class="contactCompInfor">Location:</span>
+                    <p></p>
                     <h2>Contact</h2>
                     <p>Email:</p>
                     <p>Phone</p>
@@ -102,6 +105,7 @@
             </div>
         </div>
     </div>
+  </div>
 
     <!---Footer Start--->
     <footer>

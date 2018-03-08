@@ -54,15 +54,20 @@
     </div>
 
     <div class="contactWrapper">
+      <!--Contact Form-->
         <div class="leftForm">
+          <h2>Contact</h2>
             <form action="#" method="post">
+                <div class="formWarning"><p>Name should be </p></div>
                 <span class="contactText">Name:<br></span>
                 <input type="text" name="firstname">
-                <br>
+                <div class="formWarning"><p>Name should be </p></div>
                 <span class="contactText">Email:</span>
-                <input type="text" name="lastname"><br>
+                <input type="text" name="lastname">
+
                 <!--Inquiry type(Radio button)-->
                 <div class="radioMargin">
+                  <span class="contactText">Inquiry Type:</span>
                     <label class="radio-inline">
                       <input type="radio" name="optradio">
                       <span class="contactRadio">General Inquiry</span>
@@ -75,21 +80,24 @@
                       <span class="contactRadio"><input type="radio" name="optradio">Other</span>
                     </label>
                 </div>
-                <span class="contactText">Message:</span>
+                <span class="contactText">Message:</span><br>
                 <textarea rows="4" cols="50" name="comment"></textarea>
                 <br><br>
-                <input type="submit" value="Send">
+
+                <!--Submit Button-->
+                <input id="contactSbumit" type="submit" value="Send">
             </form>
         </div>
+
+        <!--Comapny Information-->
         <div class="rightContact">
             <div class="innerHeader">
                 <h2>Reach Us</h2>
                 <div class="innerContact">
-                    <span class="contactCompInfor">Location:</span>
+                    <span class="contactInforText">Location:</span>
                     <p></p>
-                    <h2>Contact</h2>
-                    <p>Email:</p>
-                    <p>Phone</p>
+                    <span class="contactInforText">Email:</span>
+                    <span class="contactInforText">Phone</span>
                     <h2>Social</h2>
                     <div class="contactSocial">
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">

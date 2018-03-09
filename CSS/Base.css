@@ -525,6 +525,7 @@ footer p { margin: 0;}
     margin-bottom: 40px;
 }
 
+.formWarning { display: none;}
 .leftForm {
     width: 500px;
     height: 300px;
@@ -833,7 +834,7 @@ footer p { margin: 0;}
 
 /******* Technology Page Responsive(1080px) ***********/
 
-.techWordHeader h1 { 
+.techWordHeader h1 {
     font-size: 30px;
     margin-top:100px;
 }

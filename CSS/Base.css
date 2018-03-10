@@ -468,6 +468,9 @@ footer p { margin: 0;}
     padding-top: 100px;
 }
 
+.news{
+    padding: 70px 50px;
+}
 /**************** Technology Page CSS ********************/
 .techWordHeader{
     padding-top: 100px;
@@ -513,7 +516,6 @@ footer p { margin: 0;}
     height: 500px;
     width: 80%;
     border: 2px solid;
-    position: relative;
 }
 
 .techAdvantage, p, h1{
@@ -530,7 +532,6 @@ footer p { margin: 0;}
     height: 500px;
     width: 80%;
     border: 2px solid;
-    position: relative;
 }
 
 .benefitsDetail {
@@ -540,7 +541,7 @@ footer p { margin: 0;}
     height: 300px;
     width: 80%;
     border: 2px solid;
-    position: relative;
+    
 }
 
 .linkBoxes {

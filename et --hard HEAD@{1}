@@ -1,0 +1,148 @@
+[33m1c98e8e[m[33m ([m[1;36mHEAD -> [m[1;32mharuna[m[33m)[m HEAD@{0}: checkout: moving from development to haruna
+[33m3758f90[m[33m ([m[1;31morigin/development[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{1}: checkout: moving from haruna to development
+[33m1c98e8e[m[33m ([m[1;36mHEAD -> [m[1;32mharuna[m[33m)[m HEAD@{2}: merge development: Merge made by the 'recursive' strategy.
+[33ma4ec84b[m[33m ([m[1;31morigin/haruna[m[33m)[m HEAD@{3}: checkout: moving from development to haruna
+[33m3758f90[m[33m ([m[1;31morigin/development[m[33m, [m[1;32mdevelopment[m[33m)[m HEAD@{4}: pull: Fast-forward
+[33m5bb55c8[m HEAD@{5}: checkout: moving from haruna to development
+[33ma4ec84b[m[33m ([m[1;31morigin/haruna[m[33m)[m HEAD@{6}: commit: modified contact us
+[33m5bb55c8[m HEAD@{7}: checkout: moving from development to haruna
+[33m5bb55c8[m HEAD@{8}: checkout: moving from haruna to development
+[33m5bb55c8[m HEAD@{9}: checkout: moving from haruna to haruna
+[33m5bb55c8[m HEAD@{10}: checkout: moving from development to haruna
+[33m5bb55c8[m HEAD@{11}: checkout: moving from haruna to development
+[33m5bb55c8[m HEAD@{12}: checkout: moving from development to haruna
+[33m5bb55c8[m HEAD@{13}: merge haruna: Fast-forward
+[33mf5f3bc6[m HEAD@{14}: checkout: moving from haruna to development
+[33m5bb55c8[m HEAD@{15}: commit: modified Contact us(ongoing)
+[33mf5f3bc6[m HEAD@{16}: merge development: Fast-forward
+[33m94bda00[m HEAD@{17}: checkout: moving from development to haruna
+[33mf5f3bc6[m HEAD@{18}: pull: Fast-forward
+[33m94bda00[m HEAD@{19}: checkout: moving from haruna to development
+[33m94bda00[m HEAD@{20}: checkout: moving from development to haruna
+[33m94bda00[m HEAD@{21}: merge haruna: Fast-forward
+[33m9362e4f[m HEAD@{22}: checkout: moving from haruna to development
+[33m94bda00[m HEAD@{23}: commit: modified contact us
+[33m9362e4f[m HEAD@{24}: checkout: moving from development to haruna
+[33m9362e4f[m HEAD@{25}: merge haruna: Fast-forward
+[33m073fee2[m HEAD@{26}: checkout: moving from haruna to development
+[33m9362e4f[m HEAD@{27}: commit: modified CSS
+[33m0f3cd74[m HEAD@{28}: checkout: moving from development to haruna
+[33m073fee2[m HEAD@{29}: checkout: moving from haruna to development
+[33m0f3cd74[m HEAD@{30}: commit (merge): solved merge conflict on Contact us
+[33m2ecc140[m HEAD@{31}: checkout: moving from development to haruna
+[33m073fee2[m HEAD@{32}: pull: Merge made by the 'recursive' strategy.
+[33mb611df7[m HEAD@{33}: checkout: moving from haruna to development
+[33m2ecc140[m HEAD@{34}: commit: modified Contact us(still ongoing)
+[33me48951c[m HEAD@{35}: checkout: moving from development to haruna
+[33mb611df7[m HEAD@{36}: commit: modified contact us
+[33me48951c[m HEAD@{37}: checkout: moving from haruna to development
+[33me48951c[m HEAD@{38}: merge development: Fast-forward
+[33m3eea625[m HEAD@{39}: checkout: moving from development to haruna
+[33me48951c[m HEAD@{40}: pull: Fast-forward
+[33m3eea625[m HEAD@{41}: checkout: moving from haruna to development
+[33m3eea625[m HEAD@{42}: merge development: Fast-forward
+[33m45fb716[m HEAD@{43}: checkout: moving from development to haruna
+[33m3eea625[m HEAD@{44}: pull: Fast-forward
+[33m1df9dbb[m HEAD@{45}: pull: Fast-forward
+[33m45fb716[m HEAD@{46}: checkout: moving from haruna to development
+[33m45fb716[m HEAD@{47}: merge development: Fast-forward
+[33m03c6653[m HEAD@{48}: checkout: moving from development to haruna
+[33m45fb716[m HEAD@{49}: pull: Fast-forward
+[33m6c13c8d[m HEAD@{50}: merge haruna: Merge made by the 'recursive' strategy.
+[33mb34efb8[m HEAD@{51}: pull: Fast-forward
+[33mb18c0c3[m HEAD@{52}: checkout: moving from haruna to development
+[33m03c6653[m HEAD@{53}: commit: modified CSS of Calculator page, Tech page, About us page
+[33mb18c0c3[m HEAD@{54}: checkout: moving from development to haruna
+[33mb18c0c3[m HEAD@{55}: checkout: moving from haruna to development
+[33mb18c0c3[m HEAD@{56}: checkout: moving from development to haruna
+[33mb18c0c3[m HEAD@{57}: checkout: moving from haruna to development
+[33mb18c0c3[m HEAD@{58}: merge development: Fast-forward
+[33med18716[m HEAD@{59}: checkout: moving from development to haruna
+[33mb18c0c3[m HEAD@{60}: commit: modified CSS
+[33med18716[m HEAD@{61}: merge haruna: Fast-forward
+[33m49246ad[m HEAD@{62}: checkout: moving from haruna to development
+[33med18716[m HEAD@{63}: commit: modified calculator page
+[33m49246ad[m HEAD@{64}: checkout: moving from development to haruna
+[33m49246ad[m HEAD@{65}: merge haruna: Fast-forward
+[33m2096697[m HEAD@{66}: checkout: moving from haruna to development
+[33m49246ad[m HEAD@{67}: commit: modified Techonlogy page
+[33m2096697[m HEAD@{68}: checkout: moving from development to haruna
+[33m2096697[m HEAD@{69}: merge haruna: Fast-forward
+[33m1d82c5f[m HEAD@{70}: checkout: moving from haruna to development
+[33m2096697[m HEAD@{71}: commit: modified issues on footer
+[33m1d82c5f[m HEAD@{72}: checkout: moving from development to haruna
+[33m1d82c5f[m HEAD@{73}: checkout: moving from haruna to development
+[33m1d82c5f[m HEAD@{74}: merge development: Fast-forward
+[33mafc08a0[m HEAD@{75}: checkout: moving from development to haruna
+[33m1d82c5f[m HEAD@{76}: commit: modified all page footer for responsive design
+[33m5ff9f2f[m HEAD@{77}: commit (merge): solved merge conflict
+[33mbd92607[m HEAD@{78}: pull origin development: Fast-forward
+[33m3ecb2e6[m HEAD@{79}: checkout: moving from haruna to development
+[33mafc08a0[m HEAD@{80}: commit: modified about us responsive page and footer
+[33m3ecb2e6[m HEAD@{81}: merge development: Fast-forward
+[33m2c36bbe[m HEAD@{82}: checkout: moving from development to haruna
+[33m3ecb2e6[m HEAD@{83}: merge haruna: Merge made by the 'recursive' strategy.
+[33mcf6734d[m HEAD@{84}: checkout: moving from haruna to development
+[33m2c36bbe[m HEAD@{85}: commit: modified footer problem, calculator page
+[33md2af6bc[m HEAD@{86}: checkout: moving from master to haruna
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{87}: checkout: moving from development to master
+[33mcf6734d[m HEAD@{88}: checkout: moving from haruna to development
+[33md2af6bc[m HEAD@{89}: commit: Modified CSS for footer problem
+[33mf9f391c[m HEAD@{90}: checkout: moving from development to haruna
+[33mcf6734d[m HEAD@{91}: commit (merge): Solved merge conflict on UserResults.php
+[33me6271d0[m HEAD@{92}: checkout: moving from haruna to development
+[33mf9f391c[m HEAD@{93}: commit: modified CSS for Caluclator page, add files for bootstrap
+[33m657cde3[m HEAD@{94}: checkout: moving from development to haruna
+[33me6271d0[m HEAD@{95}: reset: moving to HEAD
+[33me6271d0[m HEAD@{96}: reset: moving to HEAD
+[33me6271d0[m HEAD@{97}: pull origin development: Fast-forward
+[33m657cde3[m HEAD@{98}: checkout: moving from haruna to development
+[33m657cde3[m HEAD@{99}: merge development: Fast-forward
+[33mec4b2f7[m HEAD@{100}: checkout: moving from development to haruna
+[33m657cde3[m HEAD@{101}: pull: Fast-forward
+[33mec4b2f7[m HEAD@{102}: reset: moving to HEAD
+[33mec4b2f7[m HEAD@{103}: checkout: moving from haruna to development
+[33mec4b2f7[m HEAD@{104}: reset: moving to HEAD
+[33mec4b2f7[m HEAD@{105}: checkout: moving from development to haruna
+[33mec4b2f7[m HEAD@{106}: checkout: moving from master to development
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{107}: checkout: moving from development to master
+[33mec4b2f7[m HEAD@{108}: pull origin development: Fast-forward
+[33m22bb7ac[m HEAD@{109}: checkout: moving from haruna to development
+[33mec4b2f7[m HEAD@{110}: pull origin development: Fast-forward
+[33m22bb7ac[m HEAD@{111}: checkout: moving from development to haruna
+[33m22bb7ac[m HEAD@{112}: merge haruna: Fast-forward
+[33m911812e[m HEAD@{113}: checkout: moving from haruna to development
+[33m22bb7ac[m HEAD@{114}: commit: modified footer.
+[33m911812e[m HEAD@{115}: merge development: Fast-forward
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{116}: checkout: moving from master to haruna
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{117}: checkout: moving from development to master
+[33m911812e[m HEAD@{118}: pull: Fast-forward
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{119}: checkout: moving from haruna to development
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{120}: checkout: moving from master to haruna
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{121}: merge development: Fast-forward
+[33m7414ed9[m HEAD@{122}: checkout: moving from development to master
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{123}: merge haruna: Fast-forward
+[33mb33b9b1[m HEAD@{124}: checkout: moving from haruna to development
+[33m1c91839[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{125}: commit: put <div container> to wrap everything from header to fotter on each page.
+[33mb33b9b1[m HEAD@{126}: checkout: moving from development to haruna
+[33mb33b9b1[m HEAD@{127}: checkout: moving from haruna to development
+[33mb33b9b1[m HEAD@{128}: merge development: Fast-forward
+[33mafcd60e[m HEAD@{129}: checkout: moving from development to haruna
+[33mb33b9b1[m HEAD@{130}: commit: modified css
+[33m29ef251[m HEAD@{131}: commit (merge): solved conflict
+[33mafcd60e[m HEAD@{132}: checkout: moving from haruna to development
+[33mafcd60e[m HEAD@{133}: commit: Implmented footer on About us, Added Images folder, images.
+[33m7414ed9[m HEAD@{134}: checkout: moving from master to haruna
+[33m7414ed9[m HEAD@{135}: checkout: moving from master to master
+[33m7414ed9[m HEAD@{136}: merge haruna: Fast-forward
+[33m9fb14e3[m HEAD@{137}: checkout: moving from haruna to master
+[33m7414ed9[m HEAD@{138}: checkout: moving from master to haruna
+[33m9fb14e3[m HEAD@{139}: checkout: moving from haruna to master
+[33m7414ed9[m HEAD@{140}: checkout: moving from development to haruna
+[33m44ae7a5[m HEAD@{141}: checkout: moving from development to development
+[33m44ae7a5[m HEAD@{142}: commit: 2nd commit for testing
+[33m15a86a4[m HEAD@{143}: pull origin development: Fast-forward
+[33m9fb14e3[m HEAD@{144}: checkout: moving from haruna to development
+[33m7414ed9[m HEAD@{145}: commit: initial commit
+[33m9fb14e3[m HEAD@{146}: checkout: moving from master to haruna
+[33m9fb14e3[m HEAD@{147}: clone: from https://github.com/ryanj14/group10.git

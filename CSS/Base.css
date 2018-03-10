@@ -113,6 +113,95 @@ p {
     filter: grayscale(100%);
 }
 
+
+/******************* Footer CSS ***********************/
+
+footer {
+    font-size: 16px;
+    position: relative;
+    height: auto;
+    width: 100%;
+    top: 5%;
+    bottom: 0;
+    background-color: #CCD9CE;
+}
+
+footer a {
+    color: #5A2F01;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer p { margin: 0;}
+
+#footerLogo, #footerMid, #footerRight {
+    height: 200px;
+    background-color: #CCD9CE;
+    padding-top: 20px;
+    color: #5A2F01;
+}
+
+#footerLogo {
+    width: 22%;
+    float: left;
+}
+
+#footerLogo img, p { /*logo image*/
+    width:100%;
+    padding: 10px;
+}
+
+#footerLogo2 {
+    display: none;
+}
+
+#footerMid {
+    width: 55%;
+    font-size: 14px;
+    margin: auto;
+    display: inline-block;
+}
+
+#footerMid table, td, th {
+  border-style:none;
+}
+
+#footerMid table {
+  width: 90%;
+  text-align:  center;
+}
+
+#footerMid p {
+  width: 100%;
+  margin: 0;
+}
+
+#footerRight {
+    width: 20%;
+    float: right;
+    display: inline-block;
+    font-size: 16px;
+    text-align: left;
+}
+
+#footerRight img { /*SNS Icons*/
+    width: 14%;
+    margin-top: 8px;
+    margin-left:17px;
+}
+
+#footerBottomLeft {
+    display: none;
+}
+
+
+.fInforHead {
+    background-color: #CCD9CE;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 /******************* Index CSS ************************/
 .OpenPageContainer{
     width: 100%;
@@ -218,143 +307,119 @@ p {
     margin: auto 15px auto auto;
 }
 
-.recentNews {
-    display: flex;
-    height: 300px;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    border: 2px solid;
+/* News Slider*/
+.news-holder {
+    max-width: 700px;
+    height:300px;
+    margin: 0 auto;
+    font-family: "Segoe UI","Trebuchet MS", Arial, sans-serif;
+    font-size: 13px;
+    background:white;
 }
 
-.newsContent {
-    border: 2px solid;
-    width: 700px;
+.news-holder * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.newsColumn {
-    width: 600px;
-    border: 2px solid;
+.news-headlines {
+  list-style: none;
+  position: relative;
 }
 
-.columnOne {
-    height: 60px;
-    width: 90%;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid;
-}
-
-.columnTwo {
-    height: 60px;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid;
-}
-
-.columnThree {
-    height: 60px;
-    width: 90%;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid;
-}
-
-/******************* Footer CSS ***********************/
-
-/* The footer works; It just needs content. -Ryan */
-
-footer {
-    font-size: 16px;
+.news-headlines li {
+    padding: 7px;
     position: relative;
-    height: auto;
-    width: 100%;
-    top: 5%;
-    bottom: 0;
-    background-color: #CCD9CE;
-}
-
-footer a {
-    color: #5A2F01;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-footer p { margin: 0;}
-
-#footerLogo, #footerMid, #footerRight {
-    height: 200px;
-    background-color: #CCD9CE;
-    padding-top: 20px;
-    color: #5A2F01;
-}
-
-#footerLogo {
-    width: 22%;
-    float: left;
-}
-
-#footerLogo img, p { /*logo image*/
+    z-index: 20;
+    color: #dddddd;
     width:100%;
+  background:#888888;
+    min-height:60px;
+  font-size:14px;
+}
+.nh-anim {
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+.news-headlines li:hover, .news-headlines a:hover {
+      cursor: pointer;
+      background:#333333;
+      color:white;
+  }
+.selected{
+   background:#333333;
+ }
+.news-headlines .highlight {
+     width: 100%;
+     background: #888888;
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 10;
+  }
+.news-headlines {
+   float: left;
+   width: 30%;
+}
+.news-preview {
+   float: left;
+   width: 70%;
+   position: relative;
+   z-index: 5;
+   position: relative;
+}
+
+.news-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height:275px;
+    margin: 0 auto 5px auto;
+  } 
+
+.news-content {
+    position: absolute;
+    background: #333333;
+    z-index: 10;
     padding: 10px;
-}
-
-#footerLogo2 {
+    top: 0;
+    left: 0;
+    right:0;
     display: none;
 }
-
-#footerMid {
-    width: 55%;
-    font-size: 14px;
-    margin: auto;
-    display: inline-block;
+.resume{
+  position:absolute;
+  bottom:15px;
+  left:10px;
+  right:10px;
+  background:rgba(0,0,0,0.8);
+  padding:10px;
+  color:#bbb;
 }
 
-#footerMid table, td, th {
-  border-style:none;
+.title {
+  display:block;
+  color:#dddddd;
+  margin:0 0 12px 0;
+  font-size:18px;
 }
-
-#footerMid table {
-  width: 90%;
-  text-align:  center;
+.title:hover{
+  background:none;
+  text-decoration:underline;
 }
-
-#footerMid p {
-  width: 100%;
-  margin: 0;
+.top-content {
+    display: block;
 }
-
-#footerRight {
-    width: 20%;
-    float: right;
-    display: inline-block;
-    font-size: 16px;
-    text-align: left;
-}
-
-#footerRight img { /*SNS Icons*/
-    width: 14%;
-    margin-top: 8px;
-    margin-left:17px;
-}
-
-#footerBottomLeft {
-    display: none;
-}
-
-
-.fInforHead {
-    background-color: #CCD9CE;
-    font-weight: bold;
-    font-size: 18px;
-}
-
 /*************** Waitinglist Page CSS *******************/
 #waitingMain {
     height: 100%;
@@ -392,7 +457,6 @@ footer p { margin: 0;}
 
 
 /******************* News Page CSS ***********************/
-
 
 .newsHeader h1 {
     text-align: center;
@@ -498,6 +562,7 @@ footer p { margin: 0;}
 
 .rightBox h1 { font-size: 26px;}
 /**************** Contact Us Page CSS ********************/
+
 .contactWordHeader h1{
     padding: 20px;
 }

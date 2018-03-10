@@ -133,6 +133,10 @@ footer a {
     text-decoration: none;
 }
 
+footer a:link {
+    text-decoration: none;
+}
+
 footer p { margin: 0;}
 
 #footerLogo, #footerMid, #footerRight {
@@ -385,7 +389,7 @@ footer p { margin: 0;}
     height: auto;
     max-height:275px;
     margin: 0 auto 5px auto;
-  } 
+  }
 
 .news-content {
     position: absolute;

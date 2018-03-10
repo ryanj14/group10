@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('mysqli_connect.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,56 +49,89 @@
             <h1>Header</h1>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
+          
+        <div class="userWait">
+            <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
+                Name:<br>
+                <input type="text" name="firstName" placeholder="James"><br>
+                Email:<br>
+                <input type="text" name="email" placeholder="example@mail.com">
+                <br>
+                <input id="calSubmit" type="submit" name="submit2" value="Submit">
+            </form>
+        </div>
+          
+        <?php
+            if(isset($_POST['submit2']))
+            {
+                $firstName = $_POST['firstName'];
+                $email = $_POST['email'];
+                
+                // Connecting to the database
+                $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+                // If we don't connect to the database it will spit out an error for us to fix
+                if(!$list)
+                {
+                    die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
+                }
+                
+                $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
+                
+                // Checking to see if we actually placed the data into the database
+                if (mysqli_query($list, $sql)) 
+                {
+                    echo "New record created successfully<br>";
+                } 
+                else 
+                {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+                }
+
+                // Closing the connection to the database
+                mysqli_close($list);
+                header("Refresh:0");
+            }
+        ?>
 
         <div class="tableDiv">
             <table>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-              </tr>
-              <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-              </tr>
-              <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
-                  <tr>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-              </tr>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <?php
+                    // Connecting to the database
+                    $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                
+                    $row = mysqli_query($list, "SELECT * FROM WaitingList");
+                
+                    if ($result = $list->query("SELECT * FROM WaitingList")) {
+
+                        /* determine number of rows result set */
+                        $row_cnt = $result->num_rows;
+
+                        printf("Result set has %d rows.\n", $row_cnt);
+
+                        /* close result set */
+                        $result->close();
+                    }
+                
+                
+                    while($sqlRow = mysqli_fetch_assoc($row)){
+                    ?>   
+                <tr>
+                    <td><?php echo $sqlRow['firstName']; ?></td>
+                    <td><?php echo $sqlRow['email']; ?></td>
+                </tr>                 
+                <?php 
+                    }
+                    mysqli_close($list);
+                ?>
             </table>
         </div>
-      </div>
+          
+    </div>
 
         <!---Footer Start--->
         <footer>
@@ -113,7 +151,7 @@
             <table>
               <tr >
                 <th><a href="TechnologyPage.html">Technology</a></th>
-                <th><a href="Waitinglist.html">Waiting List</a></th>
+                <th><a href="Waitinglist.php">Waiting List</a></th>
                 <th><a href="#">About us</a></th>
                 <th><a href="ContactUs.html">Contact Us</a></th>
               </tr>
@@ -165,5 +203,41 @@
           </div>
         </footer>
     </div>
+    
+    <script>
+        function validateForm() {
+            var x = document.forms["waitForm"]["firstName"].value
+            var y = document.forms["waitForm"]["email"].value
+            if (x == "") {
+                alert("Name must be filled out")
+                document.getElementById("calSubmit").reset();
+                return false;
+            }
+            if(y == ""){
+                alert("email must be filled out")
+                document.getElementById("calSubmit").reset();
+                return false
+            }
+            ValidateEmail(document.waitForm.email)
+            if(ValidateEmail == false){
+                document.getElementById("calSubmit").reset();
+                return false;
+            }
+        }
+        
+        function ValidateEmail(mail) 
+        {
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(mail.value.match(mailformat))
+            {
+            return true;
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            return false;
+            }
+        }
+    </script>
 </body>
 </html>

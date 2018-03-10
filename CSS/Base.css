@@ -38,7 +38,6 @@ p {
     position: relative;
     min-height: 100%;
     height: auto; /*it's important to make footer fixed*/
-    height: 100%;
     background-color: #FCF3EB;
 }
 
@@ -370,8 +369,10 @@ footer p { margin: 0;}
 }
 
 .tableDiv {
+    height: auto;
     margin-top: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
 }
 
 .listHeader {
@@ -385,6 +386,11 @@ footer p { margin: 0;}
     padding-top: 50px;
 }
 
+.userWait {
+    border: 2px solid;
+}
+
+
 /******************* News Page CSS ***********************/
 
 
@@ -395,21 +401,9 @@ footer p { margin: 0;}
 }
 
 /**************** Technology Page CSS ********************/
-#techMain {
-    background-color: #FCF3EB;
+.techWordHeader{
+    padding-top: 100px;
 }
-.techHeader {
-    background-color: #44AFDD;
-    position: relative;
-    margin-top: 50px;
-}
-
-.techHeader h1 {
-    text-align: center;
-    height: 100px;
-    padding-top: 30px;
-}
-
 .techWordHeader p {
     text-align: center;
     width: 80%;
@@ -505,7 +499,7 @@ footer p { margin: 0;}
 .rightBox h1 { font-size: 26px;}
 /**************** Contact Us Page CSS ********************/
 .contactWordHeader h1{
-    padding: 20px; 
+    padding: 20px;
 }
 
 .contactHeader h1 {
@@ -531,6 +525,7 @@ footer p { margin: 0;}
     margin-bottom: 40px;
 }
 
+.formWarning { display: none;}
 .leftForm {
     width: 500px;
     height: 300px;
@@ -838,11 +833,11 @@ footer p { margin: 0;}
 }
 
 /******* Technology Page Responsive(1080px) ***********/
-#techMain p { margin: 0 auto ;}
 
-.techHeader h1 { font-size: 30px;}
-
-.techWordHeader h1 { font-size: 30px;}
+.techWordHeader h1 {
+    font-size: 30px;
+    margin-top:100px;
+}
 
 .techImage {
     width: 90%;

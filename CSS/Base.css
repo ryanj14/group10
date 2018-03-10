@@ -325,10 +325,6 @@ footer p { margin: 0;}
     box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 .news-headlines {
   list-style: none;
   position: relative;
@@ -355,12 +351,12 @@ a {
     transform: translateZ(0);
   }
 
-  .news-headlines li:hover, a:hover {
+.news-headlines li:hover, .news-headlines a:hover {
       cursor: pointer;
       background:#333333;
       color:white;
   }
-li.selected{
+.selected{
    background:#333333;
  }
 .news-headlines .highlight {
@@ -410,13 +406,14 @@ li.selected{
   padding:10px;
   color:#bbb;
 }
-a.title {
+
+.title {
   display:block;
   color:#dddddd;
   margin:0 0 12px 0;
   font-size:18px;
 }
-a.title:hover{
+.title:hover{
   background:none;
   text-decoration:underline;
 }

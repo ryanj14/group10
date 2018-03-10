@@ -509,7 +509,7 @@ footer p { margin: 0;}
 }
 
 
-.contactWordHeader, p h2{
+.contactWordHeader, p h2 {
     text-align: center;
     width: 100%;
     margin-left: auto;
@@ -518,38 +518,58 @@ footer p { margin: 0;}
 }
 
 .contactWrapper {
+    color:#5A2F01;
     display: flex;
-    width: 80%;
+    border: 2px solid #5A2F01;
+    border-radius: 10px;
+    background-color: rgba(255,255, 255, 0.6);
+    width: 70%;
     height: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
 }
 
+.contactText {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 .formWarning { display: none;}
+
+.radioMargin { margin: 0;}
+
 .leftForm {
-    width: 500px;
-    height: 300px;
-    margin-top: auto;
+    width: 45%;
+    height: 500px;
+    margin-top: 30px;
     margin-bottom: auto;
     margin-left: auto;
 }
 
+.leftForm input {
+    width: 75%;
+}
 .rightContact {
+  margin-top: 30px;
     height: 500px;
-    width: 500px;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
+    width: 45%;
 }
 
 .rightContact h2 {
+    margin-top: 0;
     margin-left: 10px;
     margin-right: 10px;
 }
 
+.contactInforText {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .innerContact {
-    border: 1px solid;
     width: auto;
     height: 400px;
     margin-right: 10px;
@@ -566,15 +586,43 @@ footer p { margin: 0;}
 
 .radio-inline { display: inline; }
 
+.contactRadio { margin-right: 10px;}
+
 .radioMargin{
     margin-top: 20px;
     margin-bottom: 3px;
 }
 
+.radioMargin input { width: 5%;}
+.contactWrapper textarea { margin-top: 10px;}
+
 .contactSocial img {
     margin-left: 20px;
     height: 10%;
     width: 10%;
+}
+
+#contactSubmit { /*Submit Button settings*/
+    background-color: #1abc9c;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 12%;
+    font-size: 18px;
+    width: 50%;
+    line-height: 40px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 #0e8c73;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+#contactSubmit:hover {
+    background-color: #31c8aa;
+    box-shadow: 0 3px 0 #23a188;
+}
+#contactSubmit:active {
+    top: 3px;
+    box-shadow: none;
 }
 
 /**************** About Us Page CSS ********************/
@@ -702,6 +750,7 @@ footer p { margin: 0;}
     height: 100%;
     width: 90%;
     border: 2px solid;
+    border-radius: 10px;
     margin:auto auto 30px auto;
     background-color: white;
 }

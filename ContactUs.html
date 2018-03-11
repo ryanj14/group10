@@ -20,12 +20,62 @@
     <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      fucntion warnInvalidInput() {
-        var custName = document.form.name.value;
-        var custNameRegex = /^[a-zA-Z0-9]+$/
 
+    <script>
+    function validateForm() {
+      var flag = true;
+      if(validateName() == false) {
+        flag = false;
       }
+
+      /*if(validateEmail() == false) {
+        flag = false;
+      }*/
+      if(validateTextArea() == false) {
+        flag = false;
+      }
+
+      if(flag == true) {
+        return true;
+      }
+      return false;
+    }
+
+    function validateName() {
+      var namePattern = ''
+      var name = document.forms["contactForm"]["name"].value
+      if (name != namePattern) {
+        document.getElementById("nameWarning").style.visibility = 'visible'
+        return false;
+      } else {
+        document.getElementById("nameWarning").style.visibility = 'hidden'
+      }
+      return true;
+    }
+    function validateEmail() {
+      var emailPattern = "/^([a-zA-Z0-9])+([a-zA-Z0-9\\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\\._-]+)+$/"
+      var email = document.forms["contactForm"]["email"].value
+      /*Validate e-mail*/
+      if (email != emailPattern) {
+        alert(email)
+        document.getElementById("emailWarning").style.visibility = 'visible'
+        return false;
+      } else {
+        document.getElementById("emailWarning").style.visibility = 'hidden'
+        return true;
+      }
+    }
+
+    function validateTextArea() {
+      var text = document.forms["contactForm"]["inquiry"].value
+      if(text == "") {
+        document.getElementById("textWarning").style.visibility = 'visible'
+        return false;
+      } else {
+        document.getElementById("textWarning").style.visibility = 'hidden'
+      }
+      return true;
+    }
     </script>
 
 </head>
@@ -60,13 +110,16 @@
       <!--Contact Form-->
         <div class="leftForm">
           <h2>Contact Form</h2>
-            <form action="ContactUsResult.html" method="post">
-                <div class="formWarning"><p>Please enter valid name. </p></div>
+            <form name="contactForm" action="ContactUsResult.html" method="post" onsubmit="return validateForm()">
+                <!--Name-->
                 <span class="contactText">Name:<br></span>
-                <input type="text" name="name" id="name"  required>
-                <div class="formWarning"><p>Please enter valid e-mail address. </p></div>
+                <input type="text" name="name" onblur="validateName()">
+                <div class="formWarning" id="nameWarning"><p>*Please enter valid name. </p></div>
+
+                <!--Email-->
                 <span class="contactText">Email:</span>
-                <input type="text" name="email" id="email" required>
+                <input type="text" name="email" onblur="validateEmail()" required>
+                <div class="formWarning" id="emailWarning"><p>*Please enter valid e-mail address.</p></div>
 
                 <!--Inquiry type(Radio button)-->
                 <div class="radioMargin">
@@ -86,9 +139,10 @@
                 </div>
 
                 <!--Text Box-->
-                <div class="formWarning"><p>Please input your inquiry.</p></div>
+
                 <span class="contactText">Message:</span>
-                <textarea rows="4" cols="38" name="comment" required></textarea>
+                <textarea rows="4" cols="38" name="inquiry" onblur="validateTextArea()" required></textarea>
+                <div class="formWarning" id="textWarning"><p>*Please input your inquiry.</p></div>
                 <br>
 
                 <!--Submit Button-->

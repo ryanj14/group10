@@ -33,7 +33,7 @@
 
     <nav>
         <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.html">Waiting List</a></li>
+        <li><a href="Waitinglist.php">Waiting List</a></li>
         <li><a href="TechnologyPage.html">Our Technology</a></li>
         <li><a href="NewsPage.html">News</a></li>
         <li><a href="Aboutus.html">About Us</a></li>
@@ -44,7 +44,7 @@
     <!-- The results of the form input -->
     <?php
         setlocale(LC_MONETARY,"en_CA");
-    
+
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
         echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
@@ -74,9 +74,9 @@
             foreach($_POST['month_list'] as $selected2){
                 echo $selected2."<br>";
             }
-            echo "<br>"; 
+            echo "<br>";
         }
-    
+
         // Connecting to the database
         $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
@@ -84,7 +84,7 @@
         if(!$list){
             die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
         }
-    
+
         // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
         $growType = $_POST['growingType'];
         $acres = $_POST['acres'];
@@ -102,12 +102,12 @@
         $machineExp = $_POST['expense2'];
         $pytoExp = $_POST['expense3'];
         $otherExp = $_POST['expense4'];
-    
-    
+
+
         // Inserting in the Calculator table. It's long I know.
         $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
         VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
-    
+
         echo "<br>";
 
         // Checking to see if we actually placed the data into the database
@@ -176,7 +176,7 @@
       <tr >
         <th><a href="TechnologyPage.html">Technology</a></th>
         <th><a href="Waitinglist.html">Waiting List</a></th>
-        <th><a href="#">About us</a></th>
+        <th><a href="Aboutus.html">About us</a></th>
         <th><a href="ContactUs.html">Contact Us</a></th>
       </tr>
       <tr>

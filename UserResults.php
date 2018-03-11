@@ -33,7 +33,7 @@
 
     <nav>
         <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.html">Waiting List</a></li>
+        <li><a href="Waitinglist.php">Waiting List</a></li>
         <li><a href="TechnologyPage.html">Our Technology</a></li>
         <li><a href="NewsPage.html">News</a></li>
         <li><a href="Aboutus.html">About Us</a></li>

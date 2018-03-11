@@ -53,9 +53,9 @@
         <div class="userWait">
             <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
                 Name:<br>
-                <input type="text" name="firstName" placeholder="James"><br>
+                <input type="text" id="name1" name="firstName" placeholder="James"><br>
                 Email:<br>
-                <input type="text" name="email" placeholder="example@mail.com">
+                <input type="text" id="email1" name="email" placeholder="example@mail.com">
                 <br>
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
@@ -79,11 +79,7 @@
                 $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
 
                 // Checking to see if we actually placed the data into the database
-                if (mysqli_query($list, $sql))
-                {
-                    echo "New record created successfully<br>";
-                }
-                else
+                if (!(mysqli_query($list, $sql)))
                 {
                     echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
                 }
@@ -105,18 +101,6 @@
                     $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
                     $row = mysqli_query($list, "SELECT * FROM WaitingList");
-
-                    if ($result = $list->query("SELECT * FROM WaitingList")) {
-
-                        /* determine number of rows result set */
-                        $row_cnt = $result->num_rows;
-
-                        printf("Result set has %d rows.\n", $row_cnt);
-
-                        /* close result set */
-                        $result->close();
-                    }
-
 
                     while($sqlRow = mysqli_fetch_assoc($row)){
                     ?>
@@ -206,22 +190,26 @@
 
     <script>
         function validateForm() {
-            var x = document.forms["waitForm"]["firstName"].value
-            var y = document.forms["waitForm"]["email"].value
+            var xV = document.forms["waitForm"]["firstName"];
+            var yV = document.forms["waitForm"]["email"];
+            var x = document.forms["waitForm"]["firstName"].value;
+            var y = document.forms["waitForm"]["email"].value;
             if (x == "") {
                 alert("Name must be filled out")
-                document.getElementById("calSubmit").reset();
+                xV.focus();
                 return false;
             }
-            if(y == ""){
+            else if(y == ""){
                 alert("email must be filled out")
-                document.getElementById("calSubmit").reset();
-                return false
-            }
-            ValidateEmail(document.waitForm.email)
-            if(ValidateEmail == false){
-                document.getElementById("calSubmit").reset();
+                yV.focus();
                 return false;
+            }else{
+                if(ValidateEmail(document.waitForm.email) == false){
+                    yV.focus();
+                    return false;
+                } else {
+                    return true;
+                }
             }
         }
 

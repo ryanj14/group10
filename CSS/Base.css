@@ -439,6 +439,7 @@ footer p { margin: 0;}
 
 .tableDiv {
     height: auto;
+    width: 50%;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 2px solid;

@@ -541,7 +541,7 @@ footer p { margin: 0;}
     height: 300px;
     width: 80%;
     border: 2px solid;
-    
+
 }
 
 .linkBoxes {
@@ -1074,6 +1074,28 @@ footer p { margin: 0;}
       font-size: 30px;
       margin-top: 20px;
   }
+
+/*********** Contact Us Page CSS(1080px) ***************/
+
+.contactWrapper {
+    width: 86%;
+    height: 650px;
+}
+
+.contactText, .contactInforText {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.radio-inline { display: block; }
+
+.contactWrapper textarea {
+    margin-top: 10px;
+    width: 80%;
+}
+
+.contactSocial img {
+    width: 13%;
 }
 
 /*For Mobile Deices*/
@@ -1266,5 +1288,75 @@ footer p { margin: 0;}
       margin-bottom: 30px;
       font-size: 15px;
       width: 30%;
+  }
+
+  /*********** Contact Us Page(500px) CSS *************/
+
+  .contactWordHeader h1{
+      font-size: 30px;
+      padding-bottom: 0px;
+  }
+
+  .contactWordHeader, p h2 {
+      padding-top:50px;
+  }
+
+  .contactWrapper {
+      width: 90%;
+  }
+
+  .contactText {
+      font-size: 16px;
+      margin-top: 10px;
+  }
+
+  .formWarning { display: none;}
+
+  .radioMargin { margin: 0;}
+
+  .contactWrapper {
+      display: block;
+      height: 950px;
+  }
+
+  .leftForm {
+      width: 100%;
+      height: 500px;
+      margin-top: 30px;
+      margin-left: 10%;
+  }
+
+  .leftForm h2 {  font-size: 22px;}
+
+  .leftForm input {
+      width: 70%;
+  }
+
+  .rightContact {
+      margin-top: 30px;
+      margin-left: 10%;
+      height: 500px;
+      width: 100%;
+  }
+
+  .rightContact h2 {
+      margin-top: 0;
+      font-size: 22px;
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+  .radio-inline { display: block; }
+
+  .radioMargin input { width: 5%;}
+
+  .contactSocial img {
+      margin-left: 25px;
+      height: 10%;
+      width: 12%;
+  }
+
+  #contactSubmit { /*Submit Button settings*/
+      line-height: 30px;
   }
 }

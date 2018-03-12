@@ -166,6 +166,7 @@
       <div id="footerCopyRight">
         <p>© Eleos Robotics, Inc. All rights reserved.</p>
       </div>
+      <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
 </div>
 </body>

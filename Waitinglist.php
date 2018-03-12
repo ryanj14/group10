@@ -53,9 +53,9 @@
         <div class="userWait">
             <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
                 Name:<br>
-                <input type="text" name="firstName" placeholder="James"><br>
+                <input type="text" id="name1" name="firstName" placeholder="James"><br>
                 Email:<br>
-                <input type="text" name="email" placeholder="example@mail.com">
+                <input type="text" id="email1" name="email" placeholder="example@mail.com">
                 <br>
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
@@ -73,13 +73,11 @@
                 {
                     die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
                 }
+
                 $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
+
                 // Checking to see if we actually placed the data into the database
-                if (mysqli_query($list, $sql))
-                {
-                    echo "New record created successfully<br>";
-                }
-                else
+                if (!(mysqli_query($list, $sql)))
                 {
                     echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
                 }
@@ -99,13 +97,7 @@
                     // Connecting to the database
                     $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                     $row = mysqli_query($list, "SELECT * FROM WaitingList");
-                    if ($result = $list->query("SELECT * FROM WaitingList")) {
-                        /* determine number of rows result set */
-                        $row_cnt = $result->num_rows;
-                        printf("Result set has %d rows.\n", $row_cnt);
-                        /* close result set */
-                        $result->close();
-                    }
+
                     while($sqlRow = mysqli_fetch_assoc($row)){
                     ?>
                 <tr>
@@ -118,98 +110,42 @@
                 ?>
             </table>
         </div>
-
     </div>
 
-        <!---Footer Start--->
-        <footer>
-          <!--Logo-->
-          <div id="footerLogo">
-            <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-            <p>© Eleos Robotics, Inc. All rights reserved.</p>
-          </div>
-
-          <!--For Repsonsive(below768px, Invisible by default)-->
-          <div id="footerLogo2">
-              <a href="index.html">Eleos Robotics, Inc</a>
-          </div>
-
-          <!--Links for each page, unknown content -->
-          <div id="footerMid">
-            <table>
-              <tr >
-                <th><a href="TechnologyPage.html">Technology</a></th>
-                <th><a href="Waitinglist.php">Waiting List</a></th>
-                <th><a href="Aboutus.html">About us</a></th>
-                <th><a href="ContactUs.html">Contact Us</a></th>
-              </tr>
-              <tr>
-                <td>
-                  <p>Description about Technology page.</p>
-                </td>
-                <td>
-                  <p>Description about Waiting list page.</p>
-                </td>
-                <td>
-                  <p>Description about About us page.</p>
-                </td>
-                <td>
-                <p>Description about Contact us page.</p>
-                </td>
-              </tr>
-            </table>
-
-            <div id="footerSupporter">
-              <!--Contents is filled out later-->
-            </div>
-          </div>
-
-          <div id="footerRight">
-
-            <!--For Responsive(below 768px), Invisible by default-->
-            <div id="footerBottomLeft">
-              <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-              <p>© Eleos Robotics, Inc. All rights reserved.</p>
-            </div>
-
-            <!--Company Information-->
-              <ul>
-                <li><span class="fInforHead">Address:</span></li>
-                <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
-                <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
-                <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
-                <li><span class="fInforHead">SNS:</span>
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
-                    <img src="Images/facebook.png" alt="Share on Facebook" /></a>
-
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
-                    <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
-
-                  <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
-                    <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
-              </ul>
-          </div>
-        </footer>
+    <!---Footer Start--->
+    <footer>
+      <!--Supporters-->
+      <div id="footerSupporter">
+        <img src="images/supporter.png" alt="supporter-logos">
+      </div>
+      <div id="footerCopyRight">
+        <p>© Eleos Robotics, Inc. All rights reserved.</p>
+      </div>
+    </footer>
     </div>
 
     <script>
         function validateForm() {
-            var x = document.forms["waitForm"]["firstName"].value
-            var y = document.forms["waitForm"]["email"].value
+            var xV = document.forms["waitForm"]["firstName"];
+            var yV = document.forms["waitForm"]["email"];
+            var x = document.forms["waitForm"]["firstName"].value;
+            var y = document.forms["waitForm"]["email"].value;
             if (x == "") {
                 alert("Name must be filled out")
-                document.getElementById("calSubmit").reset();
+                xV.focus();
                 return false;
             }
-            if(y == ""){
+            else if(y == ""){
                 alert("email must be filled out")
-                document.getElementById("calSubmit").reset();
-                return false
-            }
-            ValidateEmail(document.waitForm.email)
-            if(ValidateEmail == false){
-                document.getElementById("calSubmit").reset();
+                yV.focus();
                 return false;
+            }else{
+                if(ValidateEmail(document.waitForm.email) == false){
+                    yV.focus();
+                    return false;
+                } else {
+                    return true;
+                }
             }
         }
         function ValidateEmail(mail)

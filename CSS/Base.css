@@ -172,7 +172,7 @@ p {
 /******************* Footer CSS ***********************/
 footer {
     position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
     top: 5%;
     bottom: 0;
@@ -231,6 +231,13 @@ footer p { margin: 0;}
 footer p {
     font-weight: bold;
     font-size: 18px;
+}
+
+#whiteBox {
+    background-color: #fff;
+    height: 0.2em;
+    width: 100%;
+    position: relative;
 }
 /******************* Index CSS ************************/
 .OpenPageContainer{

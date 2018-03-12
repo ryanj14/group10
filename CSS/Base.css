@@ -49,6 +49,7 @@ p {
 #header{
     top:0;
     left:0;
+    z-index: 999; /*To make header forward*/
     width:100%;
     height: 70px;
     background-color: #DDDDDD;
@@ -576,20 +577,38 @@ footer p { margin: 0;}
 }
 
 .leftBox {
-    border: 2px solid;
     margin-right: auto;
     width: 300px;
+    text-align: center;
 }
 
 .leftBox h1 { font-size: 26px;}
 
+.leftBox p, .rightBox p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #505050;
+  padding: 0.5em;
+  display: inline-block;
+  line-height: 1.3;
+  background: #dbebf8;
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.leftBox p:before , .rightBox p:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
 .rightBox {
-    border: 2px solid;
     margin-left: auto;
     width: 300px;
+    text-align: center;
 }
 
 .rightBox h1 { font-size: 26px;}
+
 /**************** Contact Us Page CSS ********************/
 
 .contactWordHeader h1{
@@ -624,33 +643,38 @@ footer p { margin: 0;}
 
 .contactWrapper {
     color:#5A2F01;
+    padding: 30px 0;
     display: flex;
     border: 2px solid #5A2F01;
     border-radius: 10px;
     background-color: rgba(255,255, 255, 0.6);
     width: 70%;
-    height: 600px;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .contactText {
     display: block;
     font-size: 20px;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
-.formWarning { display: none;}
+#nameWarning, #emailWarning, #textWarning { visibility: hidden;}
 
-.radioMargin { margin: 0;}
+.formWarning p {
+    font-size : 12px;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
 
 .leftForm {
     width: 45%;
-    height: 500px;
+    height: 400px;
     margin-top: 30px;
-    margin-bottom: auto;
     margin-left: auto;
 }
 
@@ -658,8 +682,8 @@ footer p { margin: 0;}
     width: 75%;
 }
 .rightContact {
-  margin-top: 30px;
-    height: 500px;
+    margin-top: 30px;
+    height: 400px;
     width: 45%;
 }
 
@@ -689,29 +713,28 @@ footer p { margin: 0;}
     margin-bottom: 0;
 }
 
-.radio-inline { display: inline; }
+.radio-inline {
+    width: 50%;
+    display: inline;
+  }
 
 .contactRadio { margin-right: 10px;}
 
-.radioMargin{
-    margin-top: 20px;
-    margin-bottom: 3px;
-}
-
 .radioMargin input { width: 5%;}
+
 .contactWrapper textarea { margin-top: 10px;}
 
 .contactSocial img {
     margin-left: 20px;
-    height: 10%;
-    width: 10%;
+    height: 8%;
+    width: 8%;
 }
 
 #contactSubmit { /*Submit Button settings*/
     background-color: #1abc9c;
     border-radius: 4px;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 12%;
     font-size: 18px;
     width: 50%;
@@ -1130,28 +1153,31 @@ footer p { margin: 0;}
 
 /*********** Contact Us Page CSS(1080px) ***************/
 
-.contactWrapper {
-    width: 86%;
-    height: 650px;
+  .contactWrapper {
+      padding-top: 0px ;
+      width: 86%;
+      height: 650px;
+  }
+
+  .contactText, .contactInforText {
+      font-size: 16px;
+  }
+
+  .radio-inline {
+      display: block;
+      width: 70%;
+      margin: 0;
+    }
+  .contactWrapper textarea {
+      margin-top: 10px;
+      width: 80%;
+  }
+
+  .contactSocial img {
+      width: 13%;
+  }
+
 }
-
-.contactText, .contactInforText {
-    font-size: 16px;
-    margin-top: 15px;
-}
-
-.radio-inline { display: block; }
-
-.contactWrapper textarea {
-    margin-top: 10px;
-    width: 80%;
-}
-
-.contactSocial img {
-    width: 13%;
-}
-
-
 /*For Mobile Deices*/
 @media only screen and (max-width: 768px)  {
 
@@ -1364,7 +1390,12 @@ footer p { margin: 0;}
       margin-top: 10px;
   }
 
-  .formWarning { display: none;}
+  .formWarning p {
+      width: 60%;
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+  }
 
   .radioMargin { margin: 0;}
 
@@ -1387,10 +1418,11 @@ footer p { margin: 0;}
   }
 
   .rightContact {
-      margin-top: 30px;
-      margin-left: 10%;
+      margin-top: 80px;
+      margin-left: 8%;
       height: 500px;
       width: 100%;
+      font-size: 14px;
   }
 
   .rightContact h2 {

@@ -221,9 +221,19 @@
     <script>
         function validateForm() {
             var xV = document.forms["waitForm"]["firstName"];
+            var aV = document.forms["waitForm"]["lastName"];
             var yV = document.forms["waitForm"]["email"];
+            var bV = document.forms["waitForm"]["business"];
+            var cV = document.forms["waitForm"]["farm"];
+            var dV = document.forms["waitForm"]["phoneNum"];
+            var eV = document.forms["waitForm"]["address"];
             var x = document.forms["waitForm"]["firstName"].value;
+            var a = document.forms["waitForm"]["lastName"].value;
             var y = document.forms["waitForm"]["email"].value;
+            var b = document.forms["waitForm"]["business"].value;
+            var c = document.forms["waitForm"]["farm"].value;
+            var d = document.forms["waitForm"]["phoneNum"].value;
+            var e = document.forms["waitForm"]["address"].value;
             if (x == "") {
                 alert("Name must be filled out")
                 xV.focus();
@@ -233,6 +243,21 @@
                 alert("email must be filled out")
                 yV.focus();
                 return false;
+            else if(b == ""){
+                alert("business must be filled out")
+                bV.focus();
+                return false;
+            }
+            else if(d == ""){
+                alert("phone number must be filled out")
+                dV.focus();
+                return false;
+            }
+            else if(e == ""){
+                alert("address must be filled out")
+                eV.focus();
+                return false;
+            }
             }else{
                 if(ValidateEmail(document.waitForm.email) == false){
                     yV.focus();

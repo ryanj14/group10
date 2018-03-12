@@ -29,4 +29,4 @@ CREATE TABLE WaitingList
     ,farm       VARCHAR(30) 
     ,phoneNum   VARCHAR(30) NOT NULL
     ,address    VARCHAR(50) 
-)
+);

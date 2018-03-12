@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
 
     <!-- JQuery for footer-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script type="text/javascript" src="./footerFixed.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./footerFixed.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,36 +29,24 @@
 
 <body>
     <div id="container"> <!--Put every thing from nav to footer-->
-    <div class="headerContent">
-        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+            <div id = "header">
+                <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
 
-        <ul class="navBar">
-            <li><a href="TechnologyPage.html">OUR TECH</a></li>
-            <li><a href="NewsPage.html" >NEWS</a></li>
-            <li><a href="Calculator.html">CALCULATOR</a></li>
-            <li><a href = "Aboutus.html">OUR TEAM</a></li>
-            <li><a href = "ContactUs.html">CONTACT US</a></li>
-        </ul>
 
-        <ul class="blogs">
-            <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
-            <li><img src ="Images/linkedin.png"></li>
-            <li><img src ="Images/twitter.png"></li>
-        </ul>
-        
-        <div class = "dropMenu">
-        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
-        <img class = "menuIcon" src = "Images/menuIcon.png">
-            <div class = "dropdown-content">
-                <a href="TechnologyPage.html">OUR TECH</a>
-                <a href="NewsPage.html" >NEWS</a>
-                <a href="Calculator.html">CALCULATOR</a>
-                <a href = "Aboutus.html">OUR TEAM</a>
-                <a href = "ContactUs.html">CONTACT US</a>
+                <ul class="blogs">
+                    <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                    <li><img src ="Images/linkedin.png"></li>
+                    <li><img src ="Images/twitter.png"></li>
+                </ul>
+
+                <ul class="navBar">
+                    <li><a href="TechnologyPage.html">OUR TECH</a></li>
+                    <li><a href="NewsPage.html" >NEWS</a></li>
+                    <li><a href="Calculator.html">CALCULATOR</a></li>
+                    <li><a href = "Aboutus.html">OUR TEAM</a></li>
+                    <li><a href = "ContactUs.html">CONTACT US</a></li>
+                </ul>
             </div>
-        </div>
-    </div>
-        
     <!-- Calculator main contents starts-->
     <div id="calculator">
         <!--Form Starts-->
@@ -80,32 +69,26 @@
                 </label>
           </div>
 
-          <!--Number of Acres field-->
-          <div id="acreNum">
-            <span class="calcuParagraph">How many acres do you cultivate? </span><br>
-            <input type="text" name="acres" placeholder="100"><br>
-          </div>
-
-          <!--cropType field-->
+          <!-- Number of Acres field cropType field-->
           <div id="cropType">
-            <span class="calcuParagraph">What are the crops you cultivate?</span><br>
+            <span class="calcuParagraph">What are the crops you cultivate and how many acres do you allocate for each?</span><br>
             <div class="cropTypeItems">
               <span class="calcuChoices">Vegtables</span><br>
-                <input type="text" name="cultivate" placeholder="100"><br>
+                <input type="text" name="cultivate" placeholder="0"><br>
               <span class="calcuChoices">Orchards</span><br>
-                <input type="text" name="cultivate2" placeholder="100"><br>
+                <input type="text" name="cultivate2" placeholder="0"><br>
             </div>
             <div class="cropTypeItems">
               <span class="calcuChoices">Berries</span><br>
-                 <input type="text" name="cultivate3" placeholder="100"><br>
+                 <input type="text" name="cultivate3" placeholder="0"><br>
               <span class="calcuChoices">Vineyards</span><br>
-                <input type="text" name="cultivate4" placeholder="100"><br>
+                <input type="text" name="cultivate4" placeholder="0"><br>
             </div>
             <div class="cropTypeItems">
               <span class="calcuChoices">Herbs</span><br>
-                 <input type="text" name="cultivate5" placeholder="100"><br>
+                 <input type="text" name="cultivate5" placeholder="0"><br>
               <span class="calcuChoices">Other</span><br>
-                 <input type="text" name="cultivate6" placeholder="100"><br>
+                 <input type="text" name="cultivate6" placeholder="0"><br>
             </div>
           </div>
 
@@ -122,37 +105,36 @@
             </label>
             <br>
           </div>
-
           <!--Workers per season field-->
           <div id="workersPerSeason">
             <span class="calcuParagraph">How many workers per season? </span><br>
-            <input type="text" name="workers" placeholder="5"><br>
+            <input type="text" name="workers" placeholder="0"><br>
           </div>
 
           <!--WeeklyHours field-->
           <div id="weeklyHours">
             <span class="calcuParagraph">How many hours are spent weekly in average for weeding (all workers included)?</span><br>
-            <input type="text" name="weeklyWorkers" placeholder="30"><br>
+            <input type="text" name="weeklyWorkers" placeholder="0"><br>
           </div>
 
           <!--Budget field-->
           <div id="budget">
             <span class="calcuParagraph">What is your total annual budget for weeding (per acre)?</span><br>
             <span class="calcuChoices">Total:</span>
-            <input type="text" name="annualBudget" placeholder="$6000"><br>
+            <input type="text" name="annualBudget" placeholder="0"><br>
             <div class="itemsHeading">Items:</div>
             <div class="brakedowns">
               <span class="calcuChoices">Workers</span><br>
-                <input type="text" name="expense" placeholder="100"><br>
+                <input type="text" name="expense" placeholder="0"><br>
               <span class="calcuChoices">Machinery</span><br>
-              <input type="text" name="expense2" placeholder="100"><br>
+              <input type="text" name="expense2" placeholder="0"><br>
             </div>
             <div class="brakedowns">
 
               <span class="calcuChoices">Phytosanitary products</span><br>
-                <input type="text" name="expense3" placeholder="100"><br>
+                <input type="text" name="expense3" placeholder="0"><br>
               <span class="calcuChoices">Other</span><br>
-                <input type="text" name="expense4" placeholder="100"><br>
+                <input type="text" name="expense4" placeholder="0"><br>
             </div>
           </div>
           <!--Peak harvesting months field-->
@@ -205,20 +187,82 @@
           <br><input id="calSubmit" type="submit" name="submit" value="Submit">
         </div>
         </form>
+        <script>
+            $(function() {
+                $('input[type="text"]').val('0')
+            });
+        </script>
     </div>
 
 <!---Footer Start--->
 <footer>
-  <!--Supporters-->
-  <div id="footerSupporter">
-    <img src="images/supporter.png" alt="supporter-logos">
-  </div>
-  <div id="footerCopyRight">
+  <!--Logo-->
+  <div id="footerLogo">
+    <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
     <p>© Eleos Robotics, Inc. All rights reserved.</p>
   </div>
-  <div id="whiteBox"></div> <!--To hide blank line-->
-</footer>
 
+  <!--For Repsonsive(below768px, Invisible by default)-->
+  <div id="footerLogo2">
+      <a href="index.html">Eleos Robotics, Inc</a>
+  </div>
+
+  <!--Links for each page, unknown content -->
+  <div id="footerMid">
+    <table>
+      <tr >
+        <th><a href="TechnologyPage.html">Technology</a></th>
+        <th><a href="Waitinglist.php">Waiting List</a></th>
+        <th><a href="Aboutus.html">About us</a></th>
+        <th><a href="ContactUs.html">Contact Us</a></th>
+      </tr>
+      <tr>
+        <td>
+          <p>Description about Technology page.</p>
+        </td>
+        <td>
+          <p>Description about Waiting list page.</p>
+        </td>
+        <td>
+          <p>Description about About us page.</p>
+        </td>
+        <td>
+        <p>Description about Contact us page.</p>
+        </td>
+      </tr>
+    </table>
+
+    <div id="footerSupporter">
+      <!--Contents is filled out later-->
+    </div>
+  </div>
+
+  <div id="footerRight">
+
+    <!--For Responsive(below 768px), Invisible by default-->
+    <div id="footerBottomLeft">
+      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
+      <p>© Eleos Robotics, Inc. All rights reserved.</p>
+    </div>
+
+    <!--Company Information-->
+      <ul>
+        <li><span class="fInforHead">Address:</span></li>
+        <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
+        <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
+        <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
+        <li><span class="fInforHead">SNS:</span>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
+            <img src="Images/facebook.png" alt="Share on Facebook" /></a>
+
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
+            <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
+
+          <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
+            <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
+      </ul>
+  </div>
+</footer>
 </div>
 </body>
 </html>

@@ -44,7 +44,6 @@
     <!-- The results of the form input -->
     <?php
         setlocale(LC_MONETARY,"en_CA");
-
         echo "Growing Type: ".$_POST['growingType']."<br>";
         echo "Number of acres: ".$_POST['acres']."<br>";
         echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
@@ -76,15 +75,12 @@
             }
             echo "<br>";
         }
-
         // Connecting to the database
         $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
         // If we don't connect to the database it will spit out an error for us to fix
         if(!$list){
             die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
         }
-
         // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
         $growType = $_POST['growingType'];
         $acres = $_POST['acres'];
@@ -103,20 +99,17 @@
         $pytoExp = $_POST['expense3'];
         $otherExp = $_POST['expense4'];
 
-
         // Inserting in the Calculator table. It's long I know.
         $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
         VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
 
         echo "<br>";
-
         // Checking to see if we actually placed the data into the database
         if (mysqli_query($list, $sql)) {
             echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
         }
-
         // Closing the connection to the database
         mysqli_close($list);
     ?>
@@ -129,13 +122,11 @@
         $cash = $budget - $botPrice;
         $arces = $_POST['acres']; // variavle R
         $acreSaving = $cash * $arces;
-
         if(($cash <= 0) && ($acreSaving <= 0)) {
             echo "It looks like you are doing a great job keeping you weeding budget to a minimum. Please consider Culture Bot to increase your crop yield<br>";
         } else {
             echo "Congratulations! With Culturebot, you can sav CAD $cash per year compated to your current weeding process!(Equivalent to CAD $acreSaving /year/acre)<br>";
         }
-
         $phytosanitary = $_POST['expense3']; // variable m
         $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $arces);
         $F = (($budget - $phytosanitary) / ($budget * $botPrice));
@@ -148,7 +139,6 @@
         $H = (($budget - $workers) / ($budget * $botPrice) * $arces);
         $G = ($H / (($workers * $arces) / $workerBudget));
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
-
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
             $HH = number_format($H,2);
             $GG = round($G,0,PHP_ROUND_HALF_UP);
@@ -156,7 +146,6 @@
             echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
         }
     ?>
-
     <!---Footer Start--->
     <footer>
       <!--Supporters-->

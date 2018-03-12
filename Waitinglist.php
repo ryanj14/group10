@@ -66,10 +66,8 @@
             {
                 $firstName = $_POST['firstName'];
                 $email = $_POST['email'];
-
                 // Connecting to the database
                 $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
                 // If we don't connect to the database it will spit out an error for us to fix
                 if(!$list)
                 {
@@ -83,7 +81,6 @@
                 {
                     echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
                 }
-
                 // Closing the connection to the database
                 mysqli_close($list);
                 header("Refresh:0");
@@ -99,7 +96,6 @@
                 <?php
                     // Connecting to the database
                     $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
                     $row = mysqli_query($list, "SELECT * FROM WaitingList");
 
                     while($sqlRow = mysqli_fetch_assoc($row)){
@@ -114,7 +110,6 @@
                 ?>
             </table>
         </div>
-
     </div>
 
     <!---Footer Start--->
@@ -154,7 +149,6 @@
                 }
             }
         }
-
         function ValidateEmail(mail)
         {
             var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

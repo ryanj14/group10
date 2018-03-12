@@ -51,7 +51,7 @@ p {
     left:0;
     width:100%;
     height: auto;
-    background-color: #DDDDDD;
+    background-color: white;
     position: fixed;
     list-style-type: none;
     -webkit-box-shadow: 0 3px 40px 5px #E5E5E5;
@@ -74,7 +74,7 @@ p {
     width: 15%;
     float: left;
     position: absolute;
-    background-color: #DDDDDD;
+    background-color: white;
 }
 
 .logo img{
@@ -130,7 +130,7 @@ p {
     .dropMenu{
         display: inline-block;
         position: relative;
-        background-color: #DDDDDD;
+        background-color: white;
     }
     
     .menuIcon{

@@ -49,13 +49,28 @@
             <h1>Header</h1>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
-
+<!-- onsubmit="return validateForm()" -->
         <div class="userWait">
-            <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
-                Name:<br>
+            <form name="waitForm" action=""  method="post">
+                First Name:<br>
                 <input type="text" id="name1" name="firstName" placeholder="James"><br>
+                Last Name:<br>
+                <input type="text" id="last1" name="lastName">
+                <br>
                 Email:<br>
                 <input type="text" id="email1" name="email" placeholder="example@mail.com">
+                <br>
+                Business:<br>
+                <input type="text" id="business1" name="business">
+                <br>
+                Farm:<br>
+                <input type="text" id="farm1" name="farm">
+                <br>
+                Phone Number:<br>
+                <input type="text" id="phone1" name="phoneNumber" placeholder="111-222-3333">
+                <br>
+                Address:<br>
+                <input type="text" id="address1" name="address">
                 <br>
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
@@ -65,7 +80,12 @@
             if(isset($_POST['submit2']))
             {
                 $firstName = $_POST['firstName'];
+                $lastName = $_POST['lastName'];
                 $email = $_POST['email'];
+                $business = $_POST['business'];
+                $farm = $_POST['farm'];
+                $phoneNum = $_POST['phoneNumber'];
+                $address = $_POST['address'];
 
                 // Connecting to the database
                 $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -76,7 +96,7 @@
                     die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
                 }
 
-                $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
+                $sql = "INSERT INTO WaitingList(id, firstName, lastName, email, business, farm, phoneNum, address) VALUES(NULL, '$firstName', '$lastName','$email', '$business', '$farm', '$phoneNum', '$address')";
 
                 // Checking to see if we actually placed the data into the database
                 if (!(mysqli_query($list, $sql)))
@@ -93,8 +113,13 @@
         <div class="tableDiv">
             <table>
                 <tr>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
+                    <th>Business</th>
+                    <th>Farm</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
                 </tr>
                 <?php
                     // Connecting to the database
@@ -106,7 +131,12 @@
                     ?>
                 <tr>
                     <td><?php echo $sqlRow['firstName']; ?></td>
+                    <td><?php echo $sqlRow['lastName']; ?></td>
                     <td><?php echo $sqlRow['email']; ?></td>
+                    <td><?php echo $sqlRow['business']; ?></td>
+                    <td><?php echo $sqlRow['farm']; ?></td>
+                    <td><?php echo $sqlRow['phoneNum']; ?></td>
+                    <td><?php echo $sqlRow['address']; ?></td>
                 </tr>
                 <?php
                     }

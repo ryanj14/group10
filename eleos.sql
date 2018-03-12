@@ -23,5 +23,10 @@ CREATE TABLE WaitingList
 (
     id          INT(6)      UNSIGNED AUTO_INCREMENT PRIMARY KEY
     ,firstName  VARCHAR(30) NOT NULL
+    ,lastName   VARCHAR(30) NOT NULL
     ,email      VARCHAR(30) NOT NULL
+    ,business   VARCHAR(30) NOT NULL
+    ,farm       VARCHAR(30) 
+    ,phoneNum   VARCHAR(30) NOT NULL
+    ,address    VARCHAR(50) 
 )

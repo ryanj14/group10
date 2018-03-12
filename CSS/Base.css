@@ -55,22 +55,10 @@ p {
     background-color: #DDDDDD;
     position: fixed;
     list-style-type: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    -webkit-box-shadow: 0 3px 40px 5px #E5E5E5;
-    -moz-box-shadow:    0 3px 40px 5px #E5E5E5;
-    box-shadow:         0 3px 40px 5px #E5E5E5;
-=======
     overflow: hidden;
-    -webkit-box-shadow: 0px 2px 40px 5px #CFCFCF;
-    -moz-box-shadow:    0px 2px 40px 5px #CFCFCF;
-    box-shadow:         0px 2px 40px 5px #CFCFCF;
->>>>>>> 36711474f9aaaebf7991dc268b10aee08a1f30bc
-=======
     -webkit-box-shadow: 0 3px 40px 5px #E5E5E5;
     -moz-box-shadow:    0 3px 40px 5px #E5E5E5;
     box-shadow:         0 3px 40px 5px #E5E5E5;
->>>>>>> 45fb716b0ae6777efc9b8c171a5b5e52728bcb56
 }
 
 .logo{
@@ -286,17 +274,7 @@ footer p { margin: 0;}
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin-bottom: 10px;
-
-=======
-    margin-bottom: 12px;
-    
->>>>>>> 36711474f9aaaebf7991dc268b10aee08a1f30bc
-=======
-    margin-bottom: 10px;
->>>>>>> 45fb716b0ae6777efc9b8c171a5b5e52728bcb56
 }
 
 .indexWordHeader p {
@@ -404,7 +382,6 @@ footer p { margin: 0;}
    width: 70%;
    position: relative;
    z-index: 5;
-   position: relative;
 }
 
 .news-preview img {
@@ -614,24 +591,11 @@ footer p { margin: 0;}
 .contactWordHeader h1{
     padding: 20px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 45fb716b0ae6777efc9b8c171a5b5e52728bcb56
-
 .contactHeader h1 {
     text-align: center;
     height: 100px;
     padding-top: 30px;
-<<<<<<< HEAD
-=======
-.contactWordHeader{
-    margin-top: 78px;
->>>>>>> 36711474f9aaaebf7991dc268b10aee08a1f30bc
-=======
->>>>>>> 45fb716b0ae6777efc9b8c171a5b5e52728bcb56
 }
-
 
 .contactWordHeader, p h2 {
     text-align: center;

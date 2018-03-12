@@ -116,97 +116,23 @@ p {
 
 
 /******************* Footer CSS ***********************/
-
 footer {
-    font-size: 16px;
     position: relative;
-    height: auto;
+    height: 100%;
     width: 100%;
     top: 5%;
     bottom: 0;
-    background-color: #CCD9CE;
+    background-color: #fff;
 }
 
-footer a {
-    color: #5A2F01;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
+#footerSupporter img {
+    width: 70em;
+    margin-left: 4em;
 }
-
-footer a:link {
-    text-decoration: none;
-}
-
-footer p { margin: 0;}
-
-#footerLogo, #footerMid, #footerRight {
-    height: 200px;
-    background-color: #CCD9CE;
-    padding-top: 20px;
-    color: #5A2F01;
-}
-
-#footerLogo {
-    width: 22%;
-    float: left;
-}
-
-#footerLogo img, p { /*logo image*/
-    width:100%;
-    padding: 10px;
-}
-
-#footerLogo2 {
-    display: none;
-}
-
-#footerMid {
-    width: 55%;
-    font-size: 14px;
-    margin: auto;
-    display: inline-block;
-}
-
-#footerMid table, td, th {
-  border-style:none;
-}
-
-#footerMid table {
-  width: 90%;
-  text-align:  center;
-}
-
-#footerMid p {
-  width: 100%;
-  margin: 0;
-}
-
-#footerRight {
-    width: 20%;
-    float: right;
-    display: inline-block;
-    font-size: 16px;
-    text-align: left;
-}
-
-#footerRight img { /*SNS Icons*/
-    width: 14%;
-    margin-top: 8px;
-    margin-left:17px;
-}
-
-#footerBottomLeft {
-    display: none;
-}
-
-
-.fInforHead {
-    background-color: #CCD9CE;
+footer p {
     font-weight: bold;
     font-size: 18px;
 }
-
 /******************* Index CSS ************************/
 .OpenPageContainer{
     width: 100%;
@@ -954,45 +880,6 @@ footer p { margin: 0;}
 /*For Tablet Devices*/
 @media only screen and (max-width: 1080px) {
 
-/**********Footer(1080px) Responsive*************/
-
-#footerLogo, #footerMid, #footerRight {
-    height: 200px;
-    padding-top: 20px;
-}
-
-#footerLogo {
-  width: 22%;
-}
-
-#footerLogo img, p { /*logo image*/
-  width:100%;
-  padding: 10px;
-}
-
-#footerMid {
-  width: 38%;
-  font-size: 14px;
-}
-
-#footerMid table {
-  width: 100%;
-}
-
-#footerRight {
-  width: 30%;
-  font-size: 14px;
-  margin-left: 8%;
-}
-
-#footerRight img { /*SNS Icons*/
-  width: 12%;
-}
-
-.fInforHead {
-    font-size: 14px;
-}
-
 /******* Technology Page Responsive(1080px) ***********/
 
 .techWordHeader h1 {
@@ -1144,115 +1031,9 @@ footer p { margin: 0;}
   }
 
 }
-/*For Mobile Deices*/
-@media only screen and (max-width: 768px)  {
-
-/*********Footer(768px) Responsive*********/
-  #footerLogo {
-    display: none;
-  }
-
-  #footerLogo img, p { /*logo image*/
-    width:100%;
-    padding: 10px;
-  }
-
-  #footerLogo2 {
-    display: block;
-    text-align: center;
-  }
-  #footerLogo2 a {
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 0;
-  }
-
-  #footerMid {
-    width: 100%;
-    height: 100%;
-    font-size: 16px;
-    float: center;
-  }
-
-  #footerRight {
-    width: 100%;
-    font-size: 18px;
-    float: right;
-  }
-
-  #footerRight img { /*SNS Icons*/
-    width: 10%;
-    margin-top: 8px;
-    margin-left: 14px;
-  }
-
-  #footerRight li { font-size: 14px;}
-
-  #footerBottomLeft {
-    width: 40%;
-    display: inline-block;
-    float: left;
-  }
-
-  #footerBottomLeft img {
-    width: 80%;
-  }
-
-  #footerRight ul {
-    display: inline-block;
-    float: right;
-    width: 50%;
-    margin-right: 20px;
-  }
-  .fInforHead {
-      font-size: 16px;
-  }
-
-}
 
 /*For Mobile Devices*/
 @media only screen and (max-width: 500px) {
-
-  /*********Footer(500px) Responsive*********/
-    #footerLogo2 a { font-size: 18px; }
-
-    #footerMid { font-size: 12px; }
-
-    #footerMid a { font-size: 14px;}
-
-    #footerRight {
-      width: 100%;
-      font-size: 18px;
-      float: right;
-    }
-
-    #footerRight img { /*SNS Icons*/
-      width: 12%;
-    }
-
-    #footerRight li { font-size: 12px;}
-
-    #footerBottomLeft {
-      width: 40%;
-      display: inline-block;
-      float: left;
-    }
-
-    #footerBottomLeft p { font-size: 12px;}
-    #footerBottomLeft img {
-      width: 100%;
-    }
-
-    #footerRight ul {
-      display: inline-block;
-      float: right;
-      width: 50%;
-      margin-right: 0px;
-    }
-    .fInforHead {
-        font-size: 12px;
-    }
 
   /********About Us Responsive(500px)****************/
   .aboutHeader h1 {

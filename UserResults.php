@@ -33,7 +33,7 @@
 
     <nav>
         <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.html">Waiting List</a></li>
+        <li><a href="Waitinglist.php">Waiting List</a></li>
         <li><a href="TechnologyPage.html">Our Technology</a></li>
         <li><a href="NewsPage.html">News</a></li>
         <li><a href="Aboutus.html">About Us</a></li>
@@ -98,9 +98,11 @@
         $machineExp = $_POST['expense2'];
         $pytoExp = $_POST['expense3'];
         $otherExp = $_POST['expense4'];
+
         // Inserting in the Calculator table. It's long I know.
         $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
         VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
+
         echo "<br>";
         // Checking to see if we actually placed the data into the database
         if (mysqli_query($list, $sql)) {
@@ -144,76 +146,17 @@
             echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
         }
     ?>
-
-<!---Footer Start--->
-<footer>
-  <!--Logo-->
-  <div id="footerLogo">
-    <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-    <p>© Eleos Robotics, Inc. All rights reserved.</p>
-  </div>
-
-  <!--For Repsonsive(below768px, Invisible by default)-->
-  <div id="footerLogo2">
-      <a href="index.html">Eleos Robotics, Inc</a>
-  </div>
-
-  <!--Links for each page, unknown content -->
-  <div id="footerMid">
-    <table>
-      <tr >
-        <th><a href="TechnologyPage.html">Technology</a></th>
-        <th><a href="Waitinglist.html">Waiting List</a></th>
-        <th><a href="Aboutus.html">About us</a></th>
-        <th><a href="ContactUs.html">Contact Us</a></th>
-      </tr>
-      <tr>
-        <td>
-          <p>Description about Technology page.</p>
-        </td>
-        <td>
-          <p>Description about Waiting list page.</p>
-        </td>
-        <td>
-          <p>Description about About us page.</p>
-        </td>
-        <td>
-        <p>Description about Contact us page.</p>
-        </td>
-      </tr>
-    </table>
-
-    <div id="footerSupporter">
-      <!--Contents is filled out later-->
-    </div>
-  </div>
-
-  <div id="footerRight">
-
-    <!--For Responsive(below 768px), Invisible by default-->
-    <div id="footerBottomLeft">
-      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-      <p>© Eleos Robotics, Inc. All rights reserved.</p>
-    </div>
-
-    <!--Company Information-->
-      <ul>
-        <li><span class="fInforHead">Address:</span></li>
-        <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
-        <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
-        <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
-        <li><span class="fInforHead">SNS:</span>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
-            <img src="Images/facebook.png" alt="Share on Facebook" /></a>
-
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
-            <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
-
-          <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
-            <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
-      </ul>
-  </div>
-</footer>
+    <!---Footer Start--->
+    <footer>
+      <!--Supporters-->
+      <div id="footerSupporter">
+        <img src="images/supporter.png" alt="supporter-logos">
+      </div>
+      <div id="footerCopyRight">
+        <p>© Eleos Robotics, Inc. All rights reserved.</p>
+      </div>
+      <div id="whiteBox"></div> <!--To hide blank line-->
+    </footer>
 </div>
 </body>
 </html>

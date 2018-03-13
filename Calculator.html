@@ -14,6 +14,9 @@
     <!-- JQuery for footer-->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="./footerFixed.js"></script>
+    
+    <!-- Calculator form validation -->
+     <script type="text/javascript" src="js/calculatorValidation.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -219,135 +222,5 @@
     </footer>
 		<!---Footer End--->
 	</div>
-        <script>
-        function validateForm(){
-            if(validateRadio() == false){
-                return false;
-            } else if(validateWorkers() == false) {
-                return false;
-            } else if(annualBudget() == false) {
-                return false;
-            } else {
-                if(workersHired() == false){
-                    return false;
-                } else if(workerHours() == false){
-                    return false;
-                } else{
-                    return true;
-                }
-            }
-        }
-        
-        function validateRadio(){
-            var radios = document.getElementsByName("growingType");
-            var formValid = false;
-            var i = 0;
-            
-            for(var i = 0; i < radios.length;i++){
-                if(radios[i].checked == true){
-                    formValid = true;    
-                }
-            }
-
-            if (!formValid){  
-                alert("Must check a growing type");
-                return formValid;
-            } 
-        }
-        
-        function validateWorkers(){
-            var workers = document.getElementsByName("weeding");
-            var formValid = false;
-            var i = 0;
-            
-            for(var i = 0; i < workers.length;i++){
-                if(workers[i].checked == true){
-                    formValid = true;    
-                }
-            }
-
-            if (!formValid){  
-                alert("Must check the hired workers");
-                return formValid;
-            } 
-        }
-            
-        function workersHired(){
-            var workers = getRadioWorker();
-            var workerHired = document.forms["calculatorForm"]["workers"];
-            var workerHiredValue = document.forms["calculatorForm"]["workers"].value;
-            
-            if(workers == 'Yes'){   
-                if(workerHiredValue == ""){
-                    alert("Must put in the number of workers");
-                    workerHired.focus();
-                    return false;
-                }
-                var intHired = parseInt(workerHiredValue);
-                if(intHired > 0) {
-                    return true;
-                } else {
-                    alert("Enter a positive number");
-                    workerHired.focus();
-                    return false;
-                } 
-            }
-            return false;
-        }
-        
-        function workerHours(){
-            var workers = getRadioWorker();
-            var workerHours = document.forms["calculatorForm"]["weeklyWorkers"];
-            var workerHoursValue = document.forms["calculatorForm"]["weeklyWorkers"].value;
-            
-            if(workers == 'Yes'){
-                if(workerHoursValue == ""){
-                    alert("Must put in the hours for the workers");
-                    workerHours.focus();
-                    return false;
-                }
-                var intHours = parseInt(workerHoursValue);
-                if(intHours > 0) {
-                    return true;
-                } else {
-                    alert("Enter a positive number");
-                    workerHours.focus();
-                    return false;
-                } 
-            }
-            return false;
-        }
-        
-        function getRadioWorker(){
-            var radios = document.getElementsByName("weeding");
-            for (var i = 0; i < radios.length; i++) {
-                var someRadio = radios[i];
-                if (someRadio.checked) {
-                    var rdValue = someRadio.value;
-                    return rdValue;
-                }
-            }
-        }
-            
-        function annualBudget(){
-            var budget = document.forms["calculatorForm"]["annualBudget"];
-            var budgetValue = document.forms["calculatorForm"]["annualBudget"].value;
-            
-            if(budgetValue == ""){
-                alert("Enter the annual budget per acre");
-                return false;
-            }
-            var intBudget = parseInt(budgetValue);
-            if(intBudget > 0) {
-                return true;
-            } else {
-                alert("Enter a positive number");
-                budget.focus();
-                return false;
-            }
-            alert("Something broke to reach this point");
-            return false;
-        }
-    </script>
 </body>
 </html>

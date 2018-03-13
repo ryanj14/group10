@@ -52,10 +52,25 @@
 
         <div class="userWait">
             <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
-                Name:<br>
+                First Name:<br>
                 <input type="text" id="name1" name="firstName" placeholder="James"><br>
+                Last Name:<br>
+                <input type="text" id="last1" name="lastName">
+                <br>
                 Email:<br>
                 <input type="text" id="email1" name="email" placeholder="example@mail.com">
+                <br>
+                Business:<br>
+                <input type="text" id="business1" name="business">
+                <br>
+                Farm:<br>
+                <input type="text" id="farm1" name="farm">
+                <br>
+                Phone Number:<br>
+                <input type="text" id="phone1" name="phoneNumber" placeholder="111-222-3333">
+                <br>
+                Address:<br>
+                <input type="text" id="address1" name="address">
                 <br>
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
@@ -65,7 +80,13 @@
             if(isset($_POST['submit2']))
             {
                 $firstName = $_POST['firstName'];
+                $lastName = $_POST['lastName'];
                 $email = $_POST['email'];
+                $business = $_POST['business'];
+                $farm = $_POST['farm'];
+                $phoneNum = $_POST['phoneNumber'];
+                $address = $_POST['address'];
+
                 // Connecting to the database
                 $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                 // If we don't connect to the database it will spit out an error for us to fix
@@ -74,7 +95,7 @@
                     die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
                 }
 
-                $sql = "INSERT INTO WaitingList(id, firstName, email) VALUES(NULL, '$firstName', '$email')";
+                $sql = "INSERT INTO WaitingList(id, firstName, lastName, email, business, farm, phoneNum, address) VALUES(NULL, '$firstName', '$lastName','$email', '$business', '$farm', '$phoneNum', '$address')";
 
                 // Checking to see if we actually placed the data into the database
                 if (!(mysqli_query($list, $sql)))
@@ -90,8 +111,13 @@
         <div class="tableDiv">
             <table>
                 <tr>
-                    <th>Name</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Email</th>
+                    <th>Business</th>
+                    <th>Farm</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
                 </tr>
                 <?php
                     // Connecting to the database
@@ -102,7 +128,12 @@
                     ?>
                 <tr>
                     <td><?php echo $sqlRow['firstName']; ?></td>
+                    <td><?php echo $sqlRow['lastName']; ?></td>
                     <td><?php echo $sqlRow['email']; ?></td>
+                    <td><?php echo $sqlRow['business']; ?></td>
+                    <td><?php echo $sqlRow['farm']; ?></td>
+                    <td><?php echo $sqlRow['phoneNum']; ?></td>
+                    <td><?php echo $sqlRow['address']; ?></td>
                 </tr>
                 <?php
                     }
@@ -128,20 +159,46 @@
     <script>
         function validateForm() {
             var xV = document.forms["waitForm"]["firstName"];
+            var aV = document.forms["waitForm"]["lastName"];
             var yV = document.forms["waitForm"]["email"];
+            var bV = document.forms["waitForm"]["business"];
+            var cV = document.forms["waitForm"]["farm"];
+            var dV = document.forms["waitForm"]["phoneNumber"];
+            var eV = document.forms["waitForm"]["address"];
             var x = document.forms["waitForm"]["firstName"].value;
+            var a = document.forms["waitForm"]["lastName"].value;
             var y = document.forms["waitForm"]["email"].value;
+            var b = document.forms["waitForm"]["business"].value;
+            var c = document.forms["waitForm"]["farm"].value;
+            var d = document.forms["waitForm"]["phoneNumber"].value;
+            var e = document.forms["waitForm"]["address"].value;
             if (x == "") {
-                alert("Name must be filled out")
+                alert("Name must be filled out");
                 xV.focus();
                 return false;
             }
             else if(y == ""){
-                alert("email must be filled out")
+                alert("email must be filled out");
                 yV.focus();
                 return false;
+            }
+            else if(b == ""){
+                alert("business must be filled out");
+                bV.focus();
+                return false;
+            }
+            else if(d == ""){
+                alert("phone number must be filled out");
+                dV.focus();
+                return false;
+            }
+            else if(e == ""){
+                alert("address must be filled out");
+                eV.focus();
+                return false;
             }else{
-                if(ValidateEmail(document.waitForm.email) == false){
+                if(ValidateEmail(document.waitForm.email) == false)
+                {
                     yV.focus();
                     return false;
                 } else {

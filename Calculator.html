@@ -178,61 +178,11 @@
 								<input type="text" name="expense4" placeholder="0"><br>
 							</div>
 						</div>
-						<!--Peak harvesting months field-->
-						<div id="peakMonths">
-							<span class="calcuParagraph">What are your peak harvesting months during the year?</span><br>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="January">January<br>
-								<input type="checkbox" name="month_list2[]" value="February">February<br>
-								<input type="checkbox" name="month_list2[]" value="March">March<br>
-								<input type="checkbox" name="month_list2[]" value="April">April<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="May">May<br>
-								<input type="checkbox" name="month_list2[]" value="June">June<br>
-								<input type="checkbox" name="month_list2[]" value="July">July<br>
-								<input type="checkbox" name="month_list2[]" value="August">August<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="September">September<br>
-								<input type="checkbox" name="month_list2[]" value="October">October<br>
-								<input type="checkbox" name="month_list2[]" value="November">November<br>
-								<input type="checkbox" name="month_list2[]" value="December">December<br>
-							</div>
-						</div>
-
-						<!--weedingMonths-->
-						<div id="weedingMonths">
-							<span class="calcuParagraph">During what months of the year do you do weeding?</span><br>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="January">January<br>
-								<input type="checkbox" name="month_list[]" value="February">February<br>
-								<input type="checkbox" name="month_list[]" value="March">March<br>
-								<input type="checkbox" name="month_list[]" value="April">April<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="May">May<br>
-								<input type="checkbox" name="month_list[]" value="June">June<br>
-								<input type="checkbox" name="month_list[]" value="July">July<br>
-								<input type="checkbox" name="month_list[]" value="August">August<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="September">September<br>
-								<input type="checkbox" name="month_list[]" value="October">October<br>
-								<input type="checkbox" name="month_list[]" value="November">November<br>
-								<input type="checkbox" name="month_list[]" value="December">December<br>
-							</div>
-						</div>
 
 						<!--Submit Button-->
 						<br><input id="calSubmit" type="submit" name="submit" value="Submit">
 					</div>
 				</form>
-				<script>
-					$(function() {
-						$('input[type="text"]').val('0')
-					});
-				</script>
 			</div>
 		</div>
 
@@ -327,14 +277,22 @@
             var workerHired = document.forms["calculatorForm"]["workers"];
             var workerHiredValue = document.forms["calculatorForm"]["workers"].value;
             
-            if(workers == 'Yes'){
+            if(workers == 'Yes'){   
                 if(workerHiredValue == ""){
                     alert("Must put in the number of workers");
                     workerHired.focus();
                     return false;
                 }
+                var intHired = parseInt(workerHiredValue);
+                if(intHired > 0) {
+                    return true;
+                } else {
+                    alert("Enter a positive number");
+                    workerHired.focus();
+                    return false;
+                } 
             }
-            return true;
+            return false;
         }
         
         function workerHours(){
@@ -348,8 +306,16 @@
                     workerHours.focus();
                     return false;
                 }
+                var intHours = parseInt(workerHoursValue);
+                if(intHours > 0) {
+                    return true;
+                } else {
+                    alert("Enter a positive number");
+                    workerHours.focus();
+                    return false;
+                } 
             }
-            return true;
+            return false;
         }
         
         function getRadioWorker(){
@@ -371,7 +337,16 @@
                 alert("Enter the annual budget per acre");
                 return false;
             }
-            return true;
+            var intBudget = parseInt(budgetValue);
+            if(intBudget > 0) {
+                return true;
+            } else {
+                alert("Enter a positive number");
+                budget.focus();
+                return false;
+            }
+            alert("Something broke to reach this point");
+            return false;
         }
     </script>
 </body>

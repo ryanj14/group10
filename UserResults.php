@@ -44,23 +44,55 @@
     <!-- The results of the form input -->
     <?php
         setlocale(LC_MONETARY,"en_CA");
+        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
+        $growType = $_POST['growingType'];
 
-        echo "Growing Type: ".$_POST['growingType']."<br>";
-        echo "Number of acres: ".$_POST['acres']."<br>";
-        echo "Vegtables cultivated: ".$_POST['cultivate']."<br>";
-        echo "Orchards cultivated: ".$_POST['cultivate2']."<br>";
-        echo "Berries cultivated: ".$_POST['cultivate3']."<br>";
-        echo "Vineyards cultivated: ".$_POST['cultivate4']."<br>";
-        echo "Herbs cultivated: ".$_POST['cultivate5']."<br>";
-        echo "Others cultivated: ".$_POST['cultivate6']."<br>";
-        echo "Do you hire people for weeding? ".$_POST['weeding']."<br>";
-        echo "Number of workers hired: ".$_POST['workers']."<br>";
-        echo "Hours total for weeding for workers: ".$_POST['weeklyWorkers']."<br>";
-        echo "Annual budget: $".$_POST['annualBudget']."<br>";
-        echo "Workers expenses: $".$_POST['expense']."<br>";
-        echo "Machinery expenses: $".$_POST['expense2']."<br>";
-        echo "Phytosanitary expenses: $".$_POST['expense3']."<br>";
-        echo "Other expenses: $".$_POST['expense4']."<br>";
+        $vegetables = setValue($_POST['cultivate']);
+        $orchards = setValue($_POST['cultivate2']);
+        $berries = setValue($_POST['cultivate3']);
+        $vine = setValue($_POST['cultivate4']);
+        $herb = setValue($_POST['cultivate5']);
+        $other = setValue($_POST['cultivate6']);
+        $hire = $_POST['weeding'];
+        $workHire = $_POST['workers'];
+        $workHours = $_POST['weeklyWorkers'];
+        $budget = $_POST['annualBudget'];
+        $workExpense = ($_POST['expense'] / 100) * $budget;
+        $machineExp = ($_POST['expense2'] / 100) * $budget;
+        $pytoExp = ($_POST['expense3'] / 100) * $budget;
+        $otherExp = ($_POST['expense4'] / 100) * $budget;
+
+        function getAcres() {
+            global  $vegetables, $orchards, $berries, $vine, $herb, $other;
+            $acres = $vegetables + $orchards + $berries + $vine + $herb + $other;
+            return $acres;
+        }
+
+        function setValue($value) {
+            if (!is_numeric($value))
+                return 0;
+            else
+                return $value;
+        }
+
+        $acres = getAcres();
+
+        echo "Growing Type: ". setValue($_POST['growingType'])."<br>";
+        echo "Number of acres: ". $acres ."<br>";
+        echo "Vegtables cultivated: " . $vegetables."<br>";
+        echo "Orchards cultivated: ". $orchards ."<br>";
+        echo "Berries cultivated: ". $berries ."<br>";
+        echo "Vineyards cultivated: ". $vine."<br>";
+        echo "Herbs cultivated: ". $herb."<br>";
+        echo "Others cultivated: ". $other ."<br>";
+        echo "Do you hire people for weeding? ". $_POST['weeding'] ."<br>";
+        echo "Number of workers hired: ". $_POST['workers'] ."<br>";
+        echo "Hours total for weeding for workers: ". $_POST['weeklyWorkers'] ."<br>";
+        echo "Annual budget: $". $budget ."<br>";
+        echo "Workers expenses: $". $workExpense ."<br>";
+        echo "Machinery expenses: $". $machineExp ."<br>";
+        echo "Phytosanitary expenses: $". $pytoExp ."<br>";
+        echo "Other expenses: $". $otherExp ."<br>";
         echo "<br>";
         echo "Peak harvesting months:<br>";
         if(!empty($_POST['month_list2'])){
@@ -85,28 +117,9 @@
             die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
         }
 
-        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
-        $growType = $_POST['growingType'];
-        $acres = $_POST['acres'];
-        $vegtables = $_POST['cultivate'];
-        $orchards = $_POST['cultivate2'];
-        $berries = $_POST['cultivate3'];
-        $vine = $_POST['cultivate4'];
-        $herb = $_POST['cultivate5'];
-        $other = $_POST['cultivate6'];
-        $hire = $_POST['weeding'];
-        $workHire = $_POST['workers'];
-        $workHours = $_POST['weeklyWorkers'];
-        $budget = $_POST['annualBudget'];
-        $workExpense = $_POST['expense'];
-        $machineExp = $_POST['expense2'];
-        $pytoExp = $_POST['expense3'];
-        $otherExp = $_POST['expense4'];
-
-
         // Inserting in the Calculator table. It's long I know.
-        $sql = "INSERT INTO Calculator (id,growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
-        VALUES (NULL,'$growType', $acres, $vegtables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
+        $sql = "INSERT INTO Calculator (id, growType, numAcres, vegtables,orchards,berries,vineyards,herbs,otherCult,hire,workHire,workHours,annualBudget,workExpense,machineExpense,phytoExpense,otherExpense)
+        VALUES (NULL,'$growType', $acres, $vegetables, $orchards, $berries, $vine, $herb, $other, '$hire', $workHire, $workHours, $budget, $workExpense, $machineExp, $pytoExp, $otherExp)";
 
         echo "<br>";
 
@@ -119,16 +132,15 @@
 
         // Closing the connection to the database
         mysqli_close($list);
-    ?>
 
-    <!-- The calculator part -->
 
-    <?php
+        /*
+            The calculator part
+        */
         $botPrice = 10000; // variable A
         $budget = $_POST['annualBudget']; // variable U
         $cash = $budget - $botPrice;
-        $arces = $_POST['acres']; // variavle R
-        $acreSaving = $cash * $arces;
+        $acreSaving = $cash * $acres;
 
         if(($cash <= 0) && ($acreSaving <= 0)) {
             echo "It looks like you are doing a great job keeping you weeding budget to a minimum. Please consider Culture Bot to increase your crop yield<br>";
@@ -137,7 +149,7 @@
         }
 
         $phytosanitary = $_POST['expense3']; // variable m
-        $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $arces);
+        $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $acres);
         $F = (($budget - $phytosanitary) / ($budget * $botPrice));
         if(!(($E <= 0) && ($F <= 0))) {
             echo "You can also save CAD $E on phystosanitary products yearly!(Equivalent to CAD $F year/acre)<br>";
@@ -145,8 +157,8 @@
         $workers = $_POST['expense']; // variable k
         $workerBudget = $_POST['workers']; // variable S
         $workerHours = $_POST['weeklyWorkers'];
-        $H = (($budget - $workers) / ($budget * $botPrice) * $arces);
-        $G = ($H / (($workers * $arces) / $workerBudget));
+        $H = (($budget - $workers) / ($budget * $botPrice) * $acres);
+        $G = ($H / (($workers * $acres) / $workerBudget));
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
 
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {

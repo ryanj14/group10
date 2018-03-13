@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
 
     <!-- JQuery for footer-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script type="text/javascript" src="./footerFixed.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./footerFixed.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,32 +69,26 @@
                 </label>
           </div>
 
-          <!--Number of Acres field-->
-          <div id="acreNum">
-            <span class="calcuParagraph">How many acres do you cultivate? </span><br>
-            <input type="text" name="acres" placeholder="100"><br>
-          </div>
-
-          <!--cropType field-->
+          <!-- Number of Acres field cropType field-->
           <div id="cropType">
-            <span class="calcuParagraph">What are the crops you cultivate?</span><br>
+            <span class="calcuParagraph">What are the crops you cultivate and how many acres do you allocate for each?</span><br>
             <div class="cropTypeItems">
               <span class="calcuChoices">Vegtables</span><br>
-                <input type="text" name="cultivate" placeholder="100"><br>
+                <input type="text" name="cultivate" placeholder="0"><br>
               <span class="calcuChoices">Orchards</span><br>
-                <input type="text" name="cultivate2" placeholder="100"><br>
+                <input type="text" name="cultivate2" placeholder="0"><br>
             </div>
             <div class="cropTypeItems">
               <span class="calcuChoices">Berries</span><br>
-                 <input type="text" name="cultivate3" placeholder="100"><br>
+                 <input type="text" name="cultivate3" placeholder="0"><br>
               <span class="calcuChoices">Vineyards</span><br>
-                <input type="text" name="cultivate4" placeholder="100"><br>
+                <input type="text" name="cultivate4" placeholder="0"><br>
             </div>
             <div class="cropTypeItems">
               <span class="calcuChoices">Herbs</span><br>
-                 <input type="text" name="cultivate5" placeholder="100"><br>
+                 <input type="text" name="cultivate5" placeholder="0"><br>
               <span class="calcuChoices">Other</span><br>
-                 <input type="text" name="cultivate6" placeholder="100"><br>
+                 <input type="text" name="cultivate6" placeholder="0"><br>
             </div>
           </div>
 
@@ -113,33 +108,33 @@
           <!--Workers per season field-->
           <div id="workersPerSeason">
             <span class="calcuParagraph">How many workers per season? </span><br>
-            <input type="text" name="workers" placeholder="5"><br>
+            <input type="text" name="workers" placeholder="0"><br>
           </div>
 
           <!--WeeklyHours field-->
           <div id="weeklyHours">
             <span class="calcuParagraph">How many hours are spent weekly in average for weeding (all workers included)?</span><br>
-            <input type="text" name="weeklyWorkers" placeholder="30"><br>
+            <input type="text" name="weeklyWorkers" placeholder="0"><br>
           </div>
 
           <!--Budget field-->
           <div id="budget">
             <span class="calcuParagraph">What is your total annual budget for weeding (per acre)?</span><br>
             <span class="calcuChoices">Total:</span>
-            <input type="text" name="annualBudget" placeholder="$6000"><br>
+            <input type="text" name="annualBudget" placeholder="0"><br>
             <div class="itemsHeading">Items:</div>
             <div class="brakedowns">
               <span class="calcuChoices">Workers</span><br>
-                <input type="text" name="expense" placeholder="100"><br>
+                <input type="text" name="expense" placeholder="0"><br>
               <span class="calcuChoices">Machinery</span><br>
-              <input type="text" name="expense2" placeholder="100"><br>
+              <input type="text" name="expense2" placeholder="0"><br>
             </div>
             <div class="brakedowns">
 
               <span class="calcuChoices">Phytosanitary products</span><br>
-                <input type="text" name="expense3" placeholder="100"><br>
+                <input type="text" name="expense3" placeholder="0"><br>
               <span class="calcuChoices">Other</span><br>
-                <input type="text" name="expense4" placeholder="100"><br>
+                <input type="text" name="expense4" placeholder="0"><br>
             </div>
           </div>
           <!--Peak harvesting months field-->
@@ -192,6 +187,11 @@
           <br><input id="calSubmit" type="submit" name="submit" value="Submit">
         </div>
         </form>
+        <script>
+            $(function() {
+                $('input[type="text"]').val('0')
+            });
+        </script>
     </div>
 
 <!---Footer Start--->

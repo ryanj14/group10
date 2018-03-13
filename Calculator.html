@@ -74,7 +74,7 @@
 		<div id="calculatorWrapper">
 			<div id="calculator">
 				<!--Form Starts-->
-				<form action="UserResults.php" onsubmit="return validateForm()" method="post">
+				<form action="UserResults.php" name="calculatorForm" onsubmit="return validateForm()" method="post">
 					<div id="calcuCon">
 						<!--Growing Type filled-->
 						<div id="growingType">
@@ -275,10 +275,14 @@
                 return false;
             } else if(validateWorkers() == false) {
                 return false;
+            } else if(annualBudget() == false) {
+                return false;
             } else {
-                if(workerHours() == false){
+                if(workersHired() == false){
                     return false;
-                } else {
+                } else if(workerHours() == false){
+                    return false;
+                } else{
                     return true;
                 }
             }
@@ -317,6 +321,21 @@
                 return formValid;
             } 
         }
+            
+        function workersHired(){
+            var workers = getRadioWorker();
+            var workerHired = document.forms["calculatorForm"]["workers"];
+            var workerHiredValue = document.forms["calculatorForm"]["workers"].value;
+            
+            if(workers == 'Yes'){
+                if(workerHiredValue == ""){
+                    alert("Must put in the number of workers");
+                    workerHired.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
         
         function workerHours(){
             var workers = getRadioWorker();
@@ -334,15 +353,25 @@
         }
         
         function getRadioWorker(){
-            var radios = document.getElementsByName('weeding');
-            var rdValue;
+            var radios = document.getElementsByName("weeding");
             for (var i = 0; i < radios.length; i++) {
                 var someRadio = radios[i];
                 if (someRadio.checked) {
-                    rdValue = someRadio.value;
+                    var rdValue = someRadio.value;
                     return rdValue;
                 }
             }
+        }
+            
+        function annualBudget(){
+            var budget = document.forms["calculatorForm"]["annualBudget"];
+            var budgetValue = document.forms["calculatorForm"]["annualBudget"].value;
+            
+            if(budgetValue == ""){
+                alert("Enter the annual budget per acre");
+                return false;
+            }
+            return true;
         }
     </script>
 </body>

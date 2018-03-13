@@ -169,75 +169,37 @@
         }
     ?>
 
-<!---Footer Start--->
-<footer>
-  <!--Logo-->
-  <div id="footerLogo">
-    <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-    <p>© Eleos Robotics, Inc. All rights reserved.</p>
-  </div>
-
-  <!--For Repsonsive(below768px, Invisible by default)-->
-  <div id="footerLogo2">
-      <a href="index.html">Eleos Robotics, Inc</a>
-  </div>
-
-  <!--Links for each page, unknown content -->
-  <div id="footerMid">
-    <table>
-      <tr >
-        <th><a href="TechnologyPage.html">Technology</a></th>
-        <th><a href="Waitinglist.html">Waiting List</a></th>
-        <th><a href="Aboutus.html">About us</a></th>
-        <th><a href="ContactUs.html">Contact Us</a></th>
-      </tr>
-      <tr>
-        <td>
-          <p>Description about Technology page.</p>
-        </td>
-        <td>
-          <p>Description about Waiting list page.</p>
-        </td>
-        <td>
-          <p>Description about About us page.</p>
-        </td>
-        <td>
-        <p>Description about Contact us page.</p>
-        </td>
-      </tr>
-    </table>
-
-    <div id="footerSupporter">
-      <!--Contents is filled out later-->
-    </div>
-  </div>
-
-  <div id="footerRight">
-
-    <!--For Responsive(below 768px), Invisible by default-->
-    <div id="footerBottomLeft">
-      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-      <p>© Eleos Robotics, Inc. All rights reserved.</p>
-    </div>
-
-    <!--Company Information-->
-      <ul>
-        <li><span class="fInforHead">Address:</span></li>
-        <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
-        <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
-        <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
-        <li><span class="fInforHead">SNS:</span>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
-            <img src="Images/facebook.png" alt="Share on Facebook" /></a>
-
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
-            <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
-
-          <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
-            <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
-      </ul>
-  </div>
-</footer>
+    <!---Footer Start--->
+    <footer>
+      <!--Supporters-->
+      <p>Supporters</p>
+      <div id="footerSupporter">
+        <div class="supporterTop">
+          <img src="images/flogo1.png" alt="growingFoward-logo">
+          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+          <img src="images/flogo4.png" alt="nserc-crsng-logo">
+          <img src="images/flogo5.png" alt="britishColumbia-logo">
+          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+        </div>
+        <div class="supporterBottom">
+          <img src="images/flogo8.png" alt="creativeLab-logo">
+          <img src="images/flogo9.png" alt="cta-logo">
+          <img src="images/flogo10.png" alt="mitas-logo">
+          <img src="images/flogo11.png" alt="ctcn-logo">
+          <div class="threeLogo">
+            <img src="images/flogo12.png" alt="unep-logo">
+            <img src="images/flogo13.png" alt="c-logo">
+            <img src="images/flogo14.png" alt="unido-logo">
+          </div>
+        </div>
+      </div>
+      <div id="footerCopyRight">
+        <p>© Eleos Robotics, Inc. All rights reserved.</p>
+      </div>
+      <div id="whiteBox"></div> <!--To hide blank line-->
+    </footer>
 </div>
 </body>
 </html>

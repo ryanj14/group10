@@ -49,7 +49,6 @@ p {
 .headerContent{
     top:0;
     left:0;
-    z-index: 999; /*To make header forward*/
     width:100%;
     height: auto;
     background-color: white;
@@ -127,20 +126,20 @@ p {
     .navBar, .blogs{
         display: none;
     }
-    
+
     .dropMenu{
         display: inline-block;
         position: relative;
         background-color: white;
     }
-    
+
     .menuIcon{
         width: 4%;
         float: right;
         margin: 15px 10px 4px 10px;
         cursor: pointer;
     }
-    
+
     .dropdown-content{
         display: none;
         position: absolute;
@@ -151,23 +150,23 @@ p {
         padding-top: 50px;
         opacity: 0.5;
     }
-    
+
     .dropdown-content a{
         color: black;
         padding: 12px 16px;
         display: block;
     }
-    
+
     .dropdown-content a:hover{
         background-color: beige;
         text-decoration: none;
         color: black;
     }
-    
+
     .dropMenu:hover .dropdown-content{
         display: block;
     }
-    
+
 }
 /******************* Footer CSS ***********************/
 footer {
@@ -176,63 +175,26 @@ footer {
     width: 100%;
     top: 5%;
     bottom: 0;
-    background-color: white;
+    text-align: center;
+    background-color: #fff;
 }
 
-footer a {
-    color: #5A2F01;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
+footer p {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-footer a:link {
-    text-decoration: none;
+footer img {
+    width: 8em;
+    margin: 0 15px;
 }
-
-footer p { margin: 0;}
-
-#footerLogo, #footerMid, #footerRight {
-    height: 200px;
-    background-color: #CCD9CE;
-    padding-top: 20px;
-    color: #5A2F01;
-}
-
-#footerLogo {
-    width: 22%;
-    float: left;
-}
-
-#footerLogo img, p { /*logo image*/
-    width:100%;
-    padding: 10px;
-}
-
-#footerLogo2 {
-    display: none;
-}
-
-#footerMid {
-    width: 55%;
-    font-size: 14px;
-    margin: auto;
+.supporterTop, .supporterBottom, .threeLogo {
     display: inline-block;
 }
-
-#footerMid table, td, th {
-  border-style:none;
+.threeLogo img { /*to make them equal ratio*/
+    width: 4em;
 }
-
-#footerSupporter img {
-    width: 70em;
-    margin-left: 4em;
-}
-footer p {
-    font-weight: bold;
-    font-size: 18px;
-}
-
 #whiteBox {
     background-color: #fff;
     height: 0.2em;
@@ -513,6 +475,7 @@ footer p {
 .news{
     padding: 70px 50px;
 }
+
 /**************** Technology Page CSS ********************/
 .techWordHeader{
     padding-top: 100px;
@@ -568,12 +531,8 @@ footer p {
 }
 
 .advantageDetail {
-    margin-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 500px;
     width: 80%;
-    border: 2px solid;
+    margin: auto;
 }
 
 .benefitsDetail {
@@ -924,108 +883,6 @@ footer p {
     text-align: left;
     margin: 0 auto 0;
 }
-
-/*******************Calculator Page CSS********************/
-#calculator {
-    margin-top: 120px;
-    padding-top: 50px;
-    padding-bottom: 30px;
-    font-size: 18px;
-    background-color: #FCF3EB;
-}
-
-#calculator form {
-    height: 100%;
-    width: 90%;
-    border: 2px solid;
-    border-radius: 10px;
-    margin:auto auto 30px auto;
-    background-color: white;
-}
-
-#calcuCon {
-  width: 80%;
-  margin-left:20%;
-}
-
-#calculator div {
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.calcuParagraph { /*All Question paragraphs*/
-    color: #5A2F01;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.calcuChoices { /*All choices of questions*/
-    margin-right: 30px;
-}
-
-#calculator input {
-  margin-top: 5px;
-  font-weight: normal;
-}
-
-#cropType  input {
-    margin-bottom: 10px;
-}
-
-.cropTypeItems {
-    width : 30%;
-    display: inline-block;
-    margin: auto;
-}
-
-.itemsHeading {
-    float: left;
-    margin-right: 3%;
-}
-
-.brakedowns  {
-    width: 25%;
-    display: inline-block;
-}
-
-.brakedowns input {
-    width: 60%;
-}
-.monthsItems {
-    margin-left: 2%;
-    width: 25%;
-    display: inline-block;
-}
-
-.monthsItems input {
-    margin: 10px;
-}
-
-/*Submit Button setting*/
-#calSubmit {
-    margin-left: 25%;
-    margin-bottom: 30px;
-    background-color: #1abc9c;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 18px;
-    width: 20%;
-    line-height: 40px;
-    -webkit-transition: none;
-    transition: none;
-    box-shadow: 0 3px 0 #0e8c73;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
-}
-#calSubmit:hover {
-    background-color: #31c8aa;
-    box-shadow: 0 3px 0 #23a188;
-}
-#calSubmit:active {
-    top: 3px;
-    box-shadow: none;
-}
-
-
 /*************Responsive setting******************/
 
 /*For Tablet Devices*/
@@ -1062,52 +919,6 @@ footer p {
 .leftBox h1 { font-size: 18px;}
 
 .rightBox h1 { font-size: 18px;}
-
-/*************Calculator Page Responsive(1080px)**************/
-#calcuCon {
-  width: 80%;
-  margin-left:16%;
-}
-
-#calculator form {
-    border: 2px solid #5A2F01;
-    font-size: 16px;
-}
-
-.calcuParagraph { /*All Question paragraphs*/
-    font-size: 18px;
-}
-
-.calcuChoices { /*All choices of questions*/
-    margin-right: 30px;
-}
-
-#growingType .radio-inline { display: inline-block;}
-
-#cropType  input { width: 60%;}
-
-.itemsHeading { margin-right: 5%;}
-
-.brakedowns input { width: 70%;}
-
-.brakedowns span { font-size: 14px;}
-
-.monthsItems {
-    margin-left: 5%;
-    width: 40%;
-}
-
-.monthsItems input {
-    margin: 10px;
-}
-
-/*Submit Button setting*/
-#calSubmit {
-    margin-left: 25%;
-    margin-bottom: 30px;
-    font-size: 15px;
-    width: 30%;
-}
 
 /*****Responsive(1080px) About Us*******/
   .aboutHeader h1 {
@@ -1157,30 +968,28 @@ footer p {
 
 /*********** Contact Us Page CSS(1080px) ***************/
 
-  .contactWrapper {
-      padding-top: 0px ;
-      width: 86%;
-      height: 650px;
-  }
+.contactWrapper {
+  padding-top: 0px ;
+  width: 86%;
+  height: 650px;
+}
 
-  .contactText, .contactInforText {
-      font-size: 16px;
-  }
+.contactText, .contactInforText {
+  font-size: 16px;
+}
 
-  .radio-inline {
-      display: block;
-      width: 70%;
-      margin: 0;
-    }
-  .contactWrapper textarea {
-      margin-top: 10px;
-      width: 80%;
-  }
+.radio-inline {
+  display: block;
+  width: 70%;
+  margin: 0;
+}
+.contactWrapper textarea {
+  margin-top: 10px;
+  width: 80%;
+}
 
-  .contactSocial img {
-      width: 13%;
-  }
-
+.contactSocial img {
+  width: 13%;
 }
 
 /*For Mobile Devices*/
@@ -1229,43 +1038,6 @@ footer p {
 
   .aboutWordHeader h1, .aboutStory h1 {
       font-size: 22px;
-  }
-
-  /*************Calculator Page Responsive(500px)**************/
-  #calcuCon {
-    margin-left:12%;
-  }
-
-  #calculator form {
-      font-size: 14px;
-  }
-
-  .calcuParagraph { /*All Question paragraphs*/
-      font-size: 14px;
-  }
-
-  #cropType  input { width: 70%;}
-
-  .brakedowns input { width: 70%;}
-
-  .brakedowns span { font-size: 11px;}
-
-  .monthsItems {
-      margin-left: 5%;
-      width: 50%;
-      display: inline-block;
-  }
-
-  .monthsItems input {
-      margin: 10px;
-  }
-
-  /*Submit Button setting*/
-  #calSubmit {
-      margin-left: 25%;
-      margin-bottom: 30px;
-      font-size: 15px;
-      width: 30%;
   }
 
   /*********** Contact Us Page(500px) CSS *************/

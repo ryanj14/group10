@@ -168,11 +168,13 @@ p {
     }
 
 }
+
 /******************* Footer CSS ***********************/
 footer {
     position: relative;
     height: auto;
     width: 100%;
+    padding: 10px 0;
     top: 5%;
     bottom: 0;
     text-align: center;
@@ -186,7 +188,7 @@ footer p {
 }
 
 footer img {
-    width: 8em;
+    width: 7em;
     margin: 0 15px;
 }
 .supporterTop, .supporterBottom, .threeLogo {
@@ -493,16 +495,10 @@ footer img {
     margin-right: auto;
 }
 
-.techImage {
+.techVideo {
     width: 40%;
-    border: 2px solid black;
     float: left;
     margin-left: 5%;
-}
-.techImage img {
-    width: 60%;
-    height: 350px;
-    margin-left: 25%;
 }
 
 .techWord {
@@ -533,15 +529,6 @@ footer img {
 .advantageDetail {
     width: 80%;
     margin: auto;
-}
-
-.benefitsDetail {
-    margin-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 300px;
-    width: 80%;
-    border: 2px solid;
 }
 
 .linkBoxes {
@@ -889,111 +876,134 @@ footer img {
 @media only screen and (max-width: 1080px) {
 
 /******* Technology Page Responsive(1080px) ***********/
+.techWordHeader{
+    padding-top: 100px;
+}
 
-.techWordHeader h1 {
-    font-size: 30px;
-    margin-top:100px;
+.techWordHeader p {
+    text-align: center;
+    width: 80%;
+    padding: auto;
+}
+
+.techWordHeader h2{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .techImage {
-    width: 90%;
-    clear: right;
+    width: 40%;
+    float: left;
+    margin-left: 5%;
 }
+
 .techImage img {
-    width: 50%;
+    width: 100%;
+    height: 350px;
+    margin-left: 3%;
 }
 
 .techWord {
-    display: none;
+    width: 50%;
+    height: 350px;
+    float: right;
+    margin-right: 5%;
 }
 
-.techWord2 {
-    display: block;
-    padding-top: 50px;
-    width: 100%;
-    clear: both;
-}
-.benefits h1 { margin-top: 40px;}
+.techWord2 { display: none;}
 
-.leftBox { margin-right: 40px;}
-.leftBox h1 { font-size: 18px;}
-
-.rightBox h1 { font-size: 18px;}
-
-/*****Responsive(1080px) About Us*******/
-  .aboutHeader h1 {
-      font-size: 26px;
-      padding-top: 20px;
-  }
-
-  .aboutMainHeader {
-      margin-bottom: 10px;
-  }
-
-  .aboutMainHead h1 {
-      font-size: 20px;
-  }
-
-  .aboutLeft {
-      width: 60%;
-      margin-top: 50px;
-      margin-left: 15%;
-      display: block;
-  }
-  .aboutLeft img {
-      height: 400px;
-  }
-  .aboutRight {
-      width: 70%;
-      margin: 70px auto auto 15%;
-  }
-  .aboutRight p {
-      margin-bottom: 10px;
-      width: 100%;
-  }
-
-  .aboutInner a {
-      font-size:18px;
-  }
-
-  .aboutWordHeader {
-      width: 80%;
-  }
-
-  .aboutWordHeader h1, .aboutStory h1 {
-      font-size: 30px;
-      margin-top: 20px;
-  }
+.techDetail {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 500px;
+    width: 80%;
+    border: 2px solid;
 }
 
-/*********** Contact Us Page CSS(1080px) ***************/
-
-.contactWrapper {
-  padding-top: 0px ;
-  width: 86%;
-  height: 650px;
+.techAdvantage, p, h1{
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contactText, .contactInforText {
-  font-size: 16px;
+.advantageDetail {
+    width: 80%;
+    margin: auto;
 }
 
-.radio-inline {
-  display: block;
-  width: 70%;
-  margin: 0;
-}
-.contactWrapper textarea {
-  margin-top: 10px;
-  width: 80%;
+.advantageDetail p {
+    visibility: hidden;
 }
 
-.contactSocial img {
-  width: 13%;
+.linkBoxes {
+    display: flex;
+    height: 400px;
+    width: 55%;
+    margin: 40px auto 40px;
 }
 
+.leftBox {
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+}
+
+.leftBox h1 { font-size: 26px;}
+
+.leftBox p, .rightBox p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #505050;
+  padding: 0.5em;
+  display: inline-block;
+  line-height: 1.3;
+  background: #dbebf8;
+  vertical-align: middle;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.leftBox p:before , .rightBox p:before {
+  content: '●';
+  color: white;
+  margin-right: 8px;
+}
+.rightBox {
+    margin-left: auto;
+    width: 300px;
+    text-align: center;
+}
+
+.rightBox h1 { font-size: 26px;}
 /*For Mobile Devices*/
 @media only screen and (max-width: 500px) {
+
+  /******************* Footer CSS(500px) ***********************/
+
+  footer p {
+    font-size: 0.7em;
+  }
+
+  footer img {
+      width: 5em;
+      margin: 0 15px;
+  }
+  .supporterTop, .supporterBottom {
+      display: inline;
+  }
+
+  .threeLogo img { /*to make them equal ratio*/
+      width: 4em;
+  }
+  #whiteBox {
+      background-color: #fff;
+      height: 0.2em;
+      width: 100%;
+      position: relative;
+  }
 
   /********About Us Responsive(500px)****************/
   .aboutHeader h1 {

@@ -127,20 +127,20 @@ p {
     .navBar, .blogs{
         display: none;
     }
-    
+
     .dropMenu{
         display: inline-block;
         position: relative;
         background-color: white;
     }
-    
+
     .menuIcon{
         width: 4%;
         float: right;
         margin: 15px 10px 4px 10px;
         cursor: pointer;
     }
-    
+
     .dropdown-content{
         display: none;
         position: absolute;
@@ -151,23 +151,23 @@ p {
         padding-top: 50px;
         opacity: 0.5;
     }
-    
+
     .dropdown-content a{
         color: black;
         padding: 12px 16px;
         display: block;
     }
-    
+
     .dropdown-content a:hover{
         background-color: beige;
         text-decoration: none;
         color: black;
     }
-    
+
     .dropMenu:hover .dropdown-content{
         display: block;
     }
-    
+
 }
 /******************* Footer CSS ***********************/
 footer {
@@ -176,63 +176,25 @@ footer {
     width: 100%;
     top: 5%;
     bottom: 0;
-    background-color: white;
+    text-align: center;
+    background-color: #fff;
 }
 
-footer a {
-    color: #5A2F01;
-    font-size: 20px;
+footer p {
+    margin: 0 auto;
+    font-size: 18px;
     font-weight: bold;
-    text-decoration: none;
 }
-
-footer a:link {
-    text-decoration: none;
+footer img {
+    width: 8em;
+    margin: 0 15px;
 }
-
-footer p { margin: 0;}
-
-#footerLogo, #footerMid, #footerRight {
-    height: 200px;
-    background-color: #CCD9CE;
-    padding-top: 20px;
-    color: #5A2F01;
-}
-
-#footerLogo {
-    width: 22%;
-    float: left;
-}
-
-#footerLogo img, p { /*logo image*/
-    width:100%;
-    padding: 10px;
-}
-
-#footerLogo2 {
-    display: none;
-}
-
-#footerMid {
-    width: 55%;
-    font-size: 14px;
-    margin: auto;
+.supporterTop, .supporterBottom, .threeLogo {
     display: inline-block;
 }
-
-#footerMid table, td, th {
-  border-style:none;
+.threeLogo img { /*to make them equal ratio*/
+    width: 4em;
 }
-
-#footerSupporter img {
-    width: 70em;
-    margin-left: 4em;
-}
-footer p {
-    font-weight: bold;
-    font-size: 18px;
-}
-
 #whiteBox {
     background-color: #fff;
     height: 0.2em;

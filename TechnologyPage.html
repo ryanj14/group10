@@ -21,6 +21,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!--Image Slider:JQuery Plugin-->
+    <link rel="stylesheet" type="text/css" href="CSS/slider-pro.css" media="screen"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+
 </head>
 <body>
 
@@ -91,8 +97,24 @@
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
 
+    <!--Advantages(Image Slider)-->
     <div class="advantageDetail">
-        <h1>What it does and how it works</h1>
+      <div id="advantageImg" class="slider-pro">
+        <div class="sp-slides">
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sampleNewsImg1.jpeg" />
+          </div>
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sampleNewsImg2.jpeg" />
+          </div>
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sampleNewsImg3.jpeg" />
+          </div>
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sampleNewsImg4.jpeg" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="benefits">
@@ -149,5 +171,18 @@
       <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
   </div>
+
+  <!--Image Slide Script-->
+  <script>$( document ).ready(function( $ ) {
+    $('#advantageImg').sliderPro({
+      width: 900,
+      height: 550,
+      arrows: true,
+      buttons: true,
+      slideDistance:0,
+      });
+    });
+  </script>
+
 </body>
 </html>

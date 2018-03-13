@@ -475,6 +475,7 @@ footer img {
 .news{
     padding: 70px 50px;
 }
+
 /**************** Technology Page CSS ********************/
 .techWordHeader{
     padding-top: 100px;
@@ -530,12 +531,8 @@ footer img {
 }
 
 .advantageDetail {
-    margin-top: 40px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 500px;
     width: 80%;
-    border: 2px solid;
+    margin: auto;
 }
 
 .benefitsDetail {

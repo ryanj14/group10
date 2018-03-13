@@ -49,9 +49,9 @@
             <h1>Header</h1>
             <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
-<!-- onsubmit="return validateForm()" -->
+
         <div class="userWait">
-            <form name="waitForm" action=""  method="post">
+            <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
                 First Name:<br>
                 <input type="text" id="name1" name="firstName" placeholder="James"><br>
                 Last Name:<br>
@@ -163,41 +163,42 @@
             var yV = document.forms["waitForm"]["email"];
             var bV = document.forms["waitForm"]["business"];
             var cV = document.forms["waitForm"]["farm"];
-            var dV = document.forms["waitForm"]["phoneNum"];
+            var dV = document.forms["waitForm"]["phoneNumber"];
             var eV = document.forms["waitForm"]["address"];
             var x = document.forms["waitForm"]["firstName"].value;
             var a = document.forms["waitForm"]["lastName"].value;
             var y = document.forms["waitForm"]["email"].value;
             var b = document.forms["waitForm"]["business"].value;
             var c = document.forms["waitForm"]["farm"].value;
-            var d = document.forms["waitForm"]["phoneNum"].value;
+            var d = document.forms["waitForm"]["phoneNumber"].value;
             var e = document.forms["waitForm"]["address"].value;
             if (x == "") {
-                alert("Name must be filled out")
+                alert("Name must be filled out");
                 xV.focus();
                 return false;
             }
             else if(y == ""){
-                alert("email must be filled out")
+                alert("email must be filled out");
                 yV.focus();
                 return false;
+            }
             else if(b == ""){
-                alert("business must be filled out")
+                alert("business must be filled out");
                 bV.focus();
                 return false;
             }
             else if(d == ""){
-                alert("phone number must be filled out")
+                alert("phone number must be filled out");
                 dV.focus();
                 return false;
             }
             else if(e == ""){
-                alert("address must be filled out")
+                alert("address must be filled out");
                 eV.focus();
                 return false;
-            }
             }else{
-                if(ValidateEmail(document.waitForm.email) == false){
+                if(ValidateEmail(document.waitForm.email) == false)
+                {
                     yV.focus();
                     return false;
                 } else {

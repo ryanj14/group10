@@ -172,7 +172,6 @@
     <!---Footer Start--->
     <footer>
       <!--Supporters-->
-      <p>Supporters</p>
       <div id="footerSupporter">
         <div class="supporterTop">
           <img src="images/flogo1.png" alt="growingFoward-logo">

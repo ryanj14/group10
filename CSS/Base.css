@@ -180,10 +180,11 @@ footer {
 }
 
 footer p {
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: bold;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
 }
+
 footer img {
     width: 8em;
     margin: 0 15px;

@@ -472,10 +472,18 @@ footer p {
 
 .tableDiv {
     height: auto;
-    width: 50%;
+    width: 85%;
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
     border: 2px solid;
+}
+
+.tableDiv table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .listHeader {

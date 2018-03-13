@@ -61,7 +61,7 @@
     <!-- Calculator main contents starts-->
     <div id="calculator">
         <!--Form Starts-->
-        <form action="UserResults.php" onsubmit="return validateForm()" method="post">
+        <form name="calculatorForm" action="UserResults.php" onsubmit="return validateForm()" method="post">
           <div id="calcuCon">
           <!--Growing Type filled-->
           <div id="growingType">
@@ -107,11 +107,11 @@
           <div id="weedingPpl">
             <span class="calcuParagraph">Do you hire people for weeding?</span>
             <label class="radio-inline"><br>
-              <input type="radio" name="weeding" value="Yes">
+              <input type="radio" name="weeding" id="yesNo" value="Yes">
                 <span class="calcuChoices">Yes</span>
             </label>
             <label class="radio-inline">
-              <input type="radio" name="weeding" value="No">
+              <input type="radio" name="weeding" id="yesNo" value="No">
                 <span class="calcuChoices">No</span>
             </label>
             <br>
@@ -279,8 +279,14 @@
         function validateForm(){
             if(validateRadio() == false){
                 return false;
+            } else if(validateWorkers() == false) {
+                return false;
             } else {
-                return true;
+                if(workerHours() == false){
+                    return false;
+                } else {
+                    return true;
+                }
             }
         }
         
@@ -289,7 +295,7 @@
             var formValid = false;
             var i = 0;
             
-            for(var i=0; i < radios.length;i++){
+            for(var i = 0; i < radios.length;i++){
                 if(radios[i].checked == true){
                     formValid = true;    
                 }
@@ -299,6 +305,50 @@
                 alert("Must check a growing type");
                 return formValid;
             } 
+        }
+        
+        function validateWorkers(){
+            var workers = document.getElementsByName("weeding");
+            var formValid = false;
+            var i = 0;
+            
+            for(var i = 0; i < workers.length;i++){
+                if(workers[i].checked == true){
+                    formValid = true;    
+                }
+            }
+
+            if (!formValid){  
+                alert("Must check the hired workers");
+                return formValid;
+            } 
+        }
+        
+        function workerHours(){
+            var workers = getRadioWorker();
+            var workerHours = document.forms["calculatorForm"]["weeklyWorkers"];
+            var workerHoursValue = document.forms["calculatorForm"]["weeklyWorkers"].value;
+            
+            if(workers == 'Yes'){
+                if(workerHoursValue == ""){
+                    alert("Must put in the hours for the workers");
+                    workerHours.focus();
+                    return false;
+                }
+            }
+            return true;
+        }
+        
+        function getRadioWorker(){
+            var radios = document.getElementsByName('weeding');
+            var rdValue;
+            for (var i = 0; i < radios.length; i++) {
+                var someRadio = radios[i];
+                if (someRadio.checked) {
+                    rdValue = someRadio.value;
+                    return rdValue;
+                }
+            }
         }
     </script>
 </body>

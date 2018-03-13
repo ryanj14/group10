@@ -1,0 +1,204 @@
+#container {
+    height: 100%;
+}
+
+/*******************Calculator Page CSS********************/
+#calculatorTitle {
+    position: relative;
+    padding-top: 10%;
+}
+
+#titleCard {
+    margin: auto;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%,0.1);
+    width: 50%;
+}
+
+#calculator {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.parallax {
+    height: 100%;
+    background: url("../images/orchard.jpg") no-repeat fixed center;
+    background-size: cover;
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+}
+
+#calculator form {
+    height: 100%;
+    width: 90%;
+    border: 2px solid;
+    border-radius: 10px;
+    margin:auto auto 30px auto;
+    background-color: white;
+}
+
+#calcuCon {
+    width: 80%;
+    margin-left:20%;
+}
+
+#calculator div {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    color: #5A2F01;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calcuChoices { /*All choices of questions*/
+    margin-right: 30px;
+}
+
+#calculator input {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+#cropType  input {
+    margin-bottom: 10px;
+}
+
+.cropTypeItems {
+    width : 30%;
+    display: inline-block;
+    margin: auto;
+}
+
+.itemsHeading {
+    float: left;
+    margin-right: 3%;
+}
+
+.brakedowns  {
+    width: 25%;
+    display: inline-block;
+}
+
+.brakedowns input {
+    width: 60%;
+}
+.monthsItems {
+    margin-left: 2%;
+    width: 25%;
+    display: inline-block;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 30px;
+    background-color: #1abc9c;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 18px;
+    width: 20%;
+    line-height: 40px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 #0e8c73;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
+#calSubmit:hover {
+    background-color: #31c8aa;
+    box-shadow: 0 3px 0 #23a188;
+}
+#calSubmit:active {
+    top: 3px;
+    box-shadow: none;
+}
+
+/*************Calculator Page Responsive(1080px)**************/
+#calcuCon {
+    width: 80%;
+    margin-left:16%;
+}
+
+#calculator form {
+    border: 2px solid #5A2F01;
+    font-size: 16px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    font-size: 18px;
+}
+
+.calcuChoices { /*All choices of questions*/
+    margin-right: 30px;
+}
+
+#growingType .radio-inline { display: inline-block;}
+
+#cropType  input { width: 60%;}
+
+.itemsHeading { margin-right: 5%;}
+
+.brakedowns input { width: 70%;}
+
+.brakedowns span { font-size: 14px;}
+
+.monthsItems {
+    margin-left: 5%;
+    width: 40%;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 30px;
+    font-size: 15px;
+    width: 30%;
+}
+
+/*************Calculator Page Responsive(500px)**************/
+#calcuCon {
+    margin-left:12%;
+}
+
+#calculator form {
+    font-size: 14px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    font-size: 14px;
+}
+
+#cropType  input { width: 70%;}
+
+.brakedowns input { width: 70%;}
+
+.brakedowns span { font-size: 11px;}
+
+.monthsItems {
+    margin-left: 5%;
+    width: 50%;
+    display: inline-block;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*Submit Button setting*/
+#calSubmit {
+    margin-left: 25%;
+    margin-bottom: 30px;
+    font-size: 15px;
+    width: 30%;
+}

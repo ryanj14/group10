@@ -28,7 +28,7 @@
     <script src="js/jquery.sliderPro.min.js"></script>
 
 </head>
-<body>
+<body onLoad="tm()">
 
   <div id="container"> <!--Put every thing from nav to footer-->
 
@@ -70,8 +70,8 @@
 
     <div class="pair"> <!-- Side-by-side divs -->
 
-        <div class="techImage">
-            <img src="images/logo2.png">
+        <div class="techVideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/95VP-3EDiA4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <div class="techWord">
@@ -101,17 +101,25 @@
     <div class="advantageDetail">
       <div id="advantageImg" class="slider-pro">
         <div class="sp-slides">
+          <!--1st img-->
           <div class="sp-slide">
-            <img class="sp-image" src="images/sampleNewsImg1.jpeg" />
+            <img class="sp-image" src="images/sample1.png" />
           </div>
+          <!--2nd img-->
           <div class="sp-slide">
-            <img class="sp-image" src="images/sampleNewsImg2.jpeg" />
+            <img class="sp-image" src="images/sample2.png" />
           </div>
+          <!--3rd img-->
           <div class="sp-slide">
-            <img class="sp-image" src="images/sampleNewsImg3.jpeg" />
+            <img class="sp-image" src="images/sample3.png" />
           </div>
+          <!--4th img-->
           <div class="sp-slide">
-            <img class="sp-image" src="images/sampleNewsImg4.jpeg" />
+            <img class="sp-image" src="images/sample4.png" />
+          </div>
+          <!--5th img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample5.png" />
           </div>
         </div>
       </div>
@@ -121,11 +129,6 @@
         <h1>Benefits</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
     </div>
-
-    <div class="benefitsDetail">
-        <h1>Benefits for customers</h1>
-    </div>
-
 
     <div class="linkBoxes">
         <div class="leftBox">
@@ -176,7 +179,7 @@
   <script>$( document ).ready(function( $ ) {
     $('#advantageImg').sliderPro({
       width: 900,
-      height: 550,
+      height: 500,
       arrows: true,
       buttons: true,
       slideDistance:0,

@@ -501,6 +501,10 @@ footer img {
     margin-left: 5%;
 }
 
+.techVideo iframe {
+    width: 100%;
+}
+
 .techWord {
     width: 50%;
     height: 350px;

@@ -146,7 +146,7 @@ p {
         position: absolute;
         min-width: 140px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        background-color: #DDDDDD;
+        background-color: white;
         right: 0;
         padding-top: 50px;
         opacity: 0.5;

@@ -50,7 +50,7 @@
     <!-- Calculator main contents starts-->
     <div id="calculator">
         <!--Form Starts-->
-        <form action="UserResults.php" method="post">
+        <form action="UserResults.php" onsubmit="return validateForm()" method="post">
           <div id="calcuCon">
           <!--Growing Type filled-->
           <div id="growingType">
@@ -264,5 +264,31 @@
   </div>
 </footer>
 </div>
+    <script>
+        function validateForm(){
+            if(validateRadio() == false){
+                return false;
+            } else {
+                return true;
+            }
+        }
+        
+        function validateRadio(){
+            var radios = document.getElementsByName("growingType");
+            var formValid = false;
+            var i = 0;
+            
+            for(var i=0; i< radios.length;i++){
+                if(radios[i].checked == true){
+                    formValid = true;    
+                }
+            }
+
+            if (!formValid){  
+                alert("Must check a growing type");
+                return formValid;
+            } 
+        }
+    </script>
 </body>
 </html>

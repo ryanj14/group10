@@ -14,6 +14,9 @@
     <!-- JQuery for footer-->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="./footerFixed.js"></script>
+    
+    <!-- Calculator form validation -->
+     <script type="text/javascript" src="js/calculatorValidation.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,7 +77,7 @@
 		<div id="calculatorWrapper">
 			<div id="calculator">
 				<!--Form Starts-->
-				<form action="UserResults.php" method="post">
+				<form action="UserResults.php" name="calculatorForm" onsubmit="return validateForm()" method="post">
 					<div id="calcuCon">
 						<!--Growing Type filled-->
 						<div id="growingType">
@@ -131,27 +134,24 @@
 							</div>
 						</div>
 
-						<!--People for weeding field-->
-						<div id="weedingPpl">
-							<span class="calcuParagraph">Do you hire people for weeding?</span>
-							<br>
-							<label class="radio-inline">
-								<input type="radio" name="weeding" value="Yes">
-								<span class="calcuChoices">Yes</span>
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="weeding" value="No">
-								<span class="calcuChoices">No</span>
-							</label>
-							<br>
-						</div>
-						<!--Workers per season field-->
-						<div id="workersPerSeason">
-							<span class="calcuParagraph">How many workers per season? </span>
-							<br>
-							<input type="text" name="workers" placeholder="0">
-							<br>
-						</div>
+          <!--People for weeding field-->
+          <div id="weedingPpl">
+            <span class="calcuParagraph">Do you hire people for weeding?</span>
+            <label class="radio-inline"><br>
+              <input type="radio" name="weeding" id="yesNo" value="Yes">
+                <span class="calcuChoices">Yes</span>
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="weeding" id="yesNo" value="No">
+                <span class="calcuChoices">No</span>
+            </label>
+            <br>
+          </div>
+          <!--Workers per season field-->
+          <div id="workersPerSeason">
+            <span class="calcuParagraph">How many workers per season? </span><br>
+            <input type="text" name="workers" placeholder="0"><br>
+          </div>
 
 						<!--WeeklyHours field-->
 						<div id="weeklyHours">
@@ -181,61 +181,11 @@
 								<input type="text" name="expense4" placeholder="0"><br>
 							</div>
 						</div>
-						<!--Peak harvesting months field-->
-						<div id="peakMonths">
-							<span class="calcuParagraph">What are your peak harvesting months during the year?</span><br>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="January">January<br>
-								<input type="checkbox" name="month_list2[]" value="February">February<br>
-								<input type="checkbox" name="month_list2[]" value="March">March<br>
-								<input type="checkbox" name="month_list2[]" value="April">April<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="May">May<br>
-								<input type="checkbox" name="month_list2[]" value="June">June<br>
-								<input type="checkbox" name="month_list2[]" value="July">July<br>
-								<input type="checkbox" name="month_list2[]" value="August">August<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list2[]" value="September">September<br>
-								<input type="checkbox" name="month_list2[]" value="October">October<br>
-								<input type="checkbox" name="month_list2[]" value="November">November<br>
-								<input type="checkbox" name="month_list2[]" value="December">December<br>
-							</div>
-						</div>
-
-						<!--weedingMonths-->
-						<div id="weedingMonths">
-							<span class="calcuParagraph">During what months of the year do you do weeding?</span><br>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="January">January<br>
-								<input type="checkbox" name="month_list[]" value="February">February<br>
-								<input type="checkbox" name="month_list[]" value="March">March<br>
-								<input type="checkbox" name="month_list[]" value="April">April<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="May">May<br>
-								<input type="checkbox" name="month_list[]" value="June">June<br>
-								<input type="checkbox" name="month_list[]" value="July">July<br>
-								<input type="checkbox" name="month_list[]" value="August">August<br>
-							</div>
-							<div class="monthsItems">
-								<input type="checkbox" name="month_list[]" value="September">September<br>
-								<input type="checkbox" name="month_list[]" value="October">October<br>
-								<input type="checkbox" name="month_list[]" value="November">November<br>
-								<input type="checkbox" name="month_list[]" value="December">December<br>
-							</div>
-						</div>
 
 						<!--Submit Button-->
 						<br><input id="calSubmit" type="submit" name="submit" value="Submit">
 					</div>
 				</form>
-				<script>
-					$(function() {
-						$('input[type="text"]').val('0')
-					});
-				</script>
 			</div>
 		</div>
 
@@ -252,6 +202,7 @@
           <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
           <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
         </div>
+
         <div class="supporterBottom">
           <img src="images/flogo8.png" alt="creativeLab-logo">
           <img src="images/flogo9.png" alt="cta-logo">
@@ -272,5 +223,4 @@
 		<!---Footer End--->
 	</div>
 </body>
-</div>
 </html>

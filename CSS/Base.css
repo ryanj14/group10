@@ -442,7 +442,6 @@ footer img {
     margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
-    border: 2px solid;
 }
 
 .tableDiv table {
@@ -452,6 +451,7 @@ footer img {
 }
 
 .listHeader {
+    margin-top: 80px;
     background-color: #44AFDD;
     position: relative;
 }
@@ -464,6 +464,14 @@ footer img {
 
 .userWait {
     border: 2px solid;
+    height: auto;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.waitingHeader2 h2{
+    text-align: center;
 }
 
 

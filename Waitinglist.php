@@ -33,14 +33,40 @@
 <body>
     <div id="container"> <!--Put every thing from nav to footer-->
 
-        <nav>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="NewsPage.html">News</a></li>
-            <li><a href="TechnologyPage.html">Our Technology</a></li>
-            <li><a href="NewsPage.html">News</a></li>
-            <li><a href="Calculator.html">Calculator</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-        </nav>
+        <div class="headerContent">
+            <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+
+            <ul class="blogs">
+                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                <li><img src ="Images/linkedin.png"></li>
+                <li><img src ="Images/twitter.png"></li>
+            </ul>
+            <ul class="navBar">
+                <li><a href="TechnologyPage.html">OUR TECH</a></li>
+                <li><a href="NewsPage.html" >NEWS</a></li>
+                <li><a href="Calculator.html">CALCULATOR</a></li>
+                <li><a href = "Aboutus.html">OUR TEAM</a></li>
+                <li><a href = "ContactUs.html">CONTACT US</a></li>
+            </ul>
+
+            <ul class="blogs">
+                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                <li><img src ="Images/linkedin.png"></li>
+                <li><img src ="Images/twitter.png"></li>
+            </ul>
+
+            <div class = "dropMenu">
+            <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+            <img class = "menuIcon" src = "Images/menuIcon.png">
+                <div class = "dropdown-content">
+                    <a href="TechnologyPage.html">OUR TECH</a>
+                    <a href="NewsPage.html" >NEWS</a>
+                    <a href="Calculator.html">CALCULATOR</a>
+                    <a href = "Aboutus.html">OUR TEAM</a>
+                    <a href = "ContactUs.html">CONTACT US</a>
+                </div>
+            </div>
+        </div>
 
         <div class="listHeader">
             <h1>Page heading a with nice background image</h1>
@@ -78,6 +104,8 @@
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
         </div>
+          
+        <div class="waitingHeader2"><h2>Current people on the waiting list</h2></div>
 
         <?php
             if(isset($_POST['submit2']))

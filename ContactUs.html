@@ -9,6 +9,9 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
+    
+    <!-- Contact Us form validation -->
+    <script type="text/javascript" src="js/contactValidation.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,12 +23,6 @@
     <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-      fucntion warnInvalidInput() {
-        var custName = document.form.name.value;
-        var custNameRegex = /^[a-zA-Z0-9]+$/
-      }
-    </script>
 
 </head>
 <body>
@@ -156,64 +153,5 @@
       <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
   </div><!--Container end-->
-
-  <!--Form Validation-->
-  <script>
-  function validateForm() {
-    var flag = true;
-    if(validateName() == false) {
-      flag = false;
-    }
-
-    if(validateEmail() == false) {
-      flag = false;
-    }
-
-    if(validateTextArea() == false) {
-      flag = false;
-    }
-
-    if(flag == true) {
-      return true;
-    }
-    return false;
-  }
-
-  function validateName() {
-    var name = document.forms["contactForm"]["name"].value
-    if (name == "") {
-      document.getElementById("nameWarning").style.visibility = 'visible'
-      return false;
-    } else {
-      document.getElementById("nameWarning").style.visibility = 'hidden'
-    }
-    return true;
-  }
-
-  function validateEmail() {
-    var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    var email = document.forms["contactForm"]["email"].value
-
-    if (!(email.match(emailPattern))) {
-      document.getElementById("emailWarning").style.visibility = 'visible'
-      return false;
-    } else {
-      document.getElementById("emailWarning").style.visibility = 'hidden'
-      return true;
-    }
-  }
-
-  function validateTextArea() {
-    var text = document.forms["contactForm"]["inquiry"].value
-    if(text == "") {
-      document.getElementById("textWarning").style.visibility = 'visible'
-      return false;
-    } else {
-      document.getElementById("textWarning").style.visibility = 'hidden'
-    }
-    return true;
-  }
-  </script>
-
 </body>
 </html>

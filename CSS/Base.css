@@ -488,6 +488,18 @@ footer img {
 }
 
 /**************** Technology Page CSS ********************/
+#techMainWrapper {
+    height: 100%;
+    background-image: url('../images/cropyard.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#techMainWrapper h1 {
+    font-size: 3em;
+    margin: 0.8em auto;
+}
 .techWordHeader{
     padding-top: 100px;
 }
@@ -528,8 +540,9 @@ footer img {
     margin-right: auto;
     margin-left: auto;
     height: 500px;
-    width: 80%;
-    border: 2px solid;
+    width: 90%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .techAdvantage, p, h1{

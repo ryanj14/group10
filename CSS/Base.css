@@ -206,6 +206,12 @@ footer img {
     width: 100%;
     position: relative;
 }
+/***** Results Page ****/
+    
+.results {
+    margin-top: 100px;
+}
+
 /******************* Index CSS ************************/
 .OpenPageContainer{
     width: 100%;
@@ -1104,26 +1110,26 @@ footer img {
 /*For Mobile Devices*/
 @media only screen and (max-width: 500px) {
 
-  /******************* Footer CSS(500px) ***********************/
+/******************* Footer CSS(500px) ***********************/
 
-  footer p {
-    font-size: 0.7em;
-  }
+footer p {
+font-size: 0.7em;
+}
 
-  footer img {
-      width: 5em;
-      margin: 0 15px;
-  }
-  .supporterTop, .supporterBottom {
-      display: inline;
-  }
+footer img {
+  width: 5em;
+  margin: 0 15px;
+}
+.supporterTop, .supporterBottom {
+  display: inline;
+}
 
-  .threeLogo img { /*to make them equal ratio*/
-      width: 4em;
-  }
-  #whiteBox {
-      background-color: #fff;
-      height: 0.2em;
-      width: 100%;
-      position: relative;
-  }
+.threeLogo img { /*to make them equal ratio*/
+  width: 4em;
+}
+#whiteBox {
+  background-color: #fff;
+  height: 0.2em;
+  width: 100%;
+  position: relative;
+}                      

@@ -31,16 +31,42 @@
 
 <div id="container"> <!--Put every thing from nav to footer-->
 
-    <nav>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.php">Waiting List</a></li>
-        <li><a href="TechnologyPage.html">Our Technology</a></li>
-        <li><a href="NewsPage.html">News</a></li>
-        <li><a href="Aboutus.html">About Us</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-        <li><a href="Calculator.html">Calculator</a></li>
-    </nav>
+    <div class="headerContent">
+        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
 
+        <ul class="blogs">
+            <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+            <li><img src ="Images/linkedin.png"></li>
+            <li><img src ="Images/twitter.png"></li>
+        </ul>
+        <ul class="navBar">
+            <li><a href="TechnologyPage.html">OUR TECH</a></li>
+            <li><a href="NewsPage.html" >NEWS</a></li>
+            <li><a href="Calculator.html">CALCULATOR</a></li>
+            <li><a href = "Aboutus.html">OUR TEAM</a></li>
+            <li><a href = "ContactUs.html">CONTACT US</a></li>
+        </ul>
+
+        <ul class="blogs">
+            <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+            <li><img src ="Images/linkedin.png"></li>
+            <li><img src ="Images/twitter.png"></li>
+        </ul>
+
+        <div class = "dropMenu">
+        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+        <img class = "menuIcon" src = "Images/menuIcon.png">
+            <div class = "dropdown-content">
+                <a href="TechnologyPage.html">OUR TECH</a>
+                <a href="NewsPage.html" >NEWS</a>
+                <a href="Calculator.html">CALCULATOR</a>
+                <a href = "Aboutus.html">OUR TEAM</a>
+                <a href = "ContactUs.html">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
     <!-- The results of the form input -->
     <?php
         setlocale(LC_MONETARY,"en_CA");
@@ -94,20 +120,6 @@
         echo "Phytosanitary expenses: $". $pytoExp ."<br>";
         echo "Other expenses: $". $otherExp ."<br>";
         echo "<br>";
-        echo "Peak harvesting months:<br>";
-        if(!empty($_POST['month_list2'])){
-            foreach($_POST['month_list2'] as $selected){
-                echo $selected."<br>";
-            }
-        }
-        echo "<br>";
-        echo "Months for weeding:<br>";
-        if(!empty($_POST['month_list'])){
-            foreach($_POST['month_list'] as $selected2){
-                echo $selected2."<br>";
-            }
-            echo "<br>";
-        }
 
         // Connecting to the database
         $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -137,7 +149,7 @@
         /*
             The calculator part
         */
-        $botPrice = 10000; // variable A
+        $botPrice = 2000/ $acres; // variable A
         $budget = $_POST['annualBudget']; // variable U
         $cash = $budget - $botPrice;
         $acreSaving = $cash * $acres;
@@ -149,15 +161,15 @@
         }
 
         $phytosanitary = $_POST['expense3']; // variable m
-        $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $acres);
-        $F = (($budget - $phytosanitary) / ($budget * $botPrice));
+        $E = (($phytosanitary - ($phytosanitary / $budget) * $botPrice) * $acres);
+        $F = ($phytosanitary - ($phytosanitary / $budget) * $botPrice);
         if(!(($E <= 0) && ($F <= 0))) {
             echo "You can also save CAD $E on phystosanitary products yearly!(Equivalent to CAD $F year/acre)<br>";
         }
         $workers = $_POST['expense']; // variable k
         $workerBudget = $_POST['workers']; // variable S
         $workerHours = $_POST['weeklyWorkers'];
-        $H = (($budget - $workers) / ($budget * $botPrice) * $acres);
+        $H = (($workers - ($workers / $budget) * $botPrice) * $acres);
         $G = ($H / (($workers * $acres) / $workerBudget));
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
 
@@ -168,6 +180,7 @@
             echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
         }
     ?>
+    </div>
 
     <!---Footer Start--->
     <footer>

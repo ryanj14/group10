@@ -20,6 +20,13 @@
     <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!--Fade in Jquery-->
+    <script>
+    $('head').append('<style>body{display:none;}');
+    $(window).on("load", function() {
+      $('body').fadeIn(2000);
+    });
+    </script>
 
 </head>
 
@@ -62,26 +69,24 @@
     </div>
 
     <div id="aboutMainWrapper">
-    <div class="aboutMainHead">
+      <div class="aboutTech">
         <h1>Our Technology - Culture Bot</h1>
+
+      <div class="aboutFlex">
+          <div class="aboutLeft">
+            <img src="images/product1.jpg" alt="">
+          </div>
+          <div class="aboutRight">
+              <h2>Heading</h2>
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+              <!--Learn More link-->
+              <div class="aboutInner">
+                  <a href="TechnologyPage.html">Learn More</a>
+              </div>
+          </div>
+      </div>
     </div>
-
-    <div class="aboutFlex">
-        <div class="aboutLeft">
-          <img src="images/product1.jpg" alt="">
-        </div>
-        <div class="aboutRight">
-            <h2>Heading</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-            <!--Learn More link-->
-            <div class="aboutInner">
-                <a href="TechnologyPage.html">Learn More</a>
-            </div>
-
-        </div>
-    </div>
-
     <div class="floatClear"></div><!--To clear float setting-->
 
     <!--Our Team-->
@@ -116,7 +121,7 @@
           <img src="images/members/emanuel.jpg" alt="softwareEngineer-photo">
           <div class="memberDetail">
             <h3>Emanuel Pop, Horticulturist & Software Engineer</h3>
-              <p>Emanuel Pop is passionate about nature, the outdoors, agriculture and technology. His expertise is in software engineering, electronics, horticulture, biology and cyber security. He has a Master’s in Software Engineering, specializing in cyber networking from Université de Bordeaux & Strasbourg, France and a Technical Diploma in Viticulture & Oenology from Davaye school in Burgundy, France. He's trilingual (Romanian, French and English).</p>
+              <span class="adjustText"><p>Emanuel Pop is passionate about nature, the outdoors, agriculture and technology. His expertise is in software engineering, electronics, horticulture, biology and cyber security. He has a Master’s in Software Engineering, specializing in cyber networking from Université de Bordeaux & Strasbourg, France and a Technical Diploma in Viticulture & Oenology from Davaye school in Burgundy, France. He's trilingual (Romanian, French and English).</p></span>
           </div>
         </div>
 
@@ -125,7 +130,7 @@
           <img src="images/members/paul.jpg" alt="BusinessAdvisor-photo">
           <div class="memberDetail">
             <h3>Paul Von Wittgenstein, Business Advisor</h3>
-              <span class="paulText"><p>He’s passionate about learning, human behaviour and helping entrepreneurs to succeed. He has more than 25 years experience managing corporate learning and was Futurpreneur Canada’s first Mentor Expert. He's a serial entrepreneur, senior cross-cultural business consultant and former director of a small business school in Canada. Since 1998 he focus has been on talent development in Asian multinational organizations. He's also the captain of an innovative ed-tech startup Baby World Language. He's bilingual inEnglish and Mandarin.</p></span>
+              <span class="adjustText"><p>He’s passionate about learning, human behaviour and helping entrepreneurs to succeed. He has more than 25 years experience managing corporate learning and was Futurpreneur Canada’s first Mentor Expert. He's a serial entrepreneur, senior cross-cultural business consultant and former director of a small business school in Canada. Since 1998 he focus has been on talent development in Asian multinational organizations. He's also the captain of an innovative ed-tech startup Baby World Language. He's bilingual inEnglish and Mandarin.</p></span>
           </div>
         </div>
 

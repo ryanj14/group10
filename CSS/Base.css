@@ -6,6 +6,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: #FCF3EB;
+    font-family: "Courier New", Courier, monospace;
 }
 
 table, th, td {
@@ -27,13 +28,14 @@ ul {
     padding:0;
 }
 
-li {
-    list-style: none;
+li { list-style: none;}
+
+h2 {
+    font-style: italic;
+    color: #3D4353;
 }
 
-p {
-    margin: 0;
-}
+p {  margin: 0; }
 
 #container { /*To wrap everything from header to footer*/
     position: relative;
@@ -812,17 +814,31 @@ footer img {
 
 #aboutMainWrapper {
     height: 100%;
-    padding-top: 8em;
+    padding-top: 4em;
     background-image: url('../images/vineyard.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    background-color: #fff;
+    color: #3D4353;
 }
 
 #aboutMainWrapper h1 {
     font-size: 3em;
-    margin: 0.8em auto;
+    text-align: center;
+    margin: 0 auto 0.3em auto;
+    padding: 0.3em 0;
 }
+
+/*Page Top(About Technology)*/
+.aboutTech {
+    width: 90%;
+    height: 35em;
+    margin: 8em auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .aboutFlex {
     height: auto;
     width: 100%;
@@ -854,7 +870,7 @@ footer img {
 .aboutRight p {
     font-size: 1.2em;
     text-align: left;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 0.5em auto;
     width: 70%;
 }
 
@@ -865,7 +881,7 @@ footer img {
 
 .aboutInner a { /*Learn More Button*/
     width:70%;
-    margin: auto;
+    margin: 0 auto;
     font-size:24px;
     font-weight:bold;
     text-decoration:none;
@@ -873,7 +889,7 @@ footer img {
     text-align:center;
     padding:8px 0 10px;
     color:#fff;
-    background-color:#49a9d4;
+    background-color:#33ABF9;
     box-shadow:2px 2px #555;
     border-radius:5px;
 }
@@ -886,18 +902,21 @@ footer img {
 
 /*About Team*/
 #aboutTeam {
-    height: 110em;
+    width: 90%;
+    height: 100%;
+    margin: 8em auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
     display: block;
 }
 
 .aboutWordHeader {
     width: 80%;
-    margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align:  center;
+    margin: 0 auto;
+    text-align: center;
     display: block;
 }
+
 .aboutWordHeader p {
     text-align: left;
 }
@@ -908,7 +927,7 @@ footer img {
     margin-left: 4%;
     margin-right: 2%;
     margin-bottom: 2em;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     padding-top: 1em;
     height: 23em;
@@ -916,9 +935,10 @@ footer img {
     display: inline-block;
     box-shadow: 2px 2px 2px black;
 }
+
 #member img { /*member photos*/
       float: left;
-      width: 9em;
+      width: 8em;
       margin-top: 1em;
       border-radius: 5px;
 }
@@ -928,14 +948,14 @@ footer img {
     font-size: 1em;
 }
 #member p {
-    width: 98%;
+    width: 100%;
     display: inline-block;
     text-align: left;
     padding: 0 0.6em;
     line-height: 1.8em;
 }
 
-.paulText p { /*To adjust text volume*/
+.adjustText p { /*To adjust text volume*/
     font-size: 0.9em;
 }
 
@@ -945,14 +965,15 @@ footer img {
     float: left;
     clear: right;
     font-size: 1em;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     text-align: center;
 }
 
-/*About story section*/
+/*About story*/
+
 .aboutStory {
     width: 90%;
-    height: 55em;
+    height: 100%;
     margin: 3em auto 10em auto;
     padding-top: 0.8em;
     padding-bottom: 6em;
@@ -964,9 +985,10 @@ footer img {
 
 .aboutStory h2 { /*Small heading*/
     margin-top: 1em;
-    font-size: 1.6em;
+    font-style: italic;
 }
 .aboutStoryContents p {
+    width: 90%;
     text-align: left;
     margin: auto;
 }

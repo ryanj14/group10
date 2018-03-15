@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once('mysqli_connect.php');
 ?>
 
@@ -69,10 +68,8 @@
     <div class="results">
     <!-- The results of the form input -->
     <?php
-        setlocale(LC_MONETARY,"en_CA");
-        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
+        
         $growType = $_POST['growingType'];
-
         $vegetables = setValue($_POST['cultivate']);
         $orchards = setValue($_POST['cultivate2']);
         $berries = setValue($_POST['cultivate3']);
@@ -103,24 +100,6 @@
 
         $acres = getAcres();
 
-        echo "Growing Type: ". setValue($_POST['growingType'])."<br>";
-        echo "Number of acres: ". $acres ."<br>";
-        echo "Vegtables cultivated: " . $vegetables."<br>";
-        echo "Orchards cultivated: ". $orchards ."<br>";
-        echo "Berries cultivated: ". $berries ."<br>";
-        echo "Vineyards cultivated: ". $vine."<br>";
-        echo "Herbs cultivated: ". $herb."<br>";
-        echo "Others cultivated: ". $other ."<br>";
-        echo "Do you hire people for weeding? ". $_POST['weeding'] ."<br>";
-        echo "Number of workers hired: ". $_POST['workers'] ."<br>";
-        echo "Hours total for weeding for workers: ". $_POST['weeklyWorkers'] ."<br>";
-        echo "Annual budget: $". $budget ."<br>";
-        echo "Workers expenses: $". $workExpense ."<br>";
-        echo "Machinery expenses: $". $machineExp ."<br>";
-        echo "Phytosanitary expenses: $". $pytoExp ."<br>";
-        echo "Other expenses: $". $otherExp ."<br>";
-        echo "<br>";
-
         // Connecting to the database
         $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
@@ -136,15 +115,14 @@
         echo "<br>";
 
         // Checking to see if we actually placed the data into the database
-        if (mysqli_query($list, $sql)) {
-            echo "New record created successfully";
-        } else {
+        if (!(mysqli_query($list, $sql))) {
             echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+            mysqli_close($list);
+            die();
         }
 
         // Closing the connection to the database
         mysqli_close($list);
-
 
         /*
             The calculator part
@@ -157,14 +135,18 @@
         if(($cash <= 0) && ($acreSaving <= 0)) {
             echo "It looks like you are doing a great job keeping you weeding budget to a minimum. Please consider Culture Bot to increase your crop yield<br>";
         } else {
-            echo "Congratulations! With Culturebot, you can sav CAD $cash per year compated to your current weeding process!(Equivalent to CAD $acreSaving /year/acre)<br>";
+            $roundCash = number_format($cash,2);
+            $roundAcre = number_format($acreSaving,2);
+            echo "Congratulations! With Culturebot, you can sav CAD $$roundCash per year compated to your current weeding process!(Equivalent to CAD $$roundAcre /year/acre)<br>";
         }
 
         $phytosanitary = $_POST['expense3']; // variable m
         $E = (($phytosanitary - ($phytosanitary / $budget) * $botPrice) * $acres);
         $F = ($phytosanitary - ($phytosanitary / $budget) * $botPrice);
         if(!(($E <= 0) && ($F <= 0))) {
-            echo "You can also save CAD $E on phystosanitary products yearly!(Equivalent to CAD $F year/acre)<br>";
+            $EE = number_format($E,2);
+            $FF = number_format($F,2);
+            echo "You can also save CAD $$EE on phystosanitary products yearly!(Equivalent to CAD $$FF year/acre)<br>";
         }
         $workers = $_POST['expense']; // variable k
         $workerBudget = $_POST['workers']; // variable S
@@ -176,10 +158,19 @@
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
             $HH = number_format($H,2);
             $GG = round($G,0,PHP_ROUND_HALF_UP);
+            $JJ = round($J,0,PHP_ROUND_HALF_UP);
             //$JJ = round($J);
-            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
+            echo "Last but not least, you can re-allocate or dismiss $GG workers, saving CAD $$HH yearly and a total of $$JJ hours weekly.<br>";
         }
     ?>
+    </div>
+    
+    <div class="linkBoxes">
+        <div class="rightBox">
+            <a href="Waitinglist.php">
+            <p>Waiting list</p>
+            <img src="images/techIcons/waitingList.png"></a>
+        </div>
     </div>
 
     <!---Footer Start--->

@@ -498,6 +498,8 @@ footer img {
 /**************** Technology Page CSS ********************/
 #techMainWrapper {
     height: 100%;
+    width: 100%;
+    padding-top: 6em;
     background-image: url('../images/cropyard.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -510,8 +512,15 @@ footer img {
     text-align: center;
 }
 
+#techTopWrapper {
+    background: white;
+    height: 100%;
+    width: 100%;
+}
 .techWordHeader{
-    padding-top: 5em;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 
 .techWordHeader p {
@@ -522,7 +531,6 @@ footer img {
 }
 
 .techWordHeader h2{
-    text-align: center;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -559,8 +567,9 @@ footer img {
 
 /*Advantages*/
 .techAdvantage {
-    width: 90%;
+    width: 100%;
     height: 100%;
+    background-color: white;
     margin: auto;
     text-align: center;
 }
@@ -584,7 +593,10 @@ footer img {
 /*Image Slider section*/
 .advantageDetail {
     width: 80%;
-    margin: auto;
+    padding: 1em;
+    margin: 3em auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Benefits seciton*/
@@ -837,7 +849,6 @@ footer img {
     color: #3D4353;
 }
 
-#aboutMainWrapper h2 { color: #3D4353;}
 /*Page Top(About Technology)*/
 .aboutTech {
     width: 90%;
@@ -845,6 +856,13 @@ footer img {
     margin: 8em auto;
     border-radius: 5px;
     color:#fff;
+}
+
+.aboutTech img {
+    margin-left: 10%;
+    margin-bottom: 1.5em;
+    width:70%;
+    border-radius: 60px;
 }
 
 .aboutFlex {
@@ -875,6 +893,7 @@ footer img {
     margin-bottom: auto;
 }
 
+.aboutRight h2 { color: #fff;}
 .aboutRight p {
     font-size: 1.3em;
     text-align: left;

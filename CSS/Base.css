@@ -513,7 +513,6 @@ footer img {
 }
 
 #techTopWrapper {
-    background: white;
     height: 100%;
     width: 100%;
 }
@@ -567,16 +566,20 @@ footer img {
 
 /*Advantages*/
 .techAdvantage {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    background-color: white;
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid grey;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px;
+    margin: 10em auto 0 auto;
     text-align: center;
 }
 
 .advantageBlock {
     width: 28%;
-    margin-bottom: 2em;
+    margin: 0 1em 3em 1em;
+    box-shadow: 5px 5px 5px;
     display: inline-block;
 }
 

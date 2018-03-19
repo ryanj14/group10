@@ -75,14 +75,16 @@ p {  margin: 0; }
 
 .logo{
     width: 15%;
+	max-width: 200px;
     float: left;
+	height: 100%;
     position: absolute;
     background-color: white;
 }
 
-.logo img{
-    width: 100%;
-    margin: 15px 50px 0 50px;
+.logo img {
+	max-width: 100%;
+	margin: 15px 50px 0 50px;
 }
 .blogs,.navBar{
     float:inherit;
@@ -99,7 +101,6 @@ p {  margin: 0; }
 .navBar{
     width: 55%;
     font-size: 1em;
-    margin-left: 400px;
 }
 
 .navBar a{
@@ -125,7 +126,7 @@ p {  margin: 0; }
     filter: grayscale(100%);
 }
 
-@media (max-width:1000px){
+@media only screen and (max-width:1152px){
     .navBar, .blogs{
         display: none;
     }
@@ -498,6 +499,8 @@ footer img {
 /**************** Technology Page CSS ********************/
 #techMainWrapper {
     height: 100%;
+    width: 100%;
+    padding-top: 6em;
     background-image: url('../images/cropyard.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -510,8 +513,14 @@ footer img {
     text-align: center;
 }
 
+#techTopWrapper {
+    height: 100%;
+    width: 100%;
+}
 .techWordHeader{
-    padding-top: 5em;
+    width: 100%;
+    height: auto;
+    text-align: center;
 }
 
 .techWordHeader p {
@@ -522,7 +531,6 @@ footer img {
 }
 
 .techWordHeader h2{
-    text-align: center;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -561,13 +569,18 @@ footer img {
 .techAdvantage {
     width: 90%;
     height: 100%;
-    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid grey;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px;
+    margin: 10em auto 0 auto;
     text-align: center;
 }
 
 .advantageBlock {
     width: 28%;
-    margin-bottom: 2em;
+    margin: 0 1em 3em 1em;
+    box-shadow: 5px 5px 5px;
     display: inline-block;
 }
 
@@ -584,7 +597,10 @@ footer img {
 /*Image Slider section*/
 .advantageDetail {
     width: 80%;
-    margin: auto;
+    padding: 1em;
+    margin: 3em auto;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 /*Benefits seciton*/
@@ -837,7 +853,6 @@ footer img {
     color: #3D4353;
 }
 
-#aboutMainWrapper h2 { color: #3D4353;}
 /*Page Top(About Technology)*/
 .aboutTech {
     width: 90%;
@@ -845,6 +860,13 @@ footer img {
     margin: 8em auto;
     border-radius: 5px;
     color:#fff;
+}
+
+.aboutTech img {
+    margin-left: 10%;
+    margin-bottom: 1.5em;
+    width:70%;
+    border-radius: 60px;
 }
 
 .aboutFlex {
@@ -875,6 +897,7 @@ footer img {
     margin-bottom: auto;
 }
 
+.aboutRight h2 { color: #fff;}
 .aboutRight p {
     font-size: 1.3em;
     text-align: left;

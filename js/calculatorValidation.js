@@ -1,5 +1,5 @@
 function validateForm() {
-    if(validateRadio() == false){
+    if(validateRadio()){
         return false;
     } else if(validateWorkers() == false) {
         return false;

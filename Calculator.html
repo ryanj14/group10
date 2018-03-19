@@ -10,10 +10,6 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
 	<link rel="stylesheet" href="CSS/calculator_page.css" type="text/css">
-
-    <!-- JQuery for footer-->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="./footerFixed.js"></script>
     
     <!-- Calculator form validation -->
      <script type="text/javascript" src="js/calculatorValidation.js"></script>
@@ -28,13 +24,13 @@
     <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+	<script src="js/jquery-ui.min.js"></script>
 </head>
 
 <body>
     <div id="container"> <!--Put every thing from nav to footer-->
 		<div class="headerContent">
-			<li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+			<a class = "logo" href="Index.html"><img src = "Images/logo.png" /></a>
 
 			<ul class="blogs">
 				<li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
@@ -56,7 +52,7 @@
 			</ul>
 
 			<div class = "dropMenu">
-			<li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+			<a class = "logo" href="Index.html"><img src = "Images/logo.png" /></a>
 			<img class = "menuIcon" src = "Images/menuIcon.png">
 				<div class = "dropdown-content">
 					<a href="TechnologyPage.html">OUR TECH</a>
@@ -69,89 +65,96 @@
 		</div>
 		<!-- Calculator main contents starts-->
 		<header id="calculatorTitle" class="parallax">
-			<div id="titleCard">
-				<h1>Calculator</h1>
-				<h2>Calculate your time and cost savings with our innovative calculator</h2>
-			</div>
-		</header>
-		<div id="calculatorWrapper">
+			<div class="calculatorWrapper">
 			<div id="calculator">
 				<!--Form Starts-->
-				<form action="UserResults.php" name="calculatorForm" onsubmit="return validateForm()" method="post">
-					<div id="calcuCon">
+				<form action="UserResults.php" id="calculatorForm" name="calculatorForm" method="post" onSubmit="validateForm()">
+					<ul id="progressBar">
+						<li class="active">Grower type and crop types</li>
+						<li>Weeding costs per worker</li>
+						<li>Annual budget</li>
+					</ul>
+					<fieldset>
+						<h2 class="fs-title">Growing Type</h2>
+						<h3 class="fs-subtitle">First let us know what type of crops you grow</h3>
 						<!--Growing Type filled-->
 						<div id="growingType">
 							<span class="calcuParagraph">What is your grower type? </span><br>
-							<label class="radio-inline">
-								<input type="radio" name="growingType" value="Conventional">
-								<span class="calcuChoices">Conventional</span>
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="growingType" value="Organic">
-								<span class="calcuChoices">Organic</span>
-							</label>
-							<label class="radio-inline">
-								<input type="radio" name="growingType" value="Transitional">
-								<span class="calcuChoices">Transitional</span>
-							</label>
+							<div class="radiogroup">
+								<label class="radio-inline">
+									<input type="radio" name="growingType" value="Conventional">
+									<span class="calcuChoices">Conventional</span>
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="growingType" value="Organic">
+									<span class="calcuChoices">Organic</span>
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="growingType" value="Transitional">
+									<span class="calcuChoices">Transitional</span>
+								</label>
+							</div>
+							<!-- Number of Acres field cropType field-->
+							<div id="cropType">
+								<span class="calcuParagraph">
+									What are the crops you cultivate and how many acres do you allocate for each?
+								</span>
+								<br>
+								<div class="cropTypeItems">
+									<span class="calcuChoices">Vegtables</span>
+									<br>
+									<input type="text" name="cultivate" placeholder="0">
+									<br>
+									<span class="calcuChoices">Orchards</span>
+									<br>
+									<input type="text" name="cultivate2" placeholder="0">
+									<br>
+								</div>
+								<div class="cropTypeItems">
+									<span class="calcuChoices">Berries</span>
+									<br>
+									<input type="text" name="cultivate3" placeholder="0">
+									<br>
+									<span class="calcuChoices">Vineyards</span>
+									<br>
+									<input type="text" name="cultivate4" placeholder="0">
+									<br>
+								</div>
+								<div class="cropTypeItems">
+									<span class="calcuChoices">Herbs</span>
+									<br>
+									<input type="text" name="cultivate5" placeholder="0">
+									<br>
+									<span class="calcuChoices">Other</span>
+									<br>
+									<input type="text" name="cultivate6" placeholder="0">
+									<br>
+								</div>
+							</div>
 						</div>
-
-						<!-- Number of Acres field cropType field-->
-						<div id="cropType">
-							<span class="calcuParagraph">
-								What are the crops you cultivate and how many acres do you allocate for each?
-							</span>
+						<input type="button" name="next" class="next action-button" value="Next"/>
+					</fieldset>
+					<fieldset>
+						<h2 class="fs-title">Worker costs</h2>
+						<h3 class="fs-subtitle">Tell us whether you hire workers for weeding and how much it costs.</h3>
+						<!--People for weeding field-->
+						<div id="weedingPpl">
+							<span class="calcuParagraph">Do you hire people for weeding?</span>
+							<label class="radio-inline"><br>
+							<input type="radio" name="weeding" id="yesNo" value="Yes">
+							<span class="calcuChoices">Yes</span>
+							</label>
+							<label class="radio-inline">
+							<input type="radio" name="weeding" id="yesNo" value="No">
+							<span class="calcuChoices">No</span>
+							</label>
 							<br>
-							<div class="cropTypeItems">
-								<span class="calcuChoices">Vegtables</span>
-								<br>
-								<input type="text" name="cultivate" placeholder="0">
-								<br>
-								<span class="calcuChoices">Orchards</span>
-								<br>
-								<input type="text" name="cultivate2" placeholder="0">
-								<br>
-							</div>
-							<div class="cropTypeItems">
-								<span class="calcuChoices">Berries</span>
-								<br>
-								<input type="text" name="cultivate3" placeholder="0">
-								<br>
-								<span class="calcuChoices">Vineyards</span>
-								<br>
-								<input type="text" name="cultivate4" placeholder="0">
-								<br>
-							</div>
-							<div class="cropTypeItems">
-								<span class="calcuChoices">Herbs</span>
-								<br>
-								<input type="text" name="cultivate5" placeholder="0">
-								<br>
-								<span class="calcuChoices">Other</span>
-								<br>
-								<input type="text" name="cultivate6" placeholder="0">
-								<br>
-							</div>
 						</div>
-
-          <!--People for weeding field-->
-          <div id="weedingPpl">
-            <span class="calcuParagraph">Do you hire people for weeding?</span>
-            <label class="radio-inline"><br>
-              <input type="radio" name="weeding" id="yesNo" value="Yes">
-                <span class="calcuChoices">Yes</span>
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="weeding" id="yesNo" value="No">
-                <span class="calcuChoices">No</span>
-            </label>
-            <br>
-          </div>
-          <!--Workers per season field-->
-          <div id="workersPerSeason">
-            <span class="calcuParagraph">How many workers per season? </span><br>
-            <input type="text" name="workers" placeholder="0"><br>
-          </div>
+						<!--Workers per season field-->
+						<div id="workersPerSeason">
+							<span class="calcuParagraph">How many workers per season? </span><br>
+							<input type="text" name="workers" placeholder="0"><br>
+						</div>
 
 						<!--WeeklyHours field-->
 						<div id="weeklyHours">
@@ -161,13 +164,18 @@
 							<br>
 							<input type="text" name="weeklyWorkers" placeholder="0"><br>
 						</div>
-
+						<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+						<input type="button" name="next" class="next action-button" value="Next"/>
+					</fieldset>
+					<fieldset>
 						<!--Budget field-->
 						<div id="budget">
 							<span class="calcuParagraph">What is your total annual budget for weeding (per acre)?</span><br>
 							<span class="calcuChoices">Total:</span>
 							<input type="text" name="annualBudget" placeholder="0"><br>
-							<div class="itemsHeading">Items:</div>
+							<p class="calcuParagraph">
+								What percentage do each of the items below make up of the annual budget?
+							</p>
 							<div class="brakedowns">
 								<span class="calcuChoices">Workers</span><br>
 								<input type="text" name="expense" placeholder="0"><br>
@@ -181,45 +189,47 @@
 								<input type="text" name="expense4" placeholder="0"><br>
 							</div>
 						</div>
-
+						<input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
 						<!--Submit Button-->
-						<br><input id="calSubmit" type="submit" name="submit" value="Submit">
-					</div>
+						<input class="submit action-button" type="submit" name="submit" value="Submit">
+					</fieldset>	
 				</form>
 			</div>
 		</div>
+		</header>
+		<!---Footer Start--->
+		<footer>
+		  <!--Supporters-->
+		  <div id="footerSupporter">
+			<div class="supporterTop">
+			  <img src="images/flogo1.png" alt="growingFoward-logo">
+			  <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+			  <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+			  <img src="images/flogo4.png" alt="nserc-crsng-logo">
+			  <img src="images/flogo5.png" alt="britishColumbia-logo">
+			  <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+			  <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+			</div>
 
-    <!---Footer Start--->
-    <footer>
-      <!--Supporters-->
-      <div id="footerSupporter">
-        <div class="supporterTop">
-          <img src="images/flogo1.png" alt="growingFoward-logo">
-          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
-          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
-          <img src="images/flogo4.png" alt="nserc-crsng-logo">
-          <img src="images/flogo5.png" alt="britishColumbia-logo">
-          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
-          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
-        </div>
-
-        <div class="supporterBottom">
-          <img src="images/flogo8.png" alt="creativeLab-logo">
-          <img src="images/flogo9.png" alt="cta-logo">
-          <img src="images/flogo10.png" alt="mitas-logo">
-          <img src="images/flogo11.png" alt="ctcn-logo">
-          <div class="threeLogo">
-            <img src="images/flogo12.png" alt="unep-logo">
-            <img src="images/flogo13.png" alt="c-logo">
-            <img src="images/flogo14.png" alt="unido-logo">
-          </div>
-        </div>
-      </div>
-      <div id="footerCopyRight">
-        <p>© Eleos Robotics, Inc. All rights reserved.</p>
-      </div>
-      <div id="whiteBox"></div> <!--To hide blank line-->
-    </footer>
+			<div class="supporterBottom">
+			  <img src="images/flogo8.png" alt="creativeLab-logo">
+			  <img src="images/flogo9.png" alt="cta-logo">
+			  <img src="images/flogo10.png" alt="mitas-logo">
+			  <img src="images/flogo11.png" alt="ctcn-logo">
+			  <div class="threeLogo">
+				<img src="images/flogo12.png" alt="unep-logo">
+				<img src="images/flogo13.png" alt="c-logo">
+				<img src="images/flogo14.png" alt="unido-logo">
+			  </div>
+			</div>
+		  </div>
+		  <div id="footerCopyRight">
+			<p>© Eleos Robotics, Inc. All rights reserved.</p>
+		  </div>
+		  <div id="whiteBox"></div> <!--To hide blank line-->
+		  <script src="js/form_tabs.js"></script>
+		  <script src="js/calculatorValidation.js"></script>
+		</footer>
 		<!---Footer End--->
 	</div>
 </body>

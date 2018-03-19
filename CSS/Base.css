@@ -75,14 +75,16 @@ p {  margin: 0; }
 
 .logo{
     width: 15%;
+	max-width: 200px;
     float: left;
+	height: 100%;
     position: absolute;
     background-color: white;
 }
 
-.logo img{
-    width: 100%;
-    margin: 15px 50px 0 50px;
+.logo img {
+	max-width: 100%;
+	margin: 15px 50px 0 50px;
 }
 .blogs,.navBar{
     float:inherit;
@@ -99,7 +101,6 @@ p {  margin: 0; }
 .navBar{
     width: 55%;
     font-size: 1em;
-    margin-left: 400px;
 }
 
 .navBar a{
@@ -125,7 +126,7 @@ p {  margin: 0; }
     filter: grayscale(100%);
 }
 
-@media (max-width:1000px){
+@media only screen and (max-width:1152px){
     .navBar, .blogs{
         display: none;
     }

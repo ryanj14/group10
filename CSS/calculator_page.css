@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 #container {
     height: 100%;
 }
@@ -19,7 +18,6 @@
 #calculator {
 	padding: 30px;
     font-size: 18px;
-	width: 80%;
 	margin: auto;
 }
 
@@ -34,7 +32,8 @@
 form {
     text-align: center;
 	position: relative;
-	margin-top: 30px;
+	max-width: 80%;
+	margin: auto;
 }
 
 form fieldset {
@@ -64,7 +63,7 @@ form input[type=text] {
 
 .radio-inline {
 	display: inline-block;
-	width: 150px;
+	width: 20%;
 }
 
 form .action-button {
@@ -238,66 +237,66 @@ form .action-button-previous:hover, form .action-button-previous:focus {
 }
 
 /*************Calculator Page Responsive(1080px)**************/
-#calculator form {
-    font-size: 16px;
-}
+@media only screen and (max-width: 1080px) {
+	#calculator form {
+		font-size: 16px;
+	}
 
-.calcuParagraph { /*All Question paragraphs*/
-    font-size: 18px;
-}
+	.calcuParagraph { /*All Question paragraphs*/
+		font-size: 18px;
+	}
 
-.calcuChoices { /*All choices of questions*/
-    margin-right: 30px;
-}
+	.calcuChoices { /*All choices of questions*/
+		margin-right: 30px;
+	}
 
-#growingType .radio-inline { display: inline-block;}
+	#growingType .radio-inline {
+		display: inline-block;
+		width: 200px;
+	}
 
-#cropType  input { width: 60%;}
+	#cropType  input { width: 60%;}
 
-.itemsHeading { margin-right: 5%;}
+	.itemsHeading { margin-right: 5%;}
 
-.brakedowns input { width: 70%;}
+	.brakedowns input { width: 70%;}
 
-.brakedowns span { font-size: 14px;}
+	.brakedowns span { font-size: 14px;}
 
-.monthsItems {
-    margin-left: 5%;
-    width: 40%;
-}
+	.monthsItems {
+		margin-left: 5%;
+		width: 40%;
+	}
 
-.monthsItems input {
-    margin: 10px;
+	.monthsItems input {
+		margin: 10px;
+	}
+
 }
 
 /*************Calculator Page Responsive(500px)**************/
-#calculator form {
-    font-size: 14px;
-}
+@media only screen and (max-width: 500px) {
+	#calculator form {
+		font-size: 14px;
+	}
 
-.calcuParagraph { /*All Question paragraphs*/
-    font-size: 14px;
-}
+	.calcuParagraph { /*All Question paragraphs*/
+		font-size: 14px;
+	}
 
-#cropType  input { width: 70%;}
+	#cropType  input { width: 70%;}
 
-.brakedowns input { width: 70%;}
+	.brakedowns input { width: 70%;}
 
-.brakedowns span { font-size: 11px;}
+	.brakedowns span { font-size: 11px;}
 
-.monthsItems {
-    margin-left: 5%;
-    width: 50%;
-    display: inline-block;
-}
+	.monthsItems {
+		margin-left: 5%;
+		width: 50%;
+		display: inline-block;
+	}
 
-.monthsItems input {
-    margin: 10px;
-}
-
-/*Submit Button setting*/
-#calSubmit {
-    margin-left: 25%;
-    margin-bottom: 30px;
-    font-size: 15px;
-    width: 30%;
+	.monthsItems input {
+		margin: 10px;
+	}
 }

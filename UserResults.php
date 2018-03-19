@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require_once('mysqli_connect.php');
 ?>
 
@@ -31,22 +30,46 @@
 
 <div id="container"> <!--Put every thing from nav to footer-->
 
-    <nav>
-        <li><a href="Index.html">Home</a></li>
-        <li><a href="Waitinglist.php">Waiting List</a></li>
-        <li><a href="TechnologyPage.html">Our Technology</a></li>
-        <li><a href="NewsPage.html">News</a></li>
-        <li><a href="Aboutus.html">About Us</a></li>
-        <li><a href="ContactUs.html">Contact Us</a></li>
-        <li><a href="Calculator.html">Calculator</a></li>
-    </nav>
+    <div class="headerContent">
+        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
 
+        <ul class="blogs">
+            <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+            <li><img src ="Images/linkedin.png"></li>
+            <li><img src ="Images/twitter.png"></li>
+        </ul>
+        <ul class="navBar">
+            <li><a href="TechnologyPage.html">OUR TECH</a></li>
+            <li><a href="NewsPage.html" >NEWS</a></li>
+            <li><a href="Calculator.html">CALCULATOR</a></li>
+            <li><a href = "Aboutus.html">OUR TEAM</a></li>
+            <li><a href = "ContactUs.html">CONTACT US</a></li>
+        </ul>
+
+        <ul class="blogs">
+            <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+            <li><img src ="Images/linkedin.png"></li>
+            <li><img src ="Images/twitter.png"></li>
+        </ul>
+
+        <div class = "dropMenu">
+        <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+        <img class = "menuIcon" src = "Images/menuIcon.png">
+            <div class = "dropdown-content">
+                <a href="TechnologyPage.html">OUR TECH</a>
+                <a href="NewsPage.html" >NEWS</a>
+                <a href="Calculator.html">CALCULATOR</a>
+                <a href = "Aboutus.html">OUR TEAM</a>
+                <a href = "ContactUs.html">CONTACT US</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
     <!-- The results of the form input -->
     <?php
-        setlocale(LC_MONETARY,"en_CA");
-        // I have to create php variables just to insert into our mysqli table and it won't let me use $_POST...
+        
         $growType = $_POST['growingType'];
-
         $vegetables = setValue($_POST['cultivate']);
         $orchards = setValue($_POST['cultivate2']);
         $berries = setValue($_POST['cultivate3']);
@@ -77,38 +100,6 @@
 
         $acres = getAcres();
 
-        echo "Growing Type: ". setValue($_POST['growingType'])."<br>";
-        echo "Number of acres: ". $acres ."<br>";
-        echo "Vegtables cultivated: " . $vegetables."<br>";
-        echo "Orchards cultivated: ". $orchards ."<br>";
-        echo "Berries cultivated: ". $berries ."<br>";
-        echo "Vineyards cultivated: ". $vine."<br>";
-        echo "Herbs cultivated: ". $herb."<br>";
-        echo "Others cultivated: ". $other ."<br>";
-        echo "Do you hire people for weeding? ". $_POST['weeding'] ."<br>";
-        echo "Number of workers hired: ". $_POST['workers'] ."<br>";
-        echo "Hours total for weeding for workers: ". $_POST['weeklyWorkers'] ."<br>";
-        echo "Annual budget: $". $budget ."<br>";
-        echo "Workers expenses: $". $workExpense ."<br>";
-        echo "Machinery expenses: $". $machineExp ."<br>";
-        echo "Phytosanitary expenses: $". $pytoExp ."<br>";
-        echo "Other expenses: $". $otherExp ."<br>";
-        echo "<br>";
-        echo "Peak harvesting months:<br>";
-        if(!empty($_POST['month_list2'])){
-            foreach($_POST['month_list2'] as $selected){
-                echo $selected."<br>";
-            }
-        }
-        echo "<br>";
-        echo "Months for weeding:<br>";
-        if(!empty($_POST['month_list'])){
-            foreach($_POST['month_list'] as $selected2){
-                echo $selected2."<br>";
-            }
-            echo "<br>";
-        }
-
         // Connecting to the database
         $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
@@ -124,20 +115,19 @@
         echo "<br>";
 
         // Checking to see if we actually placed the data into the database
-        if (mysqli_query($list, $sql)) {
-            echo "New record created successfully";
-        } else {
+        if (!(mysqli_query($list, $sql))) {
             echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+            mysqli_close($list);
+            die();
         }
 
         // Closing the connection to the database
         mysqli_close($list);
 
-
         /*
             The calculator part
         */
-        $botPrice = 10000; // variable A
+        $botPrice = 2000/ $acres; // variable A
         $budget = $_POST['annualBudget']; // variable U
         $cash = $budget - $botPrice;
         $acreSaving = $cash * $acres;
@@ -145,99 +135,74 @@
         if(($cash <= 0) && ($acreSaving <= 0)) {
             echo "It looks like you are doing a great job keeping you weeding budget to a minimum. Please consider Culture Bot to increase your crop yield<br>";
         } else {
-            echo "Congratulations! With Culturebot, you can sav CAD $cash per year compated to your current weeding process!(Equivalent to CAD $acreSaving /year/acre)<br>";
+            $roundCash = number_format($cash,2);
+            $roundAcre = number_format($acreSaving,2);
+            echo "Congratulations! With Culturebot, you can sav CAD $$roundCash per year compated to your current weeding process!(Equivalent to CAD $$roundAcre /year/acre)<br>";
         }
 
         $phytosanitary = $_POST['expense3']; // variable m
-        $E = ((($budget - $phytosanitary) / ($budget * $botPrice)) * $acres);
-        $F = (($budget - $phytosanitary) / ($budget * $botPrice));
+        $E = (($phytosanitary - ($phytosanitary / $budget) * $botPrice) * $acres);
+        $F = ($phytosanitary - ($phytosanitary / $budget) * $botPrice);
         if(!(($E <= 0) && ($F <= 0))) {
-            echo "You can also save CAD $E on phystosanitary products yearly!(Equivalent to CAD $F year/acre)<br>";
+            $EE = number_format($E,2);
+            $FF = number_format($F,2);
+            echo "You can also save CAD $$EE on phystosanitary products yearly!(Equivalent to CAD $$FF year/acre)<br>";
         }
         $workers = $_POST['expense']; // variable k
         $workerBudget = $_POST['workers']; // variable S
         $workerHours = $_POST['weeklyWorkers'];
-        $H = (($budget - $workers) / ($budget * $botPrice) * $acres);
+        $H = (($workers - ($workers / $budget) * $botPrice) * $acres);
         $G = ($H / (($workers * $acres) / $workerBudget));
         $J = (((($workerHours * 52) / $workerBudget) * $G) / 52);
 
         if(!(($H <= 0) && ($G <= 0) && ($J <= 0))) {
             $HH = number_format($H,2);
             $GG = round($G,0,PHP_ROUND_HALF_UP);
+            $JJ = round($J,0,PHP_ROUND_HALF_UP);
             //$JJ = round($J);
-            echo "Last but not least, you can re-allocate or dismiss $G workers, saving CAD $HH yearly and a total of $J hours weekly.<br>";
+            echo "Last but not least, you can re-allocate or dismiss $GG workers, saving CAD $$HH yearly and a total of $$JJ hours weekly.<br>";
         }
     ?>
-
-<!---Footer Start--->
-<footer>
-  <!--Logo-->
-  <div id="footerLogo">
-    <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-    <p>© Eleos Robotics, Inc. All rights reserved.</p>
-  </div>
-
-  <!--For Repsonsive(below768px, Invisible by default)-->
-  <div id="footerLogo2">
-      <a href="index.html">Eleos Robotics, Inc</a>
-  </div>
-
-  <!--Links for each page, unknown content -->
-  <div id="footerMid">
-    <table>
-      <tr >
-        <th><a href="TechnologyPage.html">Technology</a></th>
-        <th><a href="Waitinglist.html">Waiting List</a></th>
-        <th><a href="Aboutus.html">About us</a></th>
-        <th><a href="ContactUs.html">Contact Us</a></th>
-      </tr>
-      <tr>
-        <td>
-          <p>Description about Technology page.</p>
-        </td>
-        <td>
-          <p>Description about Waiting list page.</p>
-        </td>
-        <td>
-          <p>Description about About us page.</p>
-        </td>
-        <td>
-        <p>Description about Contact us page.</p>
-        </td>
-      </tr>
-    </table>
-
-    <div id="footerSupporter">
-      <!--Contents is filled out later-->
     </div>
-  </div>
-
-  <div id="footerRight">
-
-    <!--For Responsive(below 768px), Invisible by default-->
-    <div id="footerBottomLeft">
-      <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-      <p>© Eleos Robotics, Inc. All rights reserved.</p>
+    
+    <div class="linkBoxes">
+        <div class="rightBox">
+            <a href="Waitinglist.php">
+            <p>Waiting list</p>
+            <img src="images/techIcons/waitingList.png"></a>
+        </div>
     </div>
 
-    <!--Company Information-->
-      <ul>
-        <li><span class="fInforHead">Address:</span></li>
-        <li>301-3007 Glen Drive, Coquitlam,<br>BC V3B 0L8 CANADA</li>
-        <li><span class="fInforHead">E-mail:</span> info@eleosrobotics.com</li>
-        <li><span class="fInforHead">Phone:</span> +1 (604) 500-2834</li>
-        <li><span class="fInforHead">SNS:</span>
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/eleosrobotics/" target="_blank">
-            <img src="Images/facebook.png" alt="Share on Facebook" /></a>
-
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={https://www.linkedin.com/company/eleos-robotics-inc.}&title={Eleos Robotics}&summary={articleSummary}&source={articleSource}" target="_blank">
-            <img src="Images/linkedin.png" alt="Share on Lniked in" /></a>
-
-          <a href="http://twitter.com/home?status=Eleos%20Robotics" target="_blank">
-            <img src="Images/twitter.png" alt="Share on Twitter" /></a> </li>
-      </ul>
-  </div>
-</footer>
+    <!---Footer Start--->
+    <footer>
+      <!--Supporters-->
+      <div id="footerSupporter">
+        <div class="supporterTop">
+          <img src="images/flogo1.png" alt="growingFoward-logo">
+          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+          <img src="images/flogo4.png" alt="nserc-crsng-logo">
+          <img src="images/flogo5.png" alt="britishColumbia-logo">
+          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+        </div>
+        <div class="supporterBottom">
+          <img src="images/flogo8.png" alt="creativeLab-logo">
+          <img src="images/flogo9.png" alt="cta-logo">
+          <img src="images/flogo10.png" alt="mitas-logo">
+          <img src="images/flogo11.png" alt="ctcn-logo">
+          <div class="threeLogo">
+            <img src="images/flogo12.png" alt="unep-logo">
+            <img src="images/flogo13.png" alt="c-logo">
+            <img src="images/flogo14.png" alt="unido-logo">
+          </div>
+        </div>
+      </div>
+      <div id="footerCopyRight">
+        <p>© Eleos Robotics, Inc. All rights reserved.</p>
+      </div>
+      <div id="whiteBox"></div> <!--To hide blank line-->
+    </footer>
 </div>
 </body>
 </html>

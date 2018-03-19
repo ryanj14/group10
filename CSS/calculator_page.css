@@ -1,0 +1,302 @@
+#container {
+    height: 100%;
+}
+
+/*******************Calculator Page CSS********************/
+#calculatorTitle {
+    position: relative;
+    padding-top: 10%;
+}
+
+#titleCard {
+    margin: auto;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%,0.1);
+    width: 50%;
+}
+
+#calculator {
+	padding: 30px;
+    font-size: 18px;
+	margin: auto;
+}
+
+.parallax {
+    height: 100%;
+    background: url("../images/orchard.jpg") no-repeat fixed center;
+    background-size: cover;
+    -webkit-transform-style: inherit;
+    transform-style: inherit;
+}
+
+form {
+    text-align: center;
+	position: relative;
+	max-width: 80%;
+	margin: auto;
+}
+
+form fieldset {
+	background: #ffffff;
+	border: 0 none;
+	border-radius: 0;
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	position: relative;
+}
+
+form fieldset:not(:first-of-type) {
+	display: none;
+}
+
+form input[type=text] {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	margin-bottom: 10px;
+	width: 50%;
+	box-sizing: border-box;
+	color: #2c3e50;
+}
+
+.radio-inline {
+	display: inline-block;
+	width: 20%;
+}
+
+form .action-button {
+	width: 10vw;
+	background: #44afdd;
+	font-weight: bold;
+	color: #ffffff;
+	border: 0 none;
+	border-radius: 25px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	overflow: hidden;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+
+form .action-button:hover, form .action-button:focus {
+	background: #93b02a;
+	color: #ffffff;
+}
+
+form .action-button-previous {
+	width: 10vw;
+	background: #d1d1d1;
+	font-weight: bold;
+	color: #ffffff;
+	border: 0 none;
+	border-radius: 25px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px transparent;
+	overflow: hidden;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+}
+
+form .action-button-previous:hover, form .action-button-previous:focus {
+	background: #000000;
+	color: #ffffff;
+}
+
+.fs-title {
+	font-size: 1.25vw;
+	text-transform: uppercase;
+	color: #2c3e50;
+	margin-bottom: 10px;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 1.2vw;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+#progressBar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+}
+
+#progressBar li {
+	list-style-type: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+	letter-spacing: 1px;
+}
+
+#progressBar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 24px;
+	height: 24px;
+	line-height: 26px;
+	display: block;
+	font-size: 1vw;
+	color: #333;
+	background: #fff;
+	border-radius: 25px;
+	margin: 0 auto 10px auto;
+}
+
+#progressBar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;
+}
+
+#progressBar li:first-child:after {
+	content: none;
+}
+
+#progressBar li.active:before, #progressBar li.active:after {
+	background: #93b02a;
+	color: #fff;
+}
+
+#calculator div {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.calcuParagraph { /*All Question paragraphs*/
+    color: #5A2F01;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.calcuChoices { /*All choices of questions*/
+    margin-right: 30px;
+}
+
+#calculator input {
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+#cropType  input {
+    margin-bottom: 10px;
+}
+
+.cropTypeItems {
+    width : 30%;
+    display: inline-block;
+    margin: auto;
+}
+
+.itemsHeading {
+    float: left;
+    margin-right: 3%;
+}
+
+.brakedowns  {
+    width: 25%;
+    display: inline-block;
+}
+
+.brakedowns input {
+    width: 60%;
+}
+.monthsItems {
+    margin-left: 2%;
+    width: 25%;
+    display: inline-block;
+}
+
+.monthsItems input {
+    margin: 10px;
+}
+
+/*************Calculator Page Responsive(1080px)**************/
+@media only screen and (max-width: 1080px) {
+	#calculator form {
+		font-size: 16px;
+	}
+
+	.calcuParagraph { /*All Question paragraphs*/
+		font-size: 18px;
+	}
+
+	.calcuChoices { /*All choices of questions*/
+		margin-right: 30px;
+	}
+
+	#growingType .radio-inline {
+		display: inline-block;
+		width: 200px;
+	}
+
+	#cropType  input { width: 60%;}
+
+	.itemsHeading { margin-right: 5%;}
+
+	.brakedowns input { width: 70%;}
+
+	.brakedowns span { font-size: 14px;}
+
+	.monthsItems {
+		margin-left: 5%;
+		width: 40%;
+	}
+
+	.monthsItems input {
+		margin: 10px;
+	}
+
+}
+
+/*************Calculator Page Responsive(500px)**************/
+@media only screen and (max-width: 500px) {
+	#calculator form {
+		font-size: 14px;
+	}
+
+	.calcuParagraph { /*All Question paragraphs*/
+		font-size: 14px;
+	}
+
+	#cropType  input { width: 70%;}
+
+	.brakedowns input { width: 70%;}
+
+	.brakedowns span { font-size: 11px;}
+
+	.monthsItems {
+		margin-left: 5%;
+		width: 50%;
+		display: inline-block;
+	}
+
+	.monthsItems input {
+		margin: 10px;
+	}
+}

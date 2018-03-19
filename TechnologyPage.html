@@ -21,6 +21,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!--Image Slider:JQuery Plugin-->
+    <link rel="stylesheet" type="text/css" href="CSS/slider-pro.css" media="screen"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>
+
+    <script>
+    $( document ).ready( function() {
+
+    } ) ;
+    </script>
+
 </head>
 <body>
 
@@ -42,7 +54,7 @@
             <li><img src ="Images/linkedin.png"></li>
             <li><img src ="Images/twitter.png"></li>
         </ul>
-        
+
         <div class = "dropMenu">
         <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
         <img class = "menuIcon" src = "Images/menuIcon.png">
@@ -55,8 +67,10 @@
             </div>
         </div>
     </div>
-    <!--Main contents Start-->
 
+    <!--Main contents Start-->
+    <div id="techMainWrapper">
+    <div id="techTopWrapper">
     <div class="techWordHeader">
         <h1>Features</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
@@ -64,22 +78,22 @@
 
     <div class="pair"> <!-- Side-by-side divs -->
 
-        <div class="techImage">
-            <img src="images/logo2.png">
+        <div class="techVideo">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/95VP-3EDiA4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
 
         <div class="techWord">
+            <h2>Small heading</h2>
             <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
         </div>
+
         <!--For Responsive setting(below 1080px)-->
         <div class="techWord2">
             <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora "</p>
         </div>
 
-
-
     </div> <!-- End of side-by-side -->
-
+  </div>
     <div class="floatClear"></div> <!--To remove float setting-->
 
     <div class="techDetail">
@@ -88,41 +102,96 @@
 
     <div class="techAdvantage">
         <h1>Advantages</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+        <!--Eco-Friendly-->
+        <div class="advantageBlock">
+          <p>Eco-Friendly</p>
+          <img src="images/techIcons/advantage1.png" alt="icon">
+        </div>
+
+        <!--Automated-->
+        <div class="advantageBlock">
+          <p>Automated</p>
+          <img src="images/techIcons/advantage2.png" alt="icon">
+        </div>
+
+        <!--Save costs-->
+        <div class="advantageBlock">
+          <p>Save Costs</p>
+          <img src="images/techIcons/advantage3.png" alt="icon">
+        </div>
     </div>
 
+    <!--Advantages(Image Slider)-->
     <div class="advantageDetail">
-        <h1>What it does and how it works</h1>
+      <div id="advantageImg" class="slider-pro">
+        <div class="sp-slides">
+          <!--1st img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample1.png" />
+          </div>
+          <!--2nd img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample2.png" />
+          </div>
+          <!--3rd img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample3.png" />
+          </div>
+          <!--4th img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample4.png" />
+          </div>
+          <!--5th img-->
+          <div class="sp-slide">
+            <img class="sp-image" src="images/sample5.png" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="benefits">
         <h1>Benefits</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <p> 3 icons goes here</p>
     </div>
-
-    <div class="benefitsDetail">
-        <h1>Benefits for customers</h1>
-    </div>
-
 
     <div class="linkBoxes">
         <div class="leftBox">
             <a href="Calculator.html">
             <p>Calculator</p>
-            <img src="images/calculator.png"></a>
+            <img src="images/techIcons/calculator.png"></a>
         </div>
         <div class="rightBox">
             <a href="Waitinglist.php">
             <p>Waiting list</p>
-            <img src="images/waitingList.png"></a>
+            <img src="images/techIcons/waitingList.png"></a>
         </div>
-
     </div>
+  </div>
     <!---Footer Start--->
     <footer>
       <!--Supporters-->
       <div id="footerSupporter">
-        <img src="images/supporter.png" alt="supporter-logos">
+        <div class="supporterTop">
+          <img src="images/flogo1.png" alt="growingFoward-logo">
+          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+          <img src="images/flogo4.png" alt="nserc-crsng-logo">
+          <img src="images/flogo5.png" alt="britishColumbia-logo">
+          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+        </div>
+        <div class="supporterBottom">
+          <img src="images/flogo8.png" alt="creativeLab-logo">
+          <img src="images/flogo9.png" alt="cta-logo">
+          <img src="images/flogo10.png" alt="mitas-logo">
+          <img src="images/flogo11.png" alt="ctcn-logo">
+          <div class="threeLogo">
+            <img src="images/flogo12.png" alt="unep-logo">
+            <img src="images/flogo13.png" alt="c-logo">
+            <img src="images/flogo14.png" alt="unido-logo">
+          </div>
+        </div>
       </div>
       <div id="footerCopyRight">
         <p>© Eleos Robotics, Inc. All rights reserved.</p>
@@ -130,5 +199,18 @@
       <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
   </div>
+
+  <!--Image Slide Script-->
+  <script>$( document ).ready(function( $ ) {
+    $('#advantageImg').sliderPro({
+      width: 900,
+      height: 500,
+      arrows: true,
+      buttons: true,
+      slideDistance:0,
+      });
+    });
+  </script>
+
 </body>
 </html>

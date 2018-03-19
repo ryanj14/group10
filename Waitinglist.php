@@ -14,6 +14,9 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
+    
+    <!-- Waiting list form validation -->
+    <script type="text/javascript" src="js/WaitListValidation.js"></script>
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,14 +33,40 @@
 <body>
     <div id="container"> <!--Put every thing from nav to footer-->
 
-        <nav>
-            <li><a href="Index.html">Home</a></li>
-            <li><a href="NewsPage.html">News</a></li>
-            <li><a href="TechnologyPage.html">Our Technology</a></li>
-            <li><a href="NewsPage.html">News</a></li>
-            <li><a href="Calculator.html">Calculator</a></li>
-            <li><a href="ContactUs.html">Contact Us</a></li>
-        </nav>
+        <div class="headerContent">
+            <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+
+            <ul class="blogs">
+                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                <li><img src ="Images/linkedin.png"></li>
+                <li><img src ="Images/twitter.png"></li>
+            </ul>
+            <ul class="navBar">
+                <li><a href="TechnologyPage.html">OUR TECH</a></li>
+                <li><a href="NewsPage.html" >NEWS</a></li>
+                <li><a href="Calculator.html">CALCULATOR</a></li>
+                <li><a href = "Aboutus.html">OUR TEAM</a></li>
+                <li><a href = "ContactUs.html">CONTACT US</a></li>
+            </ul>
+
+            <ul class="blogs">
+                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                <li><img src ="Images/linkedin.png"></li>
+                <li><img src ="Images/twitter.png"></li>
+            </ul>
+
+            <div class = "dropMenu">
+            <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
+            <img class = "menuIcon" src = "Images/menuIcon.png">
+                <div class = "dropdown-content">
+                    <a href="TechnologyPage.html">OUR TECH</a>
+                    <a href="NewsPage.html" >NEWS</a>
+                    <a href="Calculator.html">CALCULATOR</a>
+                    <a href = "Aboutus.html">OUR TEAM</a>
+                    <a href = "ContactUs.html">CONTACT US</a>
+                </div>
+            </div>
+        </div>
 
         <div class="listHeader">
             <h1>Page heading a with nice background image</h1>
@@ -75,6 +104,8 @@
                 <input id="calSubmit" type="submit" name="submit2" value="Submit">
             </form>
         </div>
+          
+        <div class="waitingHeader2"><h2>Current people on the waiting list</h2></div>
 
         <?php
             if(isset($_POST['submit2']))
@@ -147,7 +178,26 @@
     <footer>
       <!--Supporters-->
       <div id="footerSupporter">
-        <img src="images/supporter.png" alt="supporter-logos">
+        <div class="supporterTop">
+          <img src="images/flogo1.png" alt="growingFoward-logo">
+          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+          <img src="images/flogo4.png" alt="nserc-crsng-logo">
+          <img src="images/flogo5.png" alt="britishColumbia-logo">
+          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+        </div>
+        <div class="supporterBottom">
+          <img src="images/flogo8.png" alt="creativeLab-logo">
+          <img src="images/flogo9.png" alt="cta-logo">
+          <img src="images/flogo10.png" alt="mitas-logo">
+          <img src="images/flogo11.png" alt="ctcn-logo">
+          <div class="threeLogo">
+            <img src="images/flogo12.png" alt="unep-logo">
+            <img src="images/flogo13.png" alt="c-logo">
+            <img src="images/flogo14.png" alt="unido-logo">
+          </div>
+        </div>
       </div>
       <div id="footerCopyRight">
         <p>© Eleos Robotics, Inc. All rights reserved.</p>
@@ -155,70 +205,5 @@
       <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
     </div>
-
-    <script>
-        function validateForm() {
-            var xV = document.forms["waitForm"]["firstName"];
-            var aV = document.forms["waitForm"]["lastName"];
-            var yV = document.forms["waitForm"]["email"];
-            var bV = document.forms["waitForm"]["business"];
-            var cV = document.forms["waitForm"]["farm"];
-            var dV = document.forms["waitForm"]["phoneNumber"];
-            var eV = document.forms["waitForm"]["address"];
-            var x = document.forms["waitForm"]["firstName"].value;
-            var a = document.forms["waitForm"]["lastName"].value;
-            var y = document.forms["waitForm"]["email"].value;
-            var b = document.forms["waitForm"]["business"].value;
-            var c = document.forms["waitForm"]["farm"].value;
-            var d = document.forms["waitForm"]["phoneNumber"].value;
-            var e = document.forms["waitForm"]["address"].value;
-            if (x == "") {
-                alert("Name must be filled out");
-                xV.focus();
-                return false;
-            }
-            else if(y == ""){
-                alert("email must be filled out");
-                yV.focus();
-                return false;
-            }
-            else if(b == ""){
-                alert("business must be filled out");
-                bV.focus();
-                return false;
-            }
-            else if(d == ""){
-                alert("phone number must be filled out");
-                dV.focus();
-                return false;
-            }
-            else if(e == ""){
-                alert("address must be filled out");
-                eV.focus();
-                return false;
-            }else{
-                if(ValidateEmail(document.waitForm.email) == false)
-                {
-                    yV.focus();
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-        }
-        function ValidateEmail(mail)
-        {
-            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if(mail.value.match(mailformat))
-            {
-            return true;
-            }
-            else
-            {
-            alert("You have entered an invalid email address!");
-            return false;
-            }
-        }
-    </script>
 </body>
 </html>

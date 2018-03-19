@@ -20,6 +20,13 @@
     <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!--Fade in Jquery-->
+    <script>
+    $('head').append('<style>body{display:none;}');
+    $(window).on("load", function() {
+      $('body').fadeIn(2000);
+    });
+    </script>
 
 </head>
 
@@ -47,7 +54,7 @@
             <li><img src ="Images/linkedin.png"></li>
             <li><img src ="Images/twitter.png"></li>
         </ul>
-        
+
         <div class = "dropMenu">
         <li class = "logo"><a href="Index.html"><img src = "Images/logo.png" /></a></li>
         <img class = "menuIcon" src = "Images/menuIcon.png">
@@ -61,85 +68,157 @@
         </div>
     </div>
 
-    <div class="aboutMainHead">
-        <h1>Our Technology - Culture Bot</h1>
-    </div>
+    <div id="aboutMainWrapper">
+      <div class="aboutTech">
+        <img src="images/cultureBot2.png">
 
-    <div class="aboutFlex">
-        <div class="aboutLeft">
-          <img src="images/logo2.png" alt="">
+      <div class="aboutFlex">
+          <div class="aboutLeft">
+            <img src="images/product1.jpg" alt="product-image">
+          </div>
+          <div class="aboutRight">
+              <h2>Our Technology</h2>
+              <p>For growers that need a more effective and eco-friendly approach to crop protection. Culture Bot is an intelligent UGV robot that protects your crops and eliminates weeds, thereby reducing labour and removing herbicides from the picture.
+Unlike weed pulling and hoeing, Culture Bot is fully automated, and unlike herbicides our method is 100% sustainable and eco-friendly. Culture Bot saves you time, increases productivity, and eliminates headaches.</p>
+
+              <!--Learn More link-->
+              <div class="aboutInner">
+                  <a href="TechnologyPage.html">Learn More</a>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="floatClear"></div><!--To clear float setting-->
+
+    <!--Our Team-->
+    <div id="aboutTeam">
+      <div class="aboutWordHeader">
+          <h1>Our Team</h1>
+          <p>Our team is committed to upholding the highest standards of excellence in everything we do. Learn more about what governs us as a company.</p>
+      </div>
+
+      <!--Team member Information-->
+      <div class="aboutTeamMember">
+        <!--CEO-->
+        <div id="member">
+          <img src="images/members/yahoel.jpg" alt="CEO-photo">
+          <div class="memberDetail">
+            <h3>Yahoel Van Essen, Co-Founder & CEO</h3>
+              <p>One of Eleos Robotics' founders, he's passionate about discovering new technologies, caring for others and pleasing God. His expertise is in business/venture development, marketing, professional sales, and supply chain management. He has a Business Administration Degree specializing in Entrepreneurship and a Technical Marketing Diploma from the British Columbia Institute of Technology. He's bilingual (English and French).</p>
+          </div>
         </div>
-        <div class="aboutRight">
-            <h2>Heading</h2>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            <div class="aboutInner">
-                <a href="TechnologyPage.html">Learn More</a>
-            </div>
+
+        <!--CFO-->
+        <div id="member">
+          <img src="images/members/elisabeth.jpg" alt="CFO-photo">
+          <div class="memberDetail">
+            <h3>Elisabeth Van Essen, Co-Founder & CFO</h3>
+              <p>One of Eleos Robotics' founders. She's passionate about caring for others, living life on the edge and glorifying God. Her expertise is in finance, marketing, retail marketing, fundraising, business development and business administration. She has a Master’s Degree in International Business Management from Université Jean Moulin Lyon III, France. She's quadrilingual (in Romanian, French, English and Spanish) and a world citizen.</p>
+          </div>
         </div>
+
+        <!--SoftWare Engineer-->
+        <div id="member">
+          <img src="images/members/emanuel.jpg" alt="softwareEngineer-photo">
+          <div class="memberDetail">
+            <h3>Emanuel Pop, Horticulturist & Software Engineer</h3>
+              <span class="adjustText"><p>Emanuel Pop is passionate about nature, the outdoors, agriculture and technology. His expertise is in software engineering, electronics, horticulture, biology and cyber security. He has a Master’s in Software Engineering, specializing in cyber networking from Université de Bordeaux & Strasbourg, France and a Technical Diploma in Viticulture & Oenology from Davaye school in Burgundy, France. He's trilingual (Romanian, French and English).</p></span>
+          </div>
+        </div>
+
+        <!--Business Advisor-->
+        <div id="member">
+          <img src="images/members/paul.jpg" alt="BusinessAdvisor-photo">
+          <div class="memberDetail">
+            <h3>Paul Von Wittgenstein, Business Advisor</h3>
+              <span class="adjustText"><p>He’s passionate about learning, human behaviour and helping entrepreneurs to succeed. He has more than 25 years experience managing corporate learning and was Futurpreneur Canada’s first Mentor Expert. He's a serial entrepreneur, senior cross-cultural business consultant and former director of a small business school in Canada. Since 1998 he focus has been on talent development in Asian multinational organizations. He's also the captain of an innovative ed-tech startup Baby World Language. He's bilingual inEnglish and Mandarin.</p></span>
+          </div>
+        </div>
+
+        <!--Mechatronics Engineer-->
+        <div id="member">
+          <img src="images/members/gordon.jpg" alt="MechatronicsEngineer-photo">
+          <div class="memberDetail">
+            <h3>Gordon Ho, Mechatronics Engineer</h3>
+              <p>He's passionate about travel, longboarding and staying at the forefront of advanced robotics. His expertise is in Mechatronics (hardware/robotics), programming and 3D-Modelling. Gordon has a Bachelor’s Degree in Systems Engineering from Simon Fraser University, and he has been honing his skills in robotics since he was a child.</p>
+          </div>
+        </div>
+
+        <!--Mechatronics Engineer2-->
+        <div id="member">
+          <img src="images/members/amrita.jpg" alt="MechatronicsEngineer-photo">
+          <div class="memberDetail">
+            <h3>Amrita, Mechatronics Engineer</h3>
+              <p>Amrita is passionate about travel, reading and learning new things. She’s a graduating Mechatronic Systems Engineering student at Simon Fraser University. Amrita is an engineer with an ambitious, yet focused and calm, demeanor, looking to become a qualified professional; she's top of the class. She is very hands-on and detail oriented and a good team player. She’s trilingual in English, Hindi, and Punjabi.</p>
+          </div>
+        </div>
+
+        <!--Tech Accelerator-->
+        <div id="member">
+          <img src="images/members/accelerator.jpg" alt="TechAccelerator-photo">
+          <div class="memberDetail">
+            <h3>SRCTech, Ag-Tech Accelerator</h3>
+              <p>Amrita is passionate about travel, reading and learning new things. She’s a graduating Mechatronic Systems Engineering student at Simon Fraser University. Amrita is an engineer with an ambitious, yet focused and calm, demeanor, looking to become a qualified professional; she's top of the class. She is very hands-on and detail oriented and a good team player. She’s trilingual in English, Hindi, and Punjabi.</p>
+          </div>
+        </div>
+
+        <!--KPU University-->
+        <div id="member">
+          <img src="images/members/university.png" alt="kpuUniversity-logo">
+          <div class="memberDetail">
+            <h3>Kwantlen Polytechnic University</h3>
+              <p>Kwantlen Polytechnic University (KPU) supports our technology development through their Sustainable Horticulture, and Physics departments. KPU is a leading university and has partnered with us under the NSERC program. Two KPU P.H.D.'s are overseeing our, horticulture, artificial intelligence, and software systems development. They have recruited a team of five experienced software engineers to help develop our tech.</p>
+          </div>
+        </div>
+
+
+      </div>
     </div>
 
     <div class="floatClear"></div> <!--To clear float setting-->
-    <div class="aboutWordHeader">
-        <h1>Our Team</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </div>
 
-        <div class="aboutStory" class="container-fluid">
-        <h1>Our Story</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </div>
+    <!--Our Story-->
+        <div class="aboutStory">
+          <div class="aboutStoryContents">
+            <h1>Our Story</h1>
+            <h2>History</h2>
+            <p>Eleos Robotics had humble beginnings as a virtual company partly in France and Canada. The founding team had no savings or capital and they risked their finances and ended their careers to devote themselves to building Eleos Robotics. Many skeptics had insisted that we were attempting the impossible. However, all things are possible through God who strengthens us. What we lacked in finances and resources, we made up for with abundant grace, ingenuity, and intelligence.</p>
+
+            <h2>What's Eleos Robotics</h2>
+            <p>Eleos Robotics was built to be the platform on which numerous ingenious inventions will be created and one day impact the world. Although, we know that it's not technology that changes the world, it's the people behind the technology.</p>
+            <h2>First Invention</h2>
+            <p>
+            Our first invention, Culture Bot, was inspired by the need for a technology that could remove pests on farms in a way that better reflects technological advancements and the changing values of society. The solution was made possible by cutting-edge advancements in robotics and artificial intelligence technology. It's common knowledge that pesticides are harmful to people and to the environment, but we hadn't realized how extremely expensive they were to use. Moreover, we found growers already have thin margins and the high costs of application burdens their operation. Organic growers, who take the ethical high road, have even higher costs.</p>
+            <h2>Future</h2>
+            <p>After witnessing decades of failed attempts at boycotting pesticides, we were convinced that a superior technology need to be invented and commercialized to make change happen. At Eleos Robotics, we believe that there is a better way of doing anything, so long as we make the effort. We care about the environment and most of all about people who depend on it.</p>
+      </div><!--AboutStoryContents end-->
+    </div><!--AboutStory end-->
   </div>
-    <!---Footer Start--->
-    <footer>
-      <!--Logo-->
-      <div id="footerLogo">
-        <a href="Index.html"><img src="Images/logo.png" alt="company-logo"></a>
-        <p>© Eleos Robotics, Inc. All rights reserved.</p>
-      </div>
-
-      <!--For Repsonsive(below768px, Invisible by default)-->
-      <div id="footerLogo2">
-          <a href="index.html">Eleos Robotics, Inc</a>
-      </div>
-
-      <!--Links for each page, unknown content -->
-      <div id="footerMid">
-        <table>
-          <tr >
-            <th><a href="TechnologyPage.html">Technology</a></th>
-            <th><a href="Waitinglist.php">Waiting List</a></th>
-            <th><a href="Aboutus.html">About us</a></th>
-            <th><a href="ContactUs.html">Contact Us</a></th>
-          </tr>
-          <tr>
-            <td>
-              <p>Description about Technology page.</p>
-            </td>
-            <td>
-              <p>Description about Waiting list page.</p>
-            </td>
-            <td>
-              <p>Description about About us page.</p>
-            </td>
-            <td>
-            <p>Description about Contact us page.</p>
-            </td>
-          </tr>
-        </table>
-
-        <div id="footerSupporter">
-          <!--Contents is filled out later-->
-        </div>
-      </div>
-
-      <div id="footerRight">
+</div>
   <!---Footer Start--->
   <footer>
     <!--Supporters-->
     <div id="footerSupporter">
-      <img src="images/supporter.png" alt="supporter-logos">
+      <div class="supporterTop">
+        <img src="images/flogo1.png" alt="growingFoward-logo">
+        <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+        <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+        <img src="images/flogo4.png" alt="nserc-crsng-logo">
+        <img src="images/flogo5.png" alt="britishColumbia-logo">
+        <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+        <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+      </div>
+      <div class="supporterBottom">
+        <img src="images/flogo8.png" alt="creativeLab-logo">
+        <img src="images/flogo9.png" alt="cta-logo">
+        <img src="images/flogo10.png" alt="mitas-logo">
+        <img src="images/flogo11.png" alt="ctcn-logo">
+        <div class="threeLogo">
+          <img src="images/flogo12.png" alt="unep-logo">
+          <img src="images/flogo13.png" alt="c-logo">
+          <img src="images/flogo14.png" alt="unido-logo">
+        </div>
+      </div>
     </div>
     <div id="footerCopyRight">
       <p>© Eleos Robotics, Inc. All rights reserved.</p>
@@ -149,6 +228,5 @@
 <!---Footer End--->
 </div>
 <!-- Container End -->
-
 </body>
 </html>

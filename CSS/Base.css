@@ -58,7 +58,7 @@ p {
     -webkit-box-shadow: 0 3px 40px 5px #E5E5E5;
     -moz-box-shadow:    0 3px 40px 5px #E5E5E5;
     box-shadow:         0 3px 40px 5px #E5E5E5;
-    z-index: 100;
+    z-index: 200;
 }
 
 .headerContent a{
@@ -248,7 +248,7 @@ footer p {
 
 .OpenPageContainer .OpenPageTitle{
     position: absolute;
-    z-index: 999;
+    z-index: 100;
     text-align: center;
     margin-top: 120px;
     width: 100%;

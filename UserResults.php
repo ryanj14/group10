@@ -44,6 +44,7 @@
             <li><a href="Calculator.html">CALCULATOR</a></li>
             <li><a href = "Aboutus.html">OUR TEAM</a></li>
             <li><a href = "ContactUs.html">CONTACT US</a></li>
+            <li><a href = "Waitinglist.php">WAITINGLIST</a></li>
         </ul>
 
         <ul class="blogs">
@@ -61,6 +62,7 @@
                 <a href="Calculator.html">CALCULATOR</a>
                 <a href = "Aboutus.html">OUR TEAM</a>
                 <a href = "ContactUs.html">CONTACT US</a>
+                <a href = "Waitinglist.php">WAITINGLIST</a>
             </div>
         </div>
     </div>

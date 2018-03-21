@@ -1,5 +1,6 @@
 #container {
-    height: 100%;
+   /* height: 80%;  This was causing the box to be
+    underlapped the footer*/
 }
 
 /*******************Calculator Page CSS********************/
@@ -13,7 +14,7 @@
 #calculator {
 	padding: 30px;
     font-size: 18px;
-	margin: auto;
+	margin-bottom: 10%;
 }
 
 .parallax {

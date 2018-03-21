@@ -6,13 +6,8 @@
 #calculatorTitle {
     position: relative;
     padding-top: 10%;
-}
-
-#titleCard {
-    margin: auto;
-    text-align: center;
-    background-color: hsla(0, 0%, 100%,0.1);
-    width: 50%;
+	max-width: 100%;
+	overflow: hidden;
 }
 
 #calculator {

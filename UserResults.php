@@ -13,6 +13,8 @@
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
+	<link rel="stylesheet" href="CSS/results-style.css">
+	<link rel="stylesheet" href="CSS/interactive-svg.css">
 
     <!-- For IE browser compatibility-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,11 +83,11 @@
         $hire = $_POST['weeding'];
         $workHire = $_POST['workers'];
         $workHours = $_POST['weeklyWorkers'];
-        $budget = $_POST['annualBudget'];
-        $workExpense = ($_POST['expense'] / 100) * $budget;
-        $machineExp = ($_POST['expense2'] / 100) * $budget;
-        $pytoExp = ($_POST['expense3'] / 100) * $budget;
-        $otherExp = ($_POST['expense4'] / 100) * $budget;
+        $budget = setValue($_POST['annualBudget']);
+        $workExpense = (setValue($_POST['expense']) / 100) * $budget;
+        $machineExp = (setValue($_POST['expense2']) / 100) * $budget;
+        $pytoExp = (setValue($_POST['expense3']) / 100) * $budget;
+        $otherExp = (setValue($_POST['expense4']) / 100) * $budget;
 
         function getAcres() {
             global  $vegetables, $orchards, $berries, $vine, $herb, $other;

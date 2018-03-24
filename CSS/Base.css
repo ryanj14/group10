@@ -448,21 +448,80 @@ footer img {
 .techWord2 { display: none;}
 
 .techDetail {
-    margin-top: 100px;
-    margin-right: auto;
-    margin-left: auto;
-    height: 500px;
-    width: 90%;
+    height: 100%;
+    width: 100%;
+    margin: 5em auto;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+.techDetailBlock {
+    width: 98%;
+    height: 100%;
+    margin: 2em auto;
+    display: block;
+    text-align: center;
+}
+
+.techDetailBlock h3 {
+    margin-top: 1.5em;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.techDetailBlock p {
+    width: 90%;
+    height: 5em;
+    margin: 1em auto;
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.techDetailBlock img {
+    max-width: 100%;
+    max-height: 28em;
+    height: 18em;
+    width: auto;
+    margin: 0 auto;
+}
+
+.detailBlockLeft1, .detailBlockLeft2, .detailBlockLeft3 {
+    width: 48%;
+    height: 35em;
+    margin: 1em 0.5em;
+    float: left;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.detailBlockRight1, .detailBlockRight2, .detailBlockRight3 {
+    width: 48%;
+    float: right;
+    height: 35em;
+    margin: 1em 0.5em;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.detailBlockLeft1, .detailBlockRight1, .detailBlockLeft3 {
+    background-color: #fff;
+
+}
+
+.detailBlockLeft2, .detailBlockRight2 {
+    background-color: #fff;
+}
+
+.detailBlockLeft3, .detailBlockRight3 {
+   background-color: #fff;
+}
+
 
 /*Advantages*/
 .techAdvantage {
     width: 90%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid grey;
     border-radius: 15px;
     box-shadow: 10px 10px 10px;
     margin: 10em auto 0 auto;
@@ -497,7 +556,13 @@ footer img {
 
 /*Benefits seciton*/
 .benefits {
-
+  width: 90%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px;
+  margin: 10em auto 0 auto;
+  text-align: center;
 }
 
 .benefits p {

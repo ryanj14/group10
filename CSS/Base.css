@@ -388,6 +388,16 @@ footer img {
     padding: 70px 50px;
 }
 
+@media only screen and (max-width:1152px){
+    .selector img{
+        float: right;
+        margin-top: 10px;
+        width: 5%;
+    }
+    
+
+}
+
 /**************** Technology Page CSS ********************/
 #techMainWrapper {
     height: 100%;

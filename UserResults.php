@@ -84,10 +84,10 @@ require_once('mysqli_connect.php');
         $workHire = $_POST['workers'];
         $workHours = $_POST['weeklyWorkers'];
         $budget = setValue($_POST['annualBudget']); // Variable U
-        $workExpense = (setValue($_POST['expense']) / 100) * $budget;
-        $machineExp = (setValue($_POST['expense2']) / 100) * $budget;
-        $phytoExp = (setValue($_POST['expense3']) / 100) * $budget;
-        $otherExp = (setValue($_POST['expense4']) / 100) * $budget;
+        $workExpense = determinePercentage($_POST['expense']);
+        $machineExp = determinePercentage($_POST['expense2']);
+        $phytoExp = determinePercentage($_POST['expense3']);
+        $otherExp = determinePercentage($_POST['expense4']);
 
         function getAcres()
         {
@@ -103,6 +103,15 @@ require_once('mysqli_connect.php');
             else
                 return $value;
         }
+		
+		function determinePercentage($value) {
+			if (is_numeric($value)) {
+					return setValue($value);
+			}
+			else if (preg_match("/^\\d+%\$/", $value)) {
+				return (setValue(intval($value)) / 100) * setValue($_POST['annualBudget']);
+			}
+		}
 
         $acres = getAcres();
 

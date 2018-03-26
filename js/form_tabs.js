@@ -36,7 +36,7 @@ $(".next").click(function () {
 			current_fs.hide();
 			animating = false;
 		},
-		easing: 'easeInOutBack'
+		easing: 'easeInOutBack',
 	});
 });
 
@@ -56,11 +56,15 @@ $(".previous").click(function() {
 			left = ((1 - now) * 50) + "%";
 			opacity = 1 - now;
 			current_fs.css({'left': left});
-			previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
+			previous_fs.css({
+				'transform': 'scale(' + scale + ')',
+				'opacity': opacity
+			});
 		},
 		duration: 800,
 		complete: function() {
 			current_fs.hide();
+			previous_fs.css({'position': 'relative'});
 			animating = false;
 		},
 		easing: 'easeInOutBack'

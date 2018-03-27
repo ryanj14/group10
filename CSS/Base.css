@@ -200,6 +200,7 @@ footer img {
     width: 7em;
     margin: 0 15px;
 }
+footer a:link { text-decoration: none;}
 .supporterTop, .supporterBottom, .threeLogo {
     display: inline-block;
 }
@@ -479,7 +480,6 @@ footer img {
     height: 100%;
     width: 80%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.7);
 }
 
 #techTopWrapper {
@@ -544,13 +544,14 @@ footer img {
 
 .aboutInner {
     width: 100%;
+    height: auto;
     margin: auto;
 }
 
 #learnMore, #seeDemo  { /*Learn More Button*/
-    width:50%;
+    width:40%;
     float:left;
-    margin: 0.7em 2em;
+    margin: 1em;
     font-size:1.5em;
     font-weight:bold;
     text-decoration:none;
@@ -574,6 +575,7 @@ footer img {
     background-color: #fff;
     transition: 0.4s;
 }
+
 
 /**
 .techVideo {

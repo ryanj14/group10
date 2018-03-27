@@ -27,10 +27,6 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/jquery.sliderPro.min.js"></script>-->
 
-    <!--Image Slider-->
-    <link rel="stylesheet" href="CSS/flexslider.css" type="text/css" />
-    <script src="js/jquery.flexslider.js"></script>
-
     <script>
     $( document ).ready( function() {
 
@@ -116,53 +112,70 @@
     <div class="techDetail">
       <!-- Block 1-->
       <div class="techDetailBlock">
-
         <div class="detailBlockLeft1">
           <h3>DETECTS + IDENTIFIES WEEDS</h3>
           <p>Culture Bot, is able to detect and distinguish different kinds of weed species using advanced imaging technology and artificial intelligence (Ai).</p>
-          <img src="images/sample1.png" alt="">
         </div>
-
       <div class="detailBlockRight1">
-        <h3>DESTROYS CROP WEEDS</h3>
-        <p>Culture Bot has an advanced directed evergy device that targets weeds with precision, and then eliminates them with ease.</p>
-      <img src="images/sample2.png" alt="">
+        <img src="images/sample1.png" alt="">
       </div>
-
     </div>
 
     <!-- Block 2-->
     <div class="techDetailBlock">
-
       <div class="detailBlockLeft2">
-        <h3>FULLY AUTOMATIC</h3>
-        <p>Culture Bot is completely automated. That means it navigates your crops, recharges, and operates autonomously, without the need for your supervision.</p>
-        <img src="images/sample3.png" alt="">
+        <img src="images/sample2.png" alt="">
       </div>
-
     <div class="detailBlockRight2">
-      <h3>AUTOMATIC CHARGING SYSTEM</h3>
-      <p>Culture Bot uses an autonomous charging station to shelter and recharge itself. The station can be solar, generator powered, or connected to a power-source.</p>
-      <img src="images/sample4.png" alt="">
+      <h3>DESTROYS CROP WEEDS</h3>
+      <p>Culture Bot has an advanced directed evergy device that targets weeds with precision, and then eliminates them with ease.</p>
     </div>
   </div>
 
   <!-- Block 3-->
   <div class="techDetailBlock">
-    <div class="detailBlockLeft3">
-      <h3>ANALYTICS + USER APPLICATION</h3>
-      <p>Culture Bot gives you control with an easy to user application. You can manual override the robots, track them in real-time, and get location based weed kill counts.</p>
-      <img src="images/sample5.png" alt="">
+    <div class="detailBlockLeft1">
+      <h3>FULLY AUTOMATIC</h3>
+      <p>Culture Bot is completely automated. That means it navigates your crops, recharges, and operates autonomously, without the need for your supervision.</p>
     </div>
-
-  <div class="detailBlockRight3">
-    <h3>DAY + NIGHT, RAIN OR SHINE</h3>
-    <p>Culture Bot can operate 24/7. It protects your crops and kills weeds even while you sleep. Unlike spraying or hoeing, it works in rainy or windy conditions.</p>
-    <img src="images/sample6.png" alt="">
+  <div class="detailBlockRight1">
+    <img src="images/sample3.png" alt="">
   </div>
 </div>
 
+<!-- Block 4-->
+<div class="techDetailBlock">
+  <div class="detailBlockLeft2">
+    <img src="images/sample4.png" alt="">
   </div>
+<div class="detailBlockRight2">
+  <h3>AUTOMATIC CHARGING SYSTEM</h3>
+  <p>Culture Bot uses an autonomous charging station to shelter and recharge itself. The station can be solar, generator powered, or connected to a power-source.</p>
+</div>
+</div>
+
+<!-- Block 5-->
+<div class="techDetailBlock">
+  <div class="detailBlockLeft1">
+    <h3>ANALYTICS + USER APPLICATION</h3>
+    <p>Culture Bot gives you control with an easy to user application. You can manual override the robots, track them in real-time, and get location based weed kill counts.</p>
+  </div>
+<div class="detailBlockRight1">
+  <img src="images/sample5.png" alt="">
+</div>
+</div>
+
+<!-- Block 6-->
+<div class="techDetailBlock">
+<div class="detailBlockLeft2">
+  <img src="images/sample6.png" alt="">
+</div>
+<div class="detailBlockRight2">
+<h3>DAY + NIGHT, RAIN OR SHINE</h3>
+<p>Culture Bot can operate 24/7. It protects your crops and kills weeds even while you sleep. Unlike spraying or hoeing, it works in rainy or windy conditions.</p>
+</div>
+</div>
+
 <div class="floatClear"></div> <!--To remove float setting-->
 
     <div class="techAdvantage">
@@ -188,21 +201,29 @@
     </div>
 
     <!--Advantages(Image Slider)-->
-    <div class="advantageDetail">
-      <div id="advantageImg" class="flexslider">
-        <ul class="slides">
-          <li><img src="images/sample1.png" /><p class="flex-caption">This is Caption.Please fill out with your words.</p></li>
-          <li><img src="images/sample2.png" /><p class="flex-caption">This is caption.</p></li>
-          <li><img src="images/sample3.png" /><p class="flex-caption">This is caption.</p></li>
-          <li><img src="slider4.jpg" /><p class="flex-caption">This is caption.</p></li>
-        </ul>
-    </div>
+
 
     </div>
 
     <div class="benefits">
         <h1>Benefits</h1>
-        <p> 3 icons goes here</p>
+        <!--Eco-Friendly-->
+        <div class="benefitsBlock">
+          <img src="images/techIcons/advantage1.png" alt="icon">
+          <p>Eco-Friendly</p>
+        </div>
+
+        <!--Automated-->
+        <div class="benefitsBlock">
+          <img src="images/techIcons/advantage2.png" alt="icon">
+          <p>Automated</p>
+        </div>
+
+        <!--Save costs-->
+        <div class="benefitsBlock">
+          <img src="images/techIcons/advantage3.png" alt="icon">
+          <p>Save Costs</p>
+        </div>
     </div>
 
     <div class="linkBoxes">
@@ -247,13 +268,6 @@
       <div id="whiteBox"></div> <!--To hide blank line-->
     </footer>
   </div>
-
-  <!--Image Slide Script-->
-  <script type="text/javascript" charset="utf-8">
-  $(window).load(function() {
-  $('.flexslider').flexslider();
-  });
-</script>
 
   <!--<script>$( document ).ready(function( $ ) {
     $('#advantageImg').sliderPro({

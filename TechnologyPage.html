@@ -21,11 +21,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
-    <!--Image Slider:JQuery Plugin-->
+    <!--Image Slider:JQuery Plugin>
     <link rel="stylesheet" type="text/css" href="CSS/slider-pro.css" media="screen"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="js/jquery.sliderPro.min.js"></script>
+    <script src="js/jquery.sliderPro.min.js"></script>-->
+
+    <!--Image Slider-->
+    <link rel="stylesheet" href="CSS/flexslider.css" type="text/css" />
+    <script src="js/jquery.flexslider.js"></script>
 
     <script>
     $( document ).ready( function() {
@@ -73,20 +77,37 @@
     <!--Main contents Start-->
     <div id="techMainWrapper">
     <div id="techTopWrapper">
-    <div class="techWordHeader">
-        <h1>Features</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-    </div>
+        <div class="aboutTech">
+          <img src="images/cultureBot2.png">
+
+        <div class="aboutFlex">
+            <div class="aboutLeft">
+              <img src="images/product1.jpg" alt="product-image">
+            </div>
+            <div class="aboutRight">
+                <h2>Our Technology</h2>
+                <p>For growers that need a more effective and eco-friendly approach to crop protection. Culture Bot is an intelligent UGV robot that protects your crops and eliminates weeds, thereby reducing labour and removing herbicides from the picture.
+  Unlike weed pulling and hoeing, Culture Bot is fully automated, and unlike herbicides our method is 100% sustainable and eco-friendly. Culture Bot saves you time, increases productivity, and eliminates headaches.</p>
+
+                <!--Learn More & See Demo link-->
+                <div class="aboutInner">
+                    <a href="TechnologyPage.html" id="learnMore">Learn More</a>
+                    <a href="TechnologyPage.html" id="seeDemo">See Demo</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="floatClear"></div><!--To clear float setting-->
 
     <div class="pair"> <!-- Side-by-side divs -->
-        <div class="techVideo">
+      <!--  <div class="techVideo">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/95VP-3EDiA4" frameborder="0" allow="autoplay; encrypted-media" alt="culture bot demo video. https://www.youtube.com/embed/95VP-3EDiA4" allowfullscreen></iframe>
         </div>
 
-        <div class="techWord">
+        <!--<div class="techWord">
             <h2>Small heading</h2>
             <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? "</p>
-        </div>
+        </div>-->
 
     </div> <!-- End of side-by-side -->
   </div>
@@ -149,49 +170,34 @@
 
         <!--Eco-Friendly-->
         <div class="advantageBlock">
-          <p>Eco-Friendly</p>
           <img src="images/techIcons/advantage1.png" alt="icon">
+          <p>Eco-Friendly</p>
         </div>
 
         <!--Automated-->
         <div class="advantageBlock">
-          <p>Automated</p>
           <img src="images/techIcons/advantage2.png" alt="icon">
+          <p>Automated</p>
         </div>
 
         <!--Save costs-->
         <div class="advantageBlock">
-          <p>Save Costs</p>
           <img src="images/techIcons/advantage3.png" alt="icon">
+          <p>Save Costs</p>
         </div>
     </div>
 
     <!--Advantages(Image Slider)-->
     <div class="advantageDetail">
-      <div id="advantageImg" class="slider-pro">
-        <div class="sp-slides">
-          <!--1st img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample1.png" />
-          </div>
-          <!--2nd img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample2.png" />
-          </div>
-          <!--3rd img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample3.png" />
-          </div>
-          <!--4th img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample4.png" />
-          </div>
-          <!--5th img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample5.png" />
-          </div>
-        </div>
-      </div>
+      <div id="advantageImg" class="flexslider">
+        <ul class="slides">
+          <li><img src="images/sample1.png" /><p class="flex-caption">This is Caption.Please fill out with your words.</p></li>
+          <li><img src="images/sample2.png" /><p class="flex-caption">This is caption.</p></li>
+          <li><img src="images/sample3.png" /><p class="flex-caption">This is caption.</p></li>
+          <li><img src="slider4.jpg" /><p class="flex-caption">This is caption.</p></li>
+        </ul>
+    </div>
+
     </div>
 
     <div class="benefits">
@@ -218,12 +224,10 @@
         <div class="leftBox">
             <a href="Calculator.html">
             <p>Calculator</p>
-            <img src="images/techIcons/calculator.png"></a>
         </div>
         <div class="rightBox">
             <a href="Waitinglist.php">
             <p>Waiting list</p>
-            <img src="images/techIcons/waitingList.png"></a>
         </div>
     </div>
   </div>
@@ -260,7 +264,13 @@
   </div>
 
   <!--Image Slide Script-->
-  <script>$( document ).ready(function( $ ) {
+  <script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+  $('.flexslider').flexslider();
+  });
+</script>
+
+  <!--<script>$( document ).ready(function( $ ) {
     $('#advantageImg').sliderPro({
       width: 900,
       height: 500,
@@ -269,7 +279,7 @@
       slideDistance:0,
       });
     });
-  </script>
+  </script>-->
 
 </body>
 </html>

@@ -412,10 +412,9 @@ footer img {
 
 #techTopWrapper {
     height: auto;
-    width:  80%;
+    width:  100%;
     margin: auto auto 13em auto;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
 }
 
@@ -437,6 +436,7 @@ footer img {
     margin: 0 auto;
 }
 
+/**
 .techVideo {
     width: 40%;
     height: auto;
@@ -448,7 +448,7 @@ footer img {
 .techVideo iframe {
     width: 100%;
 }
-
+**/
 .techWord {
     width: 50%;
     height: 100%;
@@ -546,15 +546,13 @@ footer img {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-    box-shadow: 10px 10px 10px;
     margin: 10em auto 0 auto;
     text-align: center;
 }
 
 .advantageBlock {
-    width: 28%;
+    width: 20%;
     margin: 0 1em 3em 1em;
-    box-shadow: 5px 5px 5px;
     display: inline-block;
 }
 
@@ -904,14 +902,15 @@ footer img {
 }
 
 .aboutInner {
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
 
-.aboutInner a { /*Learn More Button*/
-    width:70%;
+#learnMore, #seeDemo  { /*Learn More Button*/
+    width:45%;
+    float:left;
     margin: 0.7em auto;
-    font-size:24px;
+    font-size:1.5em;
     font-weight:bold;
     text-decoration:none;
     display:block;
@@ -923,7 +922,13 @@ footer img {
     border-radius:5px;
 }
 
-.aboutInner a:hover{ /*Learn More Button*/
+#learnMore:hover{ /*Learn More Button*/
+    text-decoration:none;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+#seeDemo:hover{ /*See Demo Button*/
     text-decoration:none;
     background-color: #fff;
     transition: 0.4s;
@@ -1105,31 +1110,6 @@ footer img {
       text-align: center;
   }
 
-  .leftBox h1 { font-size: 26px;}
-
-  .leftBox p, .rightBox p {
-    font-size: 20px;
-    font-weight: bold;
-    color: #505050;
-    padding: 0.5em;
-    display: inline-block;
-    line-height: 1.3;
-    background: #dbebf8;
-    vertical-align: middle;
-  }
-
-  .leftBox p:before , .rightBox p:before {
-    content: '●';
-    color: white;
-    margin-right: 8px;
-  }
-  .rightBox {
-      margin-left: auto;
-      width: 300px;
-      text-align: center;
-  }
-
-  .rightBox h1 { font-size: 26px;}
 
   /**************** About Us Responsive(1080px) ********************/
 

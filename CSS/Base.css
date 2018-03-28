@@ -669,6 +669,7 @@ footer a:link { text-decoration: none;}
 }
 
 .detailBlockRight2 { float: right;}
+
 /*Advantages*/
 .techAdvantage {
     width: 90%;
@@ -735,7 +736,6 @@ footer a:link { text-decoration: none;}
     width: 50%;
 }
 
-
 .linkBoxes {
     display: flex;
     height: 400px;
@@ -756,18 +756,8 @@ footer a:link { text-decoration: none;}
     margin-top: 2em;
     padding: 0.4em;
     display: inline-block;
-    line-height: 1.3;
-    background: #fff;
-    vertical-align: middle;
-    border-radius: 5px;
-}
 
-.leftBox p:before , .rightBox p:before {
-  color: white;
-  margin-right: 8px;
 }
-
-.rightBox h1 { font-size: 26px;}
 
 /**************** Contact Us Page CSS ********************/
 

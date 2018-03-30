@@ -21,17 +21,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!--color-box(Video-Popup)-->
+    <link rel="stylesheet" href="CSS/colorbox.css" />
+    <script src="js/jquery.colorbox-min.js"></script>
+
     <!--Image Slider:JQuery Plugin>
     <link rel="stylesheet" type="text/css" href="CSS/slider-pro.css" media="screen"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/jquery.sliderPro.min.js"></script>-->
 
+    <!--Fade in Jquery-->
     <script>
-    $( document ).ready( function() {
-
-    } ) ;
+    $('head').append('<style>body{display:none;}');
+    $(window).on("load", function() {
+      $('body').fadeIn(2000);
+    });
     </script>
+
+    <!--Video pop up-->
+    <script>
+    $(document).ready(function(){
+    $("#seeDemo").colorbox({
+        rel:'seeDemo',
+        iframe:true,
+       innerWidth:700,
+       innerHeight:433,
+    });
+});
+</script>
 
 </head>
 <body>
@@ -85,10 +103,9 @@
                 <p>For growers that need a more effective and eco-friendly approach to crop protection. Culture Bot is an intelligent UGV robot that protects your crops and eliminates weeds, thereby reducing labour and removing herbicides from the picture.
   Unlike weed pulling and hoeing, Culture Bot is fully automated, and unlike herbicides our method is 100% sustainable and eco-friendly. Culture Bot saves you time, increases productivity, and eliminates headaches.</p>
 
-                <!--Learn More & See Demo link-->
+                <!--See Demo link-->
                 <div class="aboutInner">
-                    <a href="TechnologyPage.html" id="learnMore">Learn More</a>
-                    <a href="TechnologyPage.html" id="seeDemo">See Demo</a>
+                    <a href="https://www.youtube.com/embed/95VP-3EDiA4" id="seeDemo">See Demo</a>
                 </div>
             </div>
         </div>
@@ -97,7 +114,7 @@
 
     <div class="pair"> <!-- Side-by-side divs -->
       <!--  <div class="techVideo">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/95VP-3EDiA4" frameborder="0" allow="autoplay; encrypted-media" alt="culture bot demo video. https://www.youtube.com/embed/95VP-3EDiA4" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" alt="culture bot demo video. https://www.youtube.com/embed/95VP-3EDiA4" allowfullscreen></iframe>
         </div>
 
         <!--<div class="techWord">

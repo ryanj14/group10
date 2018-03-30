@@ -1,0 +1,61 @@
+<html>
+<head>
+<script>
+onload=function() {
+  var myh1 = document.createElement('h1')
+  var maytextnode = document.createTextNode("hello")
+  document.body.appendChild(myh1)
+
+  myh1.appendChild(maytextnode)
+
+  var myimg = document.createElement('img')
+
+  //You can do this by JQuery, maybe it is much shorter.
+  myimg.setAttribute('src', 'images/cats/cat1.jpg')
+  myimg.src='images/cats/cat2.jpg' //This is better load faster.
+  myimg.width = 200;
+  myimg.style.border='red solid 5px'
+
+  document.body.appendChild(myimg)
+
+  var mytextbox = documnet.createElement('input')
+  mytextbox.type ='text'
+  mytextbox.id='t' //it's optional to give //
+
+  document.body.appendChild(documnet.createElement('br'))
+
+  document.body.appendChild(mytextbox)
+  var myparagraph = documnet.createElement('p')
+  myparagraph.id= 'p'
+  documnet.body.appendChild(myparagraph)
+  mytextbox.focus()
+  mytextbox.onkeyup=copyText
+
+
+  documnet.body.appendChild(myparagraph)
+}
+
+
+function copyText() {
+  //Case1 : the paragraph has no children
+  // So create and append a new txt node
+  if(document.getElementById('par')).childNodes.length == 0) {
+    alert('no children')
+    documnet.createElementById('p').appendChild(
+      document.createTextNode(this.value))
+    )
+  } else { //When they have children //loop through element to find text node.
+    for(int i = 0; i < documnet.getElementById('par').childNodes.length; i++) {
+      if(documnet.getElementById('p')).childNodes[i].nodeType == 3) {
+        document.getElementById('p').childeNOdes[i].nodeValue =
+        this.value;
+        return / only replace the first
+      }
+    }
+  }
+
+}
+
+</script>
+</head>
+</html>

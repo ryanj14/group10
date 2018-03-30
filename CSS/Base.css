@@ -548,10 +548,10 @@ footer a:link { text-decoration: none;}
     margin: auto;
 }
 
-#learnMore, #seeDemo  { /*Learn More Button*/
-    width:40%;
-    float:left;
-    margin: 1em;
+#seeDemo  { /*Learn More Button*/
+    width:44%;
+    float: center;
+    margin: 0.5em auto;
     font-size:1.5em;
     font-weight:bold;
     text-decoration:none;
@@ -564,16 +564,11 @@ footer a:link { text-decoration: none;}
     border-radius:5px;
 }
 
-#learnMore:hover{ /*Learn More Button*/
-    text-decoration:none;
-    background-color: #fff;
-    transition: 0.4s;
-}
-
 #seeDemo:hover{ /*See Demo Button*/
     text-decoration:none;
     background-color: #fff;
     transition: 0.4s;
+    color: #33ABF9;
 }
 
 

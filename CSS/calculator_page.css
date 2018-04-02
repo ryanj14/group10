@@ -11,13 +11,13 @@
 }
 
 #calculator {
+	position: relative;
 	padding: 30px;
     font-size: 18px;
 	margin-bottom: 10%;
 }
 
 .parallax {
-    height: 100vh;
     background: url("../Images/orchard.jpg") no-repeat fixed center;
     background-size: cover;
     -webkit-transform-style: inherit;

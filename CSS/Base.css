@@ -633,7 +633,7 @@ footer a:link { text-decoration: none;}
     width: 90%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 10em auto 0 auto;
     text-align: center;
 }
@@ -665,21 +665,22 @@ footer a:link { text-decoration: none;}
 
 /*Benefits seciton*/
 .benefits {
-  width: 90%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  margin: 10em auto 0 auto;
-  text-align: center;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    margin: 10em auto 0 auto;
+    text-align: center;
 }
 
 .benefits p {
-    width: 90%;
-    margin: auto;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .benefitsBlock {
-    width: 28%;
+    width: 20%;
     margin: 0 1em 3em 1em;
     display: inline-block;
 }
@@ -701,21 +702,29 @@ footer a:link { text-decoration: none;}
     margin: 40px auto 40px;
 }
 
+.linkBoxes a :active {
+    text-decoration: none;
+}
 .leftBox, .rightBox {
     margin: 0 auto;
     width: 20em;
     text-align: center;
 }
 
-.leftBox p, .rightBox p {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #505050;
-    margin-top: 2em;
-    padding: 0.4em;
-    display: inline-block;
-
+.leftBox  {
+    width: 50%;
+    height: 50%;
+    background-image: url('../images/techIcons/calculator.jpg');
+    background-size: cover;
 }
+
+.leftBox h3 {
+    margin: 2em auto;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+
 
 /**************** Contact Us Page CSS ********************/
 

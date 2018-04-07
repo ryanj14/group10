@@ -1,0 +1,273 @@
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: darkgray;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+.nav{
+    z-index: 100;
+}
+
+header {
+      width: 100%;
+      height: 100vh;
+      background: url("../Images/coding.gif") no-repeat 50% 50%;
+      background-size: cover;
+      
+}
+.headerContent{
+    text-align: center;
+    color: white;
+    z-index: -1;
+}
+
+.titleContent{
+    position: absolute;
+    padding: 230px;
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 15px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+      letter-spacing: 2px;
+      width:5%;
+      
+}
+
+.logo img{
+    width: 100%;
+}
+
+.logo p{
+    margin-left:80px;
+    margin-top: -80px;
+}
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 20px;
+      transition: 1s;
+}
+
+nav.white ul {
+      background: #ffffff;
+}
+
+nav.white li a{
+    color:#000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 20px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #ffffff;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #000000;
+      display: none;
+}
+.indexLeft {
+    width: 50%;
+    height: 300px;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: left;
+}
+
+.indexLeft p {
+    margin-left: 0;
+    text-align: left;
+}
+
+.indexRight {
+    padding-left: 50px;
+    padding-top: 20px;
+    height: 315px;
+    width: 50%;
+    margin: auto 20px auto auto;
+}
+
+.techContent{
+    padding: 120px 0;
+    margin-top: 140px;
+    margin-left: -40px;
+    width: 60%;
+    background-image: url("../Images/Index/tech_index.jpg");
+    text-align: center;
+    
+}
+
+.techIndex{
+    width: 100%;
+    color: white;
+    margin-left: -80px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.newsContent{
+    width: 60%;
+    padding: 120px 0;
+    margin-left: 610px;
+    margin-top: -273px;
+    background-image: url("../Images/Index/newIndex.png");
+}
+
+.newsIndex{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 250px;
+}
+
+.ourTeamContent{
+    width: 55%;
+    padding: 120px 0;
+    margin-left: -45px;
+    margin-top: 2px;
+    background-image: url("../Images/Index/ourTeam1.jpg");
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+}
+
+.teamIndex{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 250px;
+}
+
+.calContent{
+    width: 60%;
+    padding: 120px 0 120px 0;
+    margin-left: 610px;
+    margin-top: -325px;
+    background-image: url("../Images/Index/caculator.jpg");
+    margin-bottom: 50px;
+}
+
+.calcuIndex{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-left: 250px;
+}
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+            
+      }
+    .logo p{
+        color: black;
+        padding-top: 10px;
+    }
+    
+      nav ul {
+            max-height: 0px;
+            background: #ffffff;
+      }
+
+      nav.white ul {
+            background: #ffffff;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+
+/******************* Footer CSS ***********************/
+footer {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+footer p {
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+footer img {
+    width: 7em;
+    margin: 0 15px;
+}
+.supporterTop, .supporterBottom, .threeLogo {
+    display: inline-block;
+}
+.threeLogo img { /*to make them equal ratio*/
+    width: 4em;
+}
+#whiteBox {
+    background-color: #fff;
+    height: 0.2em;
+    width: 100%;
+    position: relative;
+}

@@ -54,9 +54,9 @@ p {  margin: 0; }
     left:0;
     width:100%;
     height: auto;
-    background-color: white;
     position: fixed;
     list-style-type: none;
+    background-color: white;
     -webkit-box-shadow: 0 3px 40px 5px #E5E5E5;
     -moz-box-shadow:    0 3px 40px 5px #E5E5E5;
     box-shadow:         0 3px 40px 5px #E5E5E5;
@@ -75,6 +75,7 @@ p {  margin: 0; }
 /*Not display drop down menu in noromal sized screen*/
 .dropMenu {
     display: none;
+    background-color: white;
 }
 
 .logo{
@@ -83,7 +84,6 @@ p {  margin: 0; }
     float: left;
 	height: 100%;
     position: absolute;
-    background-color: white;
 }
 
 .logo img {
@@ -131,6 +131,7 @@ p {  margin: 0; }
     filter: grayscale(100%);
 }
 
+
 @media only screen and (max-width:1152px){
     .navBar, .blogs{
         display: none;
@@ -154,10 +155,10 @@ p {  margin: 0; }
         position: absolute;
         min-width: 140px;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        background-color: white;
         right: 0;
         padding-top: 50px;
         opacity: 0.5;
+        background-color: white;
     }
 
     .dropdown-content a{
@@ -219,6 +220,7 @@ footer img {
 }
 
 /******************* Index CSS ************************/
+
 .OpenPageContainer{
     width: 100%;
     height: 100%;
@@ -249,32 +251,11 @@ footer img {
 
 .OpenPageTitle h1{
     font-size: 2em;
-    color:white;
+    color:gray;
     font-family: "Courier New", Courier, monospace;
     font-weight: 550;
     text-shadow: 2px 2px 5px #CCCCCC;
 }
-/*
-.OpenPageGifCover{
-    position: relative;
-}
-.OpenPageGifCover:after{
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    top:0;
-    left: 0;
-    box-shadow: 0 0 40px 10px #ffffff inset;;
-}
-.IndexOpenPageGif{
-    width: 100%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    opacity:0.5;
-    display: block;
-}*/
 
 .OpenPageTitle{
     margin-bottom: 20px;
@@ -325,15 +306,16 @@ footer img {
 
 .techContent{
     padding: 100px;
-    margin-left: 70px;
+    height: 300px;
     margin-bottom: 30px;
-    width: 40%;
+    width: 50%;
     background-image: url("../Images/Index/tech_index.jpg");
     text-align: center;
     
 }
 
 .techIndex{
+    margin-left: -30px;
     width: 100%;
     color: white;
     font-size: 1.5em;
@@ -341,10 +323,11 @@ footer img {
 }
 
 .newsContent{
-    width: 40%;
+    width: 60%;
+    height: 300px;
     padding: 100px;
-    margin-left: 680px;
-    margin-top: -270px;
+    margin-left: 630px;
+    margin-top: -330px;
     background-image: url("../Images/Index/newIndex.png");
 }
 
@@ -353,15 +336,14 @@ footer img {
     color: white;
     font-size: 1.5em;
     font-weight: 600;
-    margin-left: 70px;
+    margin-left: 140px;
 }
 
 .ourTeamContent{
-    width: 40%;
+    width: 50%;
+    height: 300px;
     padding: 100px;
-    margin-left: 70px;
-    margin-top: 50px;
-    background-image: url("../Images/Index/ourTeam.jpg");
+    background-image: url("../Images/Index/ourTeam1.jpg");
     margin-bottom: 50px;
 }
 
@@ -370,14 +352,16 @@ footer img {
     color: white;
     font-size: 1.5em;
     font-weight: 600;
-    margin-left: 100px;
+    margin-left: 140px;
+    
 }
 
 .calContent{
-    width: 40%;
+    width: 50%;
     padding: 100px;
-    margin-left: 680px;
-    margin-top: -285px;
+    height: 300px;
+    margin-left: 630px;
+    margin-top: -350px;
     background-image: url("../Images/Index/caculator.jpg");
     margin-bottom: 50px;
 }

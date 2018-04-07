@@ -30,11 +30,18 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
     <script src="js/jquery.sliderPro.min.js"></script>
 
-    <!--Fade in Jquery-->
+    <!--Image slider thumbnail Tourch swipe-->
     <script>
-    $('head').append('<style>body{display:none;}');
-    $(window).on("load", function() {
-      $('body').fadeIn(2000);
+    $(document).ready(function(){
+    $.fn.myFunction = function(){
+      var slider = $( '#advantageImg' ).data( 'sliderPro' );
+      var src = $('.thumbnail').attr('src').split('/');
+      var index = parseInt(src[src.length - 1].substring(6, 7));
+      slider.gotoSlide( index );
+    }
+    $(".thumbnail").click(function(){
+        $.fn.myFunction();
+    });
     });
     </script>
 
@@ -196,6 +203,7 @@
           <p>Automated</p>
         </div>
 
+
         <!--Save costs-->
         <div class="advantageBlock">
           <img src="images/techIcons/advantage3.png" alt="icon">
@@ -207,27 +215,40 @@
     <div class="imageSlider">
       <div class="slider-pro" id="advantageImg">
         <div class="sp-slides">
+
           <!-- Slide 1 -->
             <div class="sp-slide">
+                <!--Slider Image here-->
                 <img class="sp-image" src="images/sample1.png"/>
+                <!--Slider caption here-->
+                <p class="sp-caption">This is sample catption.lacing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.
+</p>
             </div>
             <!-- Slide 2 -->
             <div class="sp-slide">
                 <img class="sp-image" src="images/sample2.png"/>
+                <!--Slider caption here-->
+                <p class="sp-caption">This is sample catption.lacing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.
+</p>
             </div>
             <!-- Slide 3 -->
             <div class="sp-slide">
                 <img class="sp-image" src="images/sample3.png"/>
+                <!--Slider caption here-->
+                <p class="sp-caption">This is sample catption.lacing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.</p>
             </div>
             <!-- Slide 4 -->
             <div class="sp-slide">
                 <img class="sp-image" src="images/sample4.png"/>
+                <!--Slider caption here-->
+                <p class="sp-caption">This is sample catption.lacing assured be if removed it besides on. Far shed each high read are men over day. Afraid we praise lively he suffer family estate is. Ample order up in of in ready. Timed blind had now those ought set often which. Or snug dull he show more true wish. No at many deny away miss evil. On in so indeed spirit an mother. Amounted old strictly but marianne admitted. People former is remove remain as.</p>
             </div>
             <!-- Slide 5 -->
             <div class="sp-slide">
                 <img class="sp-image" src="images/sample5.png"/>
             </div>
-        </div>
+
+      </div>
       </div>
     </div>
 
@@ -298,10 +319,11 @@
     </footer>
   </div>
 
-  <script>$( document ).ready(function( $ ) {
+  <script>
+    $( document ).ready(function( $ ) {
     $('#advantageImg').sliderPro({
-      width: 900,
-      height: 700,
+      width: 800,
+      height: 500,
       arrows: true,
       buttons: true,
       slideDistance:0,

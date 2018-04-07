@@ -279,7 +279,6 @@ footer a:link { text-decoration: none;}
 }
 
 .indexContent {
-    padding: 20px;
     display: flex;
     height: 450px;
     width: 100%;
@@ -289,28 +288,26 @@ footer a:link { text-decoration: none;}
 }
 
 .indexLeft {
-    width: 700px;
+    width: 50%;
     height: 300px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .indexLeft p {
-    width: 660px;
-    margin-left: 0;
     text-align: left;
 }
 
 .indexRight {
     height: 315px;
-    width: 560px;
+    width: 50%;
     margin: auto 15px auto auto;
+    float: right;
 }
 
 .techContent{
     padding: 100px;
     height: 300px;
-    margin-bottom: 30px;
     width: 50%;
     background-image: url("../Images/Index/tech_index.jpg");
     text-align: center;
@@ -326,11 +323,11 @@ footer a:link { text-decoration: none;}
 }
 
 .newsContent{
-    width: 60%;
+    float: right;
+    width: 50%;
     height: 300px;
     padding: 100px;
-    margin-left: 630px;
-    margin-top: -330px;
+    margin-top: -300px;
     background-image: url("../Images/Index/newIndex.png");
 }
 
@@ -367,6 +364,7 @@ footer a:link { text-decoration: none;}
     margin-top: -350px;
     background-image: url("../Images/Index/caculator.jpg");
     margin-bottom: 50px;
+    float: right;
 }
 
 .calcuIndex{

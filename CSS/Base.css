@@ -221,6 +221,7 @@ footer a:link { text-decoration: none;}
     width: 100%;
     height: 100%;
     position: relative;
+    
 }
 
 .OpenPageContainer .OpenPageTitle{
@@ -257,8 +258,13 @@ footer a:link { text-decoration: none;}
     margin-bottom: 20px;
 }
 
+.contentSqures{
+    width: 100%;
+}
+
 .indexWordHeader {
-    width: 70%;
+    width: 100%;
+    padding: 20px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
@@ -273,9 +279,10 @@ footer a:link { text-decoration: none;}
 }
 
 .indexContent {
+    padding: 20px;
     display: flex;
     height: 450px;
-    width: 95%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
@@ -368,6 +375,94 @@ footer a:link { text-decoration: none;}
     font-size: 1.5em;
     font-weight: 600;
     margin-left: 80px;
+}
+
+.scrolldown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #808080;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+.scrolldown a{
+    text-decoration: none;
+}
+
+.text {
+  display: block;
+  margin-top: 70px;
+  margin-left: -20px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #808080;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+.text a{
+    text-decoration-line: none;
+}
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
 /*************** Waitinglist Page CSS *******************/
 #waitingMain {

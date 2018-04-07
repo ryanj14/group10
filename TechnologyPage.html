@@ -21,17 +21,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
+    <!--color-box(Video-Popup)-->
+    <link rel="stylesheet" href="CSS/colorbox.css" />
+    <script src="js/jquery.colorbox-min.js"></script>
+
     <!--Image Slider:JQuery Plugin-->
     <link rel="stylesheet" type="text/css" href="CSS/slider-pro.css" media="screen"/>
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/jquery.sliderPro.min.js"></script>
 
+    <!--Fade in Jquery-->
     <script>
-    $( document ).ready( function() {
-
-    } ) ;
+    $('head').append('<style>body{display:none;}');
+    $(window).on("load", function() {
+      $('body').fadeIn(2000);
+    });
     </script>
+
+    <!--Video pop up-->
+    <script>
+    $(document).ready(function(){
+    $("#seeDemo").colorbox({
+        rel:'seeDemo',
+        iframe:true,
+       innerWidth:700,
+       innerHeight:433,
+    });
+});
+</script>
 
 </head>
 <body>
@@ -73,75 +90,96 @@
     <!--Main contents Start-->
     <div id="techMainWrapper">
     <div id="techTopWrapper">
-    <div class="techWordHeader">
-        <h1>Features</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="aboutTech">
+          <img src="images/cultureBot2.png">
+
+        <div class="aboutFlex">
+            <div class="aboutLeft">
+              <img src="images/product1.jpg" alt="product-image">
+            </div>
+            <div class="aboutRight">
+                <h2>Our Technology</h2>
+                <p>For growers that need a more effective and eco-friendly approach to crop protection. Culture Bot is an intelligent UGV robot that protects your crops and eliminates weeds, thereby reducing labour and removing herbicides from the picture.
+  Unlike weed pulling and hoeing, Culture Bot is fully automated, and unlike herbicides our method is 100% sustainable and eco-friendly. Culture Bot saves you time, increases productivity, and eliminates headaches.</p>
+
+                <!--See Demo link-->
+                <div class="aboutInner">
+                    <a href="https://www.youtube.com/embed/95VP-3EDiA4" id="seeDemo">See Demo</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    <div class="floatClear"></div><!--To clear float setting-->
     </div>
-
-    <div class="pair"> <!-- Side-by-side divs -->
-        <div class="techVideo">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/95VP-3EDiA4" frameborder="0" allow="autoplay; encrypted-media" alt="culture bot demo video. https://www.youtube.com/embed/95VP-3EDiA4" allowfullscreen></iframe>
-        </div>
-
-        <div class="techWord">
-            <h2>Small heading</h2>
-            <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? "</p>
-        </div>
-
-    </div> <!-- End of side-by-side -->
-  </div>
     <div class="floatClear"></div> <!--To remove float setting-->
 
     <div class="techDetail">
       <!-- Block 1-->
       <div class="techDetailBlock">
-
         <div class="detailBlockLeft1">
           <h3>DETECTS + IDENTIFIES WEEDS</h3>
           <p>Culture Bot, is able to detect and distinguish different kinds of weed species using advanced imaging technology and artificial intelligence (Ai).</p>
-          <img src="images/sample1.png" alt="">
         </div>
-
       <div class="detailBlockRight1">
-        <h3>DESTROYS CROP WEEDS</h3>
-        <p>Culture Bot has an advanced directed evergy device that targets weeds with precision, and then eliminates them with ease.</p>
-      <img src="images/sample2.png" alt="">
+        <img src="images/sample1.png" alt="">
       </div>
-
     </div>
 
     <!-- Block 2-->
     <div class="techDetailBlock">
-
       <div class="detailBlockLeft2">
-        <h3>FULLY AUTOMATIC</h3>
-        <p>Culture Bot is completely automated. That means it navigates your crops, recharges, and operates autonomously, without the need for your supervision.</p>
-        <img src="images/sample3.png" alt="">
+        <img src="images/sample2.png" alt="">
       </div>
-
     <div class="detailBlockRight2">
-      <h3>AUTOMATIC CHARGING SYSTEM</h3>
-      <p>Culture Bot uses an autonomous charging station to shelter and recharge itself. The station can be solar, generator powered, or connected to a power-source.</p>
-      <img src="images/sample4.png" alt="">
+      <h3>DESTROYS CROP WEEDS</h3>
+      <p>Culture Bot has an advanced directed evergy device that targets weeds with precision, and then eliminates them with ease.</p>
     </div>
   </div>
 
   <!-- Block 3-->
   <div class="techDetailBlock">
-    <div class="detailBlockLeft3">
-      <h3>ANALYTICS + USER APPLICATION</h3>
-      <p>Culture Bot gives you control with an easy to user application. You can manual override the robots, track them in real-time, and get location based weed kill counts.</p>
-      <img src="images/sample5.png" alt="">
+    <div class="detailBlockLeft1">
+      <h3>FULLY AUTOMATIC</h3>
+      <p>Culture Bot is completely automated. That means it navigates your crops, recharges, and operates autonomously, without the need for your supervision.</p>
     </div>
-
-  <div class="detailBlockRight3">
-    <h3>DAY + NIGHT, RAIN OR SHINE</h3>
-    <p>Culture Bot can operate 24/7. It protects your crops and kills weeds even while you sleep. Unlike spraying or hoeing, it works in rainy or windy conditions.</p>
-    <img src="images/sample6.png" alt="">
+  <div class="detailBlockRight1">
+    <img src="images/sample3.png" alt="">
   </div>
 </div>
 
+<!-- Block 4-->
+<div class="techDetailBlock">
+  <div class="detailBlockLeft2">
+    <img src="images/sample4.png" alt="">
   </div>
+<div class="detailBlockRight2">
+  <h3>AUTOMATIC CHARGING SYSTEM</h3>
+  <p>Culture Bot uses an autonomous charging station to shelter and recharge itself. The station can be solar, generator powered, or connected to a power-source.</p>
+</div>
+</div>
+
+<!-- Block 5-->
+<div class="techDetailBlock">
+  <div class="detailBlockLeft1">
+    <h3>ANALYTICS + USER APPLICATION</h3>
+    <p>Culture Bot gives you control with an easy to user application. You can manual override the robots, track them in real-time, and get location based weed kill counts.</p>
+  </div>
+<div class="detailBlockRight1">
+  <img src="images/sample5.png" alt="">
+</div>
+</div>
+
+<!-- Block 6-->
+<div class="techDetailBlock">
+<div class="detailBlockLeft2">
+  <img src="images/sample6.png" alt="">
+</div>
+<div class="detailBlockRight2">
+<h3>DAY + NIGHT, RAIN OR SHINE</h3>
+<p>Culture Bot can operate 24/7. It protects your crops and kills weeds even while you sleep. Unlike spraying or hoeing, it works in rainy or windy conditions.</p>
+</div>
+</div>
+
 <div class="floatClear"></div> <!--To remove float setting-->
 
     <div class="techAdvantage">
@@ -149,68 +187,70 @@
 
         <!--Eco-Friendly-->
         <div class="advantageBlock">
-          <p>Eco-Friendly</p>
           <img src="images/techIcons/advantage1.png" alt="icon">
+          <p>Eco-Friendly</p>
         </div>
 
         <!--Automated-->
         <div class="advantageBlock">
-          <p>Automated</p>
           <img src="images/techIcons/advantage2.png" alt="icon">
+          <p>Automated</p>
         </div>
 
         <!--Save costs-->
         <div class="advantageBlock">
-          <p>Save Costs</p>
           <img src="images/techIcons/advantage3.png" alt="icon">
+          <p>Save Costs</p>
         </div>
     </div>
 
     <!--Advantages(Image Slider)-->
-    <div class="advantageDetail">
-      <div id="advantageImg" class="slider-pro">
-        <div class="sp-slides">
-          <!--1st img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample1.png" />
-          </div>
-          <!--2nd img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample2.png" />
-          </div>
-          <!--3rd img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample3.png" />
-          </div>
-          <!--4th img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample4.png" />
-          </div>
-          <!--5th img-->
-          <div class="sp-slide">
-            <img class="sp-image" src="images/sample5.png" />
-          </div>
+    <div class="slider-pro" id="advantageImg">
+    <div class="sp-slides">
+      <!-- Slide 1 -->
+        <div class="sp-slide">
+            <img class="sp-image" src="images/sample1.png"/>
+            <p>This is Capture.</p>
         </div>
-      </div>
+        <!-- Slide 2 -->
+        <div class="sp-slide">
+            <img class="sp-image" src="images/sample2.png"/>
+        </div>
+        <!-- Slide 3 -->
+        <div class="sp-slide">
+            <img class="sp-image" src="images/sample3.png"/>
+        </div>
+        <!-- Slide 4 -->
+        <div class="sp-slide">
+            <img class="sp-image" src="images/sample4.png"/>
+        </div>
+        <!-- Slide 5 -->
+        <div class="sp-slide">
+            <img class="sp-image" src="images/sample5.png"/>
+        </div>
+    </div>
+    </div>
+
     </div>
 
     <div class="benefits">
         <h1>Benefits</h1>
+        <!--Eco-Friendly-->
         <div class="benefitsBlock">
-          <p>Eco-Friendly</p>
           <img src="images/techIcons/advantage1.png" alt="icon">
+          <p>Eco-Friendly</p>
         </div>
 
         <!--Automated-->
         <div class="benefitsBlock">
-          <p>Automated</p>
           <img src="images/techIcons/advantage2.png" alt="icon">
+          <p>Automated</p>
         </div>
 
         <!--Save costs-->
         <div class="benefitsBlock">
-          <p>Save Costs</p>
           <img src="images/techIcons/advantage3.png" alt="icon">
+          <p>Save Costs</p>
         </div>
     </div>
 
@@ -218,12 +258,10 @@
         <div class="leftBox">
             <a href="Calculator.html">
             <p>Calculator</p>
-            <img src="images/techIcons/calculator.png"></a>
         </div>
         <div class="rightBox">
             <a href="Waitinglist.php">
             <p>Waiting list</p>
-            <img src="images/techIcons/waitingList.png"></a>
         </div>
     </div>
   </div>
@@ -259,11 +297,10 @@
     </footer>
   </div>
 
-  <!--Image Slide Script-->
   <script>$( document ).ready(function( $ ) {
     $('#advantageImg').sliderPro({
       width: 900,
-      height: 500,
+      height: 700,
       arrows: true,
       buttons: true,
       slideDistance:0,

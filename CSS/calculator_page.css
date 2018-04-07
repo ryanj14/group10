@@ -1,6 +1,5 @@
 #container {
-   /* height: 80%;  This was causing the box to be
-    underlapped the footer*/
+   height: 100%;
 }
 
 /*******************Calculator Page CSS********************/
@@ -12,14 +11,14 @@
 }
 
 #calculator {
+	position: relative;
 	padding: 30px;
     font-size: 18px;
 	margin-bottom: 10%;
 }
 
 .parallax {
-    height: 100%;
-    background: url("../images/orchard.jpg") no-repeat fixed center;
+    background: url("../Images/orchard.jpg") no-repeat fixed center;
     background-size: cover;
     -webkit-transform-style: inherit;
     transform-style: inherit;

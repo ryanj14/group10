@@ -461,11 +461,19 @@ footer a:link { text-decoration: none;}
 .text a{
     text-decoration-line: none;
 }
+
+.scrolldown a:link {
+    text-decoration: none;
+}
+
 @keyframes pulse {
   to {
     opacity: 1;
   }
 }
+
+.techContent a:link, .newsContent a:link, .ourTeamContent a:link, .calContent a:link { text-decoration: none;}
+
 /*************** Waitinglist Page CSS *******************/
 #waitingMain {
     height: 100%;
@@ -825,8 +833,8 @@ footer a:link { text-decoration: none;}
     text-shadow: 2px 2px #fff;
     transition: 0.4s;
 }
-/**************** Contact Us Page CSS ********************/
 
+/**************** Contact Us Page CSS ********************/
 .contactWordHeader h1{
     padding: 20px;
 }

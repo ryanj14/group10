@@ -982,6 +982,7 @@ footer a:link { text-decoration: none;}
     background-image: url('../images/sampleNewsImg2.jpeg');
     background-size: cover;
     background-position: center;
+    bottom: 0;
 }
 
 #conResultMsg p {

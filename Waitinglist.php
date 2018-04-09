@@ -70,40 +70,43 @@
             </div>
         </div>
 
-        <div class="listHeader">
-            <h1>Page heading a with nice background image</h1>
-        </div>
-
       <!-- Waiting list main Starts-->
       <div id="waitingMain">
         <div class="waitingheader">
-            <h1>Header</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <h1>Waiting List</h1>
+            <p>There's a demand for Culture bot and we currently have a waiting list for it. Place your name on the list if you're interested in purchasing Culture bot.</p>
         </div>
 
         <div class="userWait">
             <form name="waitForm" action="" onsubmit="return validateForm()" method="post">
-                First Name:<br>
+                <div class="formWrap">
+                <div class="leftForm2">
+                <span class="contactText">First Name:<br></span>
                 <input type="text" id="name1" name="firstName" placeholder="James"><br>
-                Last Name:<br>
+                <span class="contactText">Last Name:<br></span>
                 <input type="text" id="last1" name="lastName">
                 <br>
-                Email:<br>
+                <span class="contactText">Email:<br></span>
                 <input type="text" id="email1" name="email" placeholder="example@mail.com">
                 <br>
-                Business:<br>
+                <span class="contactText">Buisness:<br></span>
+                
                 <input type="text" id="business1" name="business">
                 <br>
-                Farm:<br>
+                    </div>
+                    <div class="rightForm2">
+                <span class="contactText">Farm:<br></span>
                 <input type="text" id="farm1" name="farm">
                 <br>
-                Phone Number:<br>
+                <span class="contactText">Phone Number:<br></span>
                 <input type="text" id="phone1" name="phoneNumber" placeholder="111-222-3333">
                 <br>
-                Address:<br>
+                <span class="contactText">Address:<br></span>
                 <input type="text" id="address1" name="address">
                 <br>
-                <input id="calSubmit" type="submit" name="submit2" value="Submit">
+                    </div>
+                    </div>
+                <input id="contactSubmit2" type="submit" value="Submit">
             </form>
         </div>
           

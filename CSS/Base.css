@@ -480,6 +480,10 @@ footer a:link { text-decoration: none;}
     padding-bottom: 50px;
 }
 
+.waitingheader {
+    margin-top: 7%;
+}
+
 .waitingheader, p h2{
     text-align: center;
     width: 60%;
@@ -515,17 +519,53 @@ footer a:link { text-decoration: none;}
 }
 
 .userWait {
-    border: 2px solid;
     height: auto;
     width: 60%;
     margin-left: auto;
     margin-right: auto;
 }
 
+.waitingHeader2 {
+    margin-top: 2%;
+}
+
 .waitingHeader2 h2{
     text-align: center;
 }
 
+.userWait form {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+}
+
+.leftForm2 {
+    height: 45%;
+    margin: auto;
+}
+
+.rightForm2{
+    margin:auto;
+}
+
+.formWrap {
+    display: flex;
+}
+
+#contactSubmit2 {
+    background-color: #1abc9c;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 15px;
+    margin-left: 35%;
+    font-size: 18px;
+    width: 30%;
+    line-height: 40px;
+    -webkit-transition: none;
+    transition: none;
+    box-shadow: 0 3px 0 #0e8c73;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+}
 
 /******************* News Page CSS ***********************/
 

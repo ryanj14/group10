@@ -331,6 +331,9 @@ footer a:link { text-decoration: none;}
     margin-top: -300px;
     background-image: url("../Images/Index/newIndex.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .newsIndex{

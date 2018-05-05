@@ -4,8 +4,8 @@
     <title>Contact Us</title>
     <meta charset="utf-8">
 
-    <!-- Eleos Tab Icon -->
-    <link rel="icon" href="Images/eleosIcon.png">
+    <!-- Tab Icon -->
+    <link rel="icon" href="images/placeholder.png">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
@@ -26,9 +26,15 @@
 
 </head>
 <body>
-  <div id="container"> <!--Put every thing from nav to footer-->
-      <div class="headerContent">
-        <li class = "logo"><a href="index.html"><img src = "Images/logo.png" /></a></li>
+    
+<!--Put every thing from nav to footer-->
+<div id="container"> 
+    <div class="headerContent">
+        <li class = "logo">
+            <a href="index.html">
+                <img src = "images/placeholderlogo.png">
+            </a>
+        </li>
 
         <ul class="navBar">
             <li><a href="TechnologyPage.html">OUR TECH</a></li>
@@ -36,7 +42,7 @@
             <li><a href="Calculator.html">CALCULATOR</a></li>
             <li><a href = "Aboutus.html">OUR TEAM</a></li>
             <li><a href = "ContactUs.html">CONTACT US</a></li>
-             <li><a href = "Waitinglist.php">WAITINGLIST</a></li>
+            <li><a href = "Waitinglist.php">WAITINGLIST</a></li>
         </ul>
 
         <ul class="blogs">
@@ -46,8 +52,8 @@
         </ul>
 
         <div class = "dropMenu">
-        <li class = "logo"><a href="index.html"><img src = "Images/logo.png" /></a></li>
-        <img class = "menuIcon" src = "Images/menuIcon.png">
+            <li class = "logo"><a href="index.html"><img src = "Images/logo.png" /></a></li>
+            <img class = "menuIcon" src = "Images/menuIcon.png">
             <div class = "dropdown-content">
                 <a href="TechnologyPage.html">OUR TECH</a>
                 <a href="NewsPage.html" >NEWS</a>
@@ -57,56 +63,58 @@
                 <a href = "Waitinglist.php">WAITINGLIST</a>
             </div>
         </div>
-    </div>
+    </div> <!-- headerContent div end -->
 
     <div class="contactWordHeader">
-        <h1>Contact us Header</h1>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <h1>This page doesn't work</h1>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </p>
     </div>
 
     <div class="contactWrapper">
-      <!--Contact Form-->
-        <div class="leftForm">
-          <h2>Contact Form</h2>
-            <form name="contactForm" action="ContactUsResult.html" method="post" onsubmit="return validateForm()">
-                <!--Name-->
-                <span class="contactText">Name:<br></span>
-                <input type="text" name="name" onblur="validateName()" required>
-                <div class="formWarning" id="nameWarning"><p>*Please enter valid name. </p></div>
+    <!--Contact Form-->
+    <div class="leftForm">
+      <h2>Contact Form</h2>
+        <form name="contactForm" action="ContactUsResult.html" method="post" onsubmit="return validateForm()">
+            <!--Name-->
+            <span class="contactText">Name:<br></span>
+            <input type="text" name="name" onblur="validateName()" required>
+            <div class="formWarning" id="nameWarning"><p>*Please enter valid name. </p></div>
 
-                <!--Email-->
-                <span class="contactText">Email:</span>
-                <input type="text" name="email" onblur="validateEmail()" required>
-                <div class="formWarning" id="emailWarning"><p>*Please enter valid e-mail address.</p></div>
+            <!--Email-->
+            <span class="contactText">Email:</span>
+            <input type="text" name="email" onblur="validateEmail()" required>
+            <div class="formWarning" id="emailWarning"><p>*Please enter valid e-mail address.</p></div>
 
-                <!--Inquiry type(Radio button)-->
-                <div class="radioMargin">
-                  <span class="contactText">Inquiry Type:</span><br>
-                    <label class="radio-inline">
-                      <input type="radio" name="optradio" checked>
-                      <span class="contactRadio">General Inquiry</span>
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="optradio">
-                      <span class="contactRadio">Technology</span>
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="optradio">
-                      <span class="contactRadio">Other</span>
-                    </label>
-                </div>
+            <!--Inquiry type(Radio button)-->
+            <div class="radioMargin">
+              <span class="contactText">Inquiry Type:</span><br>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio" checked>
+                  <span class="contactRadio">General Inquiry</span>
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">
+                  <span class="contactRadio">Technology</span>
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="optradio">
+                  <span class="contactRadio">Other</span>
+                </label>
+            </div>
 
-                <!--Text Box-->
-                <div class="formWarning"><p>Please input your inquiry.</p></div>
-                <span class="contactText">Message:</span>
-                <textarea rows="4" cols="38" name="inquiry" onblur="validateTextArea()" required></textarea>
-                <div class="formWarning" id="textWarning"><p>*Please input your inquiry.</p></div>
-                <br>
+            <!--Text Box-->
+            <div class="formWarning"><p>Please input your inquiry.</p></div>
+            <span class="contactText">Message:</span>
+            <textarea rows="4" cols="38" name="inquiry" onblur="validateTextArea()" required></textarea>
+            <div class="formWarning" id="textWarning"><p>*Please input your inquiry.</p></div>
+            <br>
 
-                <!--Submit Button-->
-                <input id="contactSubmit" type="submit" value="Send">
-            </form>
-        </div>
+            <!--Submit Button-->
+            <input id="contactSubmit" type="submit" value="Send">
+        </form>
+    </div>
 
         <!--Comapny Information-->
         <div class="rightContact">
@@ -114,46 +122,45 @@
                 <h2>Reach Us</h2>
                 <div class="innerContact">
                     <span class="contactInforText">Location:</span>
-                    <p>301-3007 Glen Drive, Coquitlam, BC V3B 0L8 CANADA</p>
+                    <p>CANADA</p>
                     <span class="contactInforText">Email:</span>
-                    <p>info@eleosrobotics.com</p>
+                    <p>info@email.com</p>
                     <span class="contactInforText">Phone:</span>
-                    <p>+1 (604) 500-2834</p>
+                    <p>+1 (333) 222-1111</p>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!-- contactWrapper div end -->
 
-    <!---Footer Start--->
-    <footer>
-      <!--Supporters-->
-      <div id="footerSupporter">
+<footer>
+    <div id="footerSupporter">
         <div class="supporterTop">
-          <img src="images/flogo1.png" alt="growingFoward-logo">
-          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
-          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
-          <img src="images/flogo4.png" alt="nserc-crsng-logo">
-          <img src="images/flogo5.png" alt="britishColumbia-logo">
-          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
-          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+            <img src="images/flogo1.png" alt="growingFoward-logo">
+            <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+            <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+            <img src="images/flogo4.png" alt="nserc-crsng-logo">
+            <img src="images/flogo5.png" alt="britishColumbia-logo">
+            <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+            <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
         </div>
         <div class="supporterBottom">
-          <img src="images/flogo8.png" alt="creativeLab-logo">
-          <img src="images/flogo9.png" alt="cta-logo">
-          <img src="images/flogo10.png" alt="mitas-logo">
-          <img src="images/flogo11.png" alt="ctcn-logo">
-          <div class="threeLogo">
-            <img src="images/flogo12.png" alt="unep-logo">
-            <img src="images/flogo13.png" alt="c-logo">
-            <img src="images/flogo14.png" alt="unido-logo">
-          </div>
+            <img src="images/flogo8.png" alt="creativeLab-logo">
+            <img src="images/flogo9.png" alt="cta-logo">
+            <img src="images/flogo10.png" alt="mitas-logo">
+            <img src="images/flogo11.png" alt="ctcn-logo">
+            <div class="threeLogo">
+                <img src="images/flogo12.png" alt="unep-logo">
+                <img src="images/flogo13.png" alt="c-logo">
+                <img src="images/flogo14.png" alt="unido-logo">
+            </div>
         </div>
-      </div>
-      <div id="footerCopyRight">
-        <p>© Eleos Robotics, Inc. All rights reserved.</p>
-      </div>
-      <div id="whiteBox"></div> <!--To hide blank line-->
-    </footer>
-  </div><!--Container end-->
+    </div>
+    <div id="footerCopyRight">
+        <p>Ryan Joseph, Maggie Wu, Garel Bucknor, and Haruna Kakinoki. All rights reserved.</p>
+    </div>
+    <div id="whiteBox"></div> <!--To hide blank line-->
+</footer>
+    
+</div><!--Container end-->
 </body>
 </html>

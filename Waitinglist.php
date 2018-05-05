@@ -9,8 +9,8 @@
     <title>Waiting List</title>
     <meta charset="utf-8">
 
-    <!-- Eleos Tab Icon -->
-    <link rel="icon" href="Images/eleosIcon.png">
+    <!-- Tab Icon -->
+    <link rel="icon" href="images/placeholder.png">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="CSS/Base.css" type="text/css">
@@ -31,13 +31,14 @@
 
 </head>
 <body>
-    <div id="container"> <!--Put every thing from nav to footer-->
+    <!--Put every thing from nav to footer-->
+    <div id="container">
 
         <div class="headerContent">
-            <li class = "logo"><a href="index.html"><img src = "Images/logo.png" /></a></li>
+            <li class = "logo"><a href="index.html"><img src = "images/placeholderlogo.png" /></a></li>
 
             <ul class="blogs">
-                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
+                <li><a href = "https://www.facebook.com"><img src="Images/facebook.png"></a></li>
                 <li><img src ="Images/linkedin.png"></li>
                 <li><img src ="Images/twitter.png"></li>
             </ul>
@@ -51,14 +52,14 @@
             </ul>
 
             <ul class="blogs">
-                <li><a href = "https://www.facebook.com/eleosrobotics/"><img src="Images/facebook.png"></a></li>
-                <li><img src ="Images/linkedin.png"></li>
-                <li><img src ="Images/twitter.png"></li>
+                <li><a href = "https://www.facebook.com"><img src="images/facebook.png"></a></li>
+                <li><img src ="images/linkedin.png"></li>
+                <li><img src ="images/twitter.png"></li>
             </ul>
 
             <div class = "dropMenu">
-            <li class = "logo"><a href="index.html"><img src = "Images/logo.png" /></a></li>
-            <img class = "menuIcon" src = "Images/menuIcon.png">
+            <li class = "logo"><a href="index.html"><img src = "images/logo.png" /></a></li>
+            <img class = "menuIcon" src = "images/menuIcon.png">
                 <div class = "dropdown-content">
                     <a href="TechnologyPage.html">OUR TECH</a>
                     <a href="NewsPage.html" >NEWS</a>
@@ -73,8 +74,8 @@
       <!-- Waiting list main Starts-->
       <div id="waitingMain">
         <div class="waitingheader">
-            <h1>Waiting List</h1>
-            <p>There's a demand for Culture bot and we currently have a waiting list for it. Place your name on the list if you're interested in purchasing Culture bot.</p>
+            <h1>mySQL functionality</h1>
+            <p>Enter in some data to see it be updated to the database. The table below will display all items from the database.</p>
         </div>
 
         <div class="userWait">
@@ -110,7 +111,7 @@
             </form>
         </div>
           
-        <div class="waitingHeader2"><h2>Current people on the waiting list</h2></div>
+        <div class="waitingHeader2"><h2>mySQL database table</h2></div>
 
         <?php
             if(isset($_POST['submit2']))
@@ -179,36 +180,34 @@
         </div>
     </div>
 
-    <!---Footer Start--->
     <footer>
-      <!--Supporters-->
-      <div id="footerSupporter">
+    <div id="footerSupporter">
         <div class="supporterTop">
-          <img src="images/flogo1.png" alt="growingFoward-logo">
-          <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
-          <img src="images/flogo3.png" alt="nrc-cnrc-logo">
-          <img src="images/flogo4.png" alt="nserc-crsng-logo">
-          <img src="images/flogo5.png" alt="britishColumbia-logo">
-          <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
-          <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
+            <img src="images/flogo1.png" alt="growingFoward-logo">
+            <img src="images/flogo2.jpg" alt="investmentAgriculture-logo">
+            <img src="images/flogo3.png" alt="nrc-cnrc-logo">
+            <img src="images/flogo4.png" alt="nserc-crsng-logo">
+            <img src="images/flogo5.png" alt="britishColumbia-logo">
+            <img src="images/flogo6.jpg" alt="canadaGovernment-logo">
+            <img src="images/flogo7.png" alt="bcInnovationCouncil-logo">
         </div>
         <div class="supporterBottom">
-          <img src="images/flogo8.png" alt="creativeLab-logo">
-          <img src="images/flogo9.png" alt="cta-logo">
-          <img src="images/flogo10.png" alt="mitas-logo">
-          <img src="images/flogo11.png" alt="ctcn-logo">
-          <div class="threeLogo">
-            <img src="images/flogo12.png" alt="unep-logo">
-            <img src="images/flogo13.png" alt="c-logo">
-            <img src="images/flogo14.png" alt="unido-logo">
-          </div>
+            <img src="images/flogo8.png" alt="creativeLab-logo">
+            <img src="images/flogo9.png" alt="cta-logo">
+            <img src="images/flogo10.png" alt="mitas-logo">
+            <img src="images/flogo11.png" alt="ctcn-logo">
+            <div class="threeLogo">
+                <img src="images/flogo12.png" alt="unep-logo">
+                <img src="images/flogo13.png" alt="c-logo">
+                <img src="images/flogo14.png" alt="unido-logo">
+            </div>
         </div>
-      </div>
-      <div id="footerCopyRight">
-        <p>© Eleos Robotics, Inc. All rights reserved.</p>
-      </div>
-      <div id="whiteBox"></div> <!--To hide blank line-->
-    </footer>
+    </div>
+    <div id="footerCopyRight">
+        <p>Ryan Joseph, Maggie Wu, Garel Bucknor, and Haruna Kakinoki. All rights reserved.</p>
+    </div>
+    <div id="whiteBox"></div> <!--To hide blank line-->
+</footer>
     </div>
 </body>
 </html>

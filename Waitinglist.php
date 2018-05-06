@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     session_start();
     require_once('mysqli_connect.php');
 ?>
@@ -107,7 +108,7 @@
                 <br>
                     </div>
                     </div>
-                <input id="contactSubmit2" type="submit" value="Submit">
+                <input id="contactSubmit2" name="submit2" type="submit" value="Submit">
             </form>
         </div>
           
@@ -116,13 +117,13 @@
         <?php
             if(isset($_POST['submit2']))
             {
-                $firstName = $_POST['firstName'];
-                $lastName = $_POST['lastName'];
-                $email = $_POST['email'];
-                $business = $_POST['business'];
-                $farm = $_POST['farm'];
-                $phoneNum = $_POST['phoneNumber'];
-                $address = $_POST['address'];
+                $firstName  =   $_POST['firstName'];
+                $lastName   =   $_POST['lastName'];
+                $email      =   $_POST['email'];
+                $business   =   $_POST['business'];
+                $farm       =   $_POST['farm'];
+                $phoneNum   =   $_POST['phoneNumber'];
+                $address    =   $_POST['address'];
 
                 // Connecting to the database
                 $list = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -131,17 +132,30 @@
                 {
                     die("Connection failed: ".mysqli_connect_error()); // Remove the connect_error method after done testing because of hacking issues.
                 }
+                
+                /* create a prepared statement */
+                if ($stmt = mysqli_prepare($list, 
+                       "INSERT INTO WaitingList
+                            (id, firstName, lastName, email, business, farm, phoneNum, address) 
+                        VALUES
+                            (NULL, ?, ?, ?, ?, ?, ?, ?)")) {
 
-                $sql = "INSERT INTO WaitingList(id, firstName, lastName, email, business, farm, phoneNum, address) VALUES(NULL, '$firstName', '$lastName','$email', '$business', '$farm', '$phoneNum', '$address')";
+                    /* bind parameters for markers */
+                    mysqli_stmt_bind_param($stmt, "sssssss", $firstName, $lastName, $email, $business, $farm, $phoneNum, $address);
 
-                // Checking to see if we actually placed the data into the database
-                if (!(mysqli_query($list, $sql)))
-                {
-                    echo "Error: " . $sql . "<br>" . mysqli_error($list). "<br>";
+                    /* execute query */
+                    mysqli_stmt_execute($stmt);
+
+                    /* close statement */
+                    mysqli_stmt_close($stmt);
+
+                    mysqli_close($list);
+                    header("Location: Waitinglist.php");
+                } else {
+                    echo "Error with prepare statement!\n";
+                    mysqli_close($list);
+                    die();
                 }
-                // Closing the connection to the database
-                mysqli_close($list);
-                header("Refresh:0");
             }
         ?>
 
